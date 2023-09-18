@@ -104,3 +104,7 @@ Reload apache conf. file to make sure the file has no errors
 Reload apache 
 
     sudo systemctl reload apache2
+
+Check your web browser.
+
+    #http://ubuntu_instance_public_ip_address
