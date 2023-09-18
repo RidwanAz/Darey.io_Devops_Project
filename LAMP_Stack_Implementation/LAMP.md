@@ -134,6 +134,6 @@ Paste the contents below
     <?php
     phpinfo();
 Save and close the file 
-You can use you ubuntu instance public ip address to access the php file served by apache from your web browser 
-![php]()
+You can use ubuntu instance public ip address to access the php file served by apache from your web browser 
+![php](images/phpinfo.png)
 The default page above will be displayed.
