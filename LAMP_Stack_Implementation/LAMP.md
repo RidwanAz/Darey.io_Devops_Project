@@ -67,7 +67,7 @@ Create a directory for our codes to be hosted at the location "/var/www/html/dar
     sudo mkdir /var/www/html/darey.io
 Create an simple html file which our apache will serve
 
-    sudo nano /var/www/your_domain/index.html
+    sudo nano /var/www/darey.io/index.html
 It should have the content below
 
 
@@ -126,4 +126,14 @@ Save and close the file then reload apache
 
 ## Testing PHP with Apache 
 
-Replace the index 
+Replace the index.html file in /var/www/darey.io with index.php with a simple php info.
+
+    sudo nano /var/www/darey.io/info.php
+Paste the contents below
+
+    <?php
+    phpinfo();
+Save and close the file 
+You can use you ubuntu instance public ip address to access the php file served by apache from your web browser 
+![php]()
+The default page above will be displayed.
