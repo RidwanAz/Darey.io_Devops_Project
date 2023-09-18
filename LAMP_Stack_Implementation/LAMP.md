@@ -120,3 +120,10 @@ Change the arrangement if index.html and index.php
     <IfModule mod_dir.c>
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
     </IfModule>
+Save and close the file then reload apache
+
+    sudo systemctl reload apache2
+
+## Testing PHP with Apache 
+
+Replace the index 
