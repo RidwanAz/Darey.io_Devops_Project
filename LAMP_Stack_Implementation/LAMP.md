@@ -5,7 +5,7 @@ The word LAMP refers to a group of open source software installed together which
 ### Tools Used For Completion of the project
 - An AWS account with an ubuntu EC2 instance
 - Virtual machine using linux
-- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)(not necessary)
 
 ## Installation of Apache
 update apt repositories
@@ -24,11 +24,12 @@ NOTE: The step above will allow firewall for apache once it is enabled, it is im
 To check if ubuntu instance has been installed successfully
 
     sudo systemctl status apache2
-
+![apache](LAMP_Stack_Implementation/images/Apache.jpg)
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
-An Apache default page will displayed. 
+![apache](LAMP_Stack_Implementation/images/small_apache_default_1804.png)
+The Apache default page above will displayed. 
 You can check your ubuntu instance ip address from your aws console from the EC2 instance service management or input the command below
 
     curl http://icanhazip.com
@@ -44,7 +45,9 @@ Secure mysql installation
     sudo mysql_secure_installation
 Check if mysql has been successfully installed
 
-    sudo
+    sudo systemctl status mysql 
+
+![mysql](LAMP_Stack_Implementation/images/Mysql.jpg)
 Log into mysql as the root user
 
     sudo mysql
