@@ -24,11 +24,11 @@ NOTE: The step above will allow firewall for apache once it is enabled, it is im
 To check if ubuntu instance has been installed successfully
 
     sudo systemctl status apache2
-![apache](LAMP_Stack_Implementation/images/Apache.jpg)
+![apache](images/Apache.jpg)
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
-![apache](LAMP_Stack_Implementation/images/small_apache_default_1804.png)
+![apache](images/small_apache_default_1804.png)
 The Apache default page above will displayed. 
 You can check your ubuntu instance ip address from your aws console from the EC2 instance service management or input the command below
 
@@ -47,7 +47,7 @@ Check if mysql has been successfully installed
 
     sudo systemctl status mysql 
 
-![mysql](LAMP_Stack_Implementation/images/Mysql.jpg)
+![mysql](images/Mysql.jpg)
 Log into mysql as the root user
 
     sudo mysql
