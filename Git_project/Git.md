@@ -97,7 +97,7 @@ Clonning to the repository created.
 
 ![git Colne](images/gitclone.png)
 
-### Committing and Pushing changes to a repository 
+### Committing and Pushing changes to your remote location (github)
 Changes made in a github repository can be committed locally and then later pushed into a remote repository on github.
 Create a non empty file in the cloned github repository.
 
