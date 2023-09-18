@@ -86,7 +86,7 @@ Your PAT should be stored safely and cannot be shared with anyone. Store somewhe
 ### Creating a repository on github 
 ![github](images/Screenshot_20230914-075850_Chrome.jpg)
 
-### Clonning to the repository
+### Clonning a repository from your local environment 
 The format for clonning to a repository locally 
 
     Git clone <repository url>
