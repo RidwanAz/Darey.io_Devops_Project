@@ -41,13 +41,13 @@ create a readme.md file
      git commit -m "This is my first commit"
  Change your working branch to main from master
 
-     #git branch  -M main
+     git branch  -M main
  In order to push changes to the remote repository on github, we need the http link of the remote location.
 
-     #git remote origin -v
+     git remote origin -v
  Add remote origin before pushing changes.
 
-     #git remote add origin https://github.com/Ridwan010/darey_io.git
+     git remote add origin https://github.com/Ridwan010/darey_io.git
  Push Changes to your github account 
 
      git push -u origin main
