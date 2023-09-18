@@ -9,10 +9,15 @@ The simple definition is that it is a version control system. A version control 
 # Implementation of Git & Github
 ### Creating a Github account
 click [here](https://github.com) to create an account 
-### Installing Git in your virtual machine, for example vagrant
+### Installing Git in your local environment or virtual machine, for example vagrant
 Update apt repositories 
 
        sudo apt update 
+ For windows users, install git bash or vocoder
+ For Mac users
+
+     brew apt update
+     brew install git
 Install git 
       
        sudo apt install git 
