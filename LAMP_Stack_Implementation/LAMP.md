@@ -107,4 +107,16 @@ Reload apache
 
 Check your web browser.
 
-    #http://ubuntu_instance_public_ip_address
+    http://ubuntu_instance_public_ip_address
+
+## Modifying Directory Index To Serve php files
+
+By default, in the index.html comes before index.php1 file in /etc/apache2/mods-enabled/dir.conf. As a result of this, apache will always serve html files before php file. The directory index needs to be modified to apache read php files
+
+
+    sudo nano /etc/apache2/mods-enabled/dir.conf
+Change the arrangement if index.html and index.php
+
+    <IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
+    </IfModule>
