@@ -9,4 +9,6 @@
   - Creating a repository from your local environment
   - Creating Personal Access Token (PAT)
   - Creating a repository on github
-  - Clonning a repository from your local environment 
+  - Clonning a repository from your local environment
+  - Committing and Pushing to changes to your remote location (github)
+  - Working with branches
