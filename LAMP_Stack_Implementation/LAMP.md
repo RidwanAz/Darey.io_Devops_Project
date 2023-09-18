@@ -44,7 +44,7 @@ Secure mysql installation
     sudo mysql_secure_installation
 Check if mysql has been successfully installed
 
-    sudo systemctl status mysql
+    sudo
 Log into mysql as the root user
 
     sudo mysql
@@ -65,8 +65,42 @@ Check for the successful installation of php
 Create a directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which apache will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Apache web server is smart enough to know this location and serve it with the help of its configuration file.
 
     sudo mkdir /var/www/html/darey.io
+Create an simple html file which our apache will serve
+
+    sudo nano /var/www/your_domain/index.html
+It should have the content below
 
 
- darey.io is the directory created which will contain our php code
+    <h1>Welcone to Darey.io, Apache works</h1>
+darey.io is the directory created which will contain our php code
+Assign ownership of the directory with the user
 
-    
+    sudo chown -R $USER:$USER /var/www/html/darey.io
+
+Create a new configuration file that will replace apache default configuration file at /etc/apache2/sites-available
+
+    sudo nano /etc/apache2/sites-available/darey_io.conf
+
+darey_io contains the below
+
+    #<VirtualHost *:80>
+          ServerName localhost
+          ServerAlias localhost
+          ServerAdmin webmaster@localhost
+          DocumentRoot /var/www/html/darey.io
+          ErrorLog ${APACHE_LOG_DIR}/error.log
+          CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+
+Enable the new .conf and disabled default.conf file
+
+    sudo a2ensite /etc/apache2/sites-available/darey_io.conf
+
+    sudo a2dissite /etc/apache2/sites-available/000-default
+Reload apache conf. file to make sure the file has no errors
+
+    sudo apache2ctl configtest
+
+Reload apache 
+
+    sudo systemctl reload apache2
