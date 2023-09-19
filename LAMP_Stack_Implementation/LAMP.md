@@ -166,7 +166,20 @@ Log out of mysql
 Log in to mysql as user 'darey'
 
     mysql -u darey -p Aa123456789
-Creat a table called devops_list in the database created 
+
+Checkout the database created as the root user
+
+    SHOW DATABASES;
+The output below will be printed
+
+    +--------------------+
+    | Database           |
+    +--------------------+
+    | darey_io           |
+    | information_schema |
+    +--------------------+
+    2 rows in set (0.000 sec)
+Create a table called devops_list in the database created 
 
     CREATE TABLE darey_io.devops_list (
 	item_id INT AUTO_INCREMENT,
@@ -175,9 +188,9 @@ Creat a table called devops_list in the database created
     );
 Add a few lines to the list
 
-    INSERT INTO darey_io.devops_list (content) VALUES ("Linux");
-    INSERT INTO darey_io.devops_list (content) VALUES ("Git");
-    INSERT INTO darey_io.devops_list (content) VALUES ("LAMP");
+    INSERT INTO darey_io.devops_list (content) VALUES ("Linux needed for devops");
+    INSERT INTO darey_io.devops_list (content) VALUES ("Git needed for devops");
+    INSERT INTO darey_io.devops_list (content) VALUES ("LAMP needed for devops");
 
 Check that the lines have been successfully inputed
 
