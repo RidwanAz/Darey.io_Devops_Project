@@ -10,6 +10,8 @@
 
 ***Configuring Apache Web server to Serves As A Virtual Host***
 
-***Running PHP with Apache***
+***Modifying Directory Index To Serve php files***
 
-***Running PHP and Mysql with Apache (LAMP Stack)***
+***Testing PHP with Apache***
+
+***Testing PHP and Mysql with Apache (LAMP Stack)***
