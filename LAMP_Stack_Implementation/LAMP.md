@@ -140,3 +140,37 @@ Save and close the file
 You can use ubuntu instance public ip address to access the php file served by apache from your web browser 
 ![php](images/phpinfo.png)
 The default page above will be displayed.
+## Testing PHP and Mysql with Apache (LAMP Stack)
+
+In the previous step, php was tested with apache by using apache to serve a php file. In the step mysql database will be connected to php and web served by apache.
+The first to do is to create a database with datas
+
+Log into mysql as root user 
+
+    sudo mysql 
+
+***In the mysql shell***
+Create a database called darey.io
+
+    CREATE DATABASE darey_io;
+
+Create a new user called ***darey*** with password ***A different username or password can be used***
+
+    CREATE USER 'darey'@'%' IDENTIFIED WITH mysql_native_password BY 'Ab123456789';
+Grant 'darey' all permissions 
+
+    GRANT ALL ON root.* TO 'darey'@'%';
+Log out of mysql
+
+    exit
+Log in to mysql as user 'darey'
+
+    mysql -u darey -p Aa123456789
+Creat a table in the database created 
+
+    CREATE TABLE example_database.todo_list (
+	item_id INT AUTO_INCREMENT,
+	content VARCHAR(255),
+	PRIMARY KEY(item_id)
+ );
+
