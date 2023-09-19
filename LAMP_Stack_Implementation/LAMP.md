@@ -205,3 +205,29 @@ To output below will be shown
     |       3 | LAMP needed for devops   |
     +---------+--------------------------+
     3 rows in set (0.000 sec)
+Exit mysql shell.
+
+In the /var/www/html we need to edit our index.php file
+
+    sudo nano /var/www/html/index.php
+Paste the content below 
+
+    <?php
+    $user = "darey";
+    $password = "Ab123456789";
+    $database = "darey_io";
+    $table = "devops_list";
+    
+    try {
+    $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+    echo "<h2>Devops</h2><ol>"; 
+    foreach($db->query("SELECT content FROM $table") as $row) {
+    echo "<li>" . $row['content'] . "</li>";
+    }
+    echo "</ol>";
+    } catch (PDOException $e) {
+    print "Error!: " . $e->getMessage() . "<br/>";
+    die();
+    }
+Save and close the file
+Check you web browser with your ubuntu instance ip address to see apace serving php with the contents in the database displayed.
