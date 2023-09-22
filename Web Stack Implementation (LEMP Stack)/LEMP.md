@@ -8,21 +8,21 @@ What make a LAMP stack different  from LEMP Stack is the Nginx web server which 
 - Virtual machine using linux
 - [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)(not necessary)
 
-## Installation of Apache
+## Installation of Nginx
 update apt repositories
 
     sudo apt update
-Install apache web server
+Install nginx web server
 
-    sudo apt install apache2
-Allow firewall for apache
+    sudo apt install nginx
+Allow firewall for nginx
 
-    sudo ufw allow in "Apache"
-NOTE: The step above will allow firewall for apache once it is enabled, it is important we allow firewall for ssh. ssh runs on port 22, if firewall is not allowed for ssh running on port 22, connection to the ubuntu instance via ssh will be permanently
+    sudo ufw allow in "Nginx HTTP"
+NOTE: The step above will allow firewall for nginx on port 80, to allow firewall for nginx on port 443 or any other port, "Nginx HTTPS and Nginx Full" need to be opened. Once it is enabled, it is important we allow firewall for ssh. ssh runs on port 22, if firewall is not allowed for ssh running on port 22, connection to the ubuntu instance via ssh will be permanently
 
     sudo ufw allow 22
     
-To check if ubuntu instance has been installed successfully
+To check if nginx web server has been installed successfully
 
     sudo systemctl status apache2
 ![apache](images/Apache.jpg)
