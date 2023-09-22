@@ -120,7 +120,7 @@ To activate a server block, you create a symbolic link from the sites-enabled di
 
 Creating a symbolic link 
 
-    sudo ln -s /etc/nginx/sites-available/darey_io /etc/nginx/sites-enabled/
+    sudo ln -s /etc/nginx/sites-available/darey.io /etc/nginx/sites-enabled/
 
 Unlinking the default server block configuration file from sites enables
 
