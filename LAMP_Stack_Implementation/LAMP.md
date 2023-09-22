@@ -129,9 +129,9 @@ Save and close the file then reload apache
 
 ## Testing PHP with Apache 
 
-Replace the index.html file in /var/www/darey.io with index.php with a simple php info.
+Replace the index.html file in /var/www/html/darey.io with index.php with a simple php info.
 
-    sudo nano /var/www/darey.io/info.php
+    sudo nano /var/www/html/darey.io/index.php
 Paste the contents below
 
     <?php
