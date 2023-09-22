@@ -25,7 +25,7 @@ NOTE: The step above will allow firewall for nginx on port 80, to allow firewall
 To check if nginx web server has been installed successfully
 
     sudo systemctl status nginx
-![nginx](images/Apache.jpg)
+![nginx](images/Nginx.jpg)
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
@@ -147,12 +147,13 @@ Paste the contents below
     <?php
     phpinfo();
 Save and close the file 
-You can use ubuntu instance public ip address to access the php file served by apache from your web browser 
+You can use ubuntu instance public ip address to access the php file served by nginx from your web browser 
 ![php](images/phpinfo.png)
 The default page above will be displayed.
-## Testing PHP and Mysql with Apache (LAMP Stack)
 
-In the previous step, php was tested with apache by using apache to serve a php file. In the step mysql database will be connected to php and web served by apache.
+## Testing PHP and Mysql with Nginx (LEMP Stack)
+
+In the previous step, php was tested with nginx by using nginx to serve a php file. In the step mysql database will be connected to php and web served by nginx.
 The first to do is to create a database with datas
 
 Log into mysql as root user 
@@ -160,7 +161,7 @@ Log into mysql as root user
     sudo mysql 
 
 ***In the mysql shell***
-Create a database called darey.io
+Create a database called darey_io
 
     CREATE DATABASE darey_io;
 
