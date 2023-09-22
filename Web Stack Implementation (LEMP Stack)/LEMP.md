@@ -29,7 +29,7 @@ To check if nginx web server has been installed successfully
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
-![nginx](images/small_apache_default_1804.png)
+![nginx](images/nginx_default.png)
 The Nginx default page above will displayed. 
 You can check your ubuntu instance ip address from your aws console from the EC2 instance service management or input the command below
 
