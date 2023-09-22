@@ -21,7 +21,7 @@ NOTE: The step above will allow firewall for apache once it is enabled, it is im
 
     sudo ufw allow 22
     
-To check if ubuntu instance has been installed successfully
+To check if apache web server has been installed successfully
 
     sudo systemctl status apache2
 ![apache](images/Apache.jpg)
