@@ -43,7 +43,7 @@ or
     curl -4 icanhazip.com 
 ## Installation of Mysql
 
-In the previous step, apache web server was installed successfully. In this step, mysql will be installed as a database to store data for our web application.
+In the previous step, nginx web server was installed successfully. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
 
     sudo apt install mysql-server
