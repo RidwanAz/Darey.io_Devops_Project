@@ -150,7 +150,7 @@ Log into mysql as root user
     sudo mysql 
 
 ***In the mysql shell***
-Create a database called darey.io
+Create a database called darey_io
 
     CREATE DATABASE darey_io;
 
@@ -230,4 +230,4 @@ Paste the content below
     die();
     }
 Save and close the file
-Check you web browser with your ubuntu instance ip address to see apace serving php with the contents in the database displayed.
+Check you web browser with your ubuntu instance ip address to see apache serving php with the contents in the database displayed.
