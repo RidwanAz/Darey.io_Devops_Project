@@ -18,7 +18,7 @@ Install nginx web server
 Allow firewall for nginx
 
     sudo ufw allow in "Nginx HTTP"
-NOTE: The step above will allow firewall for nginx on port 80, to allow firewall for nginx on port 443 or any other port, "Nginx HTTPS and Nginx Full" need to be opened. Once it is enabled, it is important we allow firewall for ssh. ssh runs on port 22, if firewall is not allowed for ssh running on port 22, connection to the ubuntu instance via ssh will be permanently
+NOTE: The step above will allow firewall for nginx on port 80, to allow firewall for nginx on port 443 or any other port, "Nginx HTTPS and Nginx Full" need to be opened. Once it is enabled, it is important we allow firewall for ssh. ssh runs on port 22, if firewall is not allowed for ssh running on port 22, connection to the ubuntu instance via ssh will be permanently denied 
 
     sudo ufw allow 22
     
