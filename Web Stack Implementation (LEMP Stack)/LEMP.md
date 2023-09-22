@@ -241,4 +241,4 @@ Paste the content below
     die();
     }
 Save and close the file
-Check you web browser with your ubuntu instance ip address to see apace serving php with the contents in the database displayed.
+Check you web browser with your ubuntu instance ip address to see nginx serving php with the contents in the database displayed.
