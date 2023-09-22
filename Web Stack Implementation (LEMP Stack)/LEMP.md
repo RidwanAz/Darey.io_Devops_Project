@@ -64,8 +64,9 @@ Log out of mysql
 
 ## Installing PHP
 
-So far, Nginx and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step
-The installation of php is different for nginx is different from apache because the way it interacts with the web server duffer. PHP for Apache typically uses the Apache module called mod_php. This module integrates PHP directly into the Apache web server, allowing it to handle PHP requests internally. For Nginx, PHP is typically run as a separate process using FastCGI (e.g., PHP-FPM) or as a reverse proxy. This means Nginx communicates with the PHP interpreter over a network socket or through a unix domain socket.
+So far, Nginx and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step.
+
+The installation of php is different for nginx is different from apache because, the way it interacts with the web server differs. PHP for Apache typically uses the Apache module called mod_php. This module integrates PHP directly into the Apache web server, allowing it to handle PHP requests internally. For Nginx, PHP is typically run as a separate process using FastCGI (e.g., PHP-FPM) or as a reverse proxy. This means Nginx communicates with the PHP interpreter over a network socket or through a unix domain socket.
 
     sudo apt install php-fpm php-mysql
 Check for the successful installation of php
