@@ -2,7 +2,7 @@
 In project_2 LAMP Stack was implemented. In the project LEMP Stack will be implemented.
 The word LEMP refers to a group of open source software installed together which can be used to host web applications.
 ***LEMP*** meaning Linux; a unix operating system, Nginx; a web server capable of load balancing and can serve as a reverse proxy, Mysql; a database and PHP; an Hypertext preprocessor.
-What make a LAMP stack different  from LEMP Stack is the Nginx web server which is the most widely used web server.
+What makes a LAMP stack different  from LEMP Stack is the Nginx web server which is the most widely used web server.
 ### Tools Used For Completion of the project
 - An AWS account with an ubuntu EC2 instance
 - Virtual machine using linux
