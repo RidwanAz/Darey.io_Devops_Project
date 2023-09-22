@@ -25,10 +25,12 @@ To check if apache web server has been installed successfully
 
     sudo systemctl status apache2
 ![apache](images/Apache.jpg)
+
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
 ![apache](images/small_apache_default_1804.png)
+
 The Apache default page above will displayed. 
 You can check your ubuntu instance ip address from your aws console from the EC2 instance service management or input the command below
 
