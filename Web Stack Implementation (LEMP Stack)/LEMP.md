@@ -24,17 +24,19 @@ NOTE: The step above will allow firewall for nginx on port 80, to allow firewall
     
 To check if nginx web server has been installed successfully
 
-    sudo systemctl status apache2
-![apache](images/Apache.jpg)
+    sudo systemctl status nginx
+![nginx](images/Apache.jpg)
 To access your web server on your browser
 
     http://ubuntu_instance_public_ip_address
-![apache](images/small_apache_default_1804.png)
-The Apache default page above will displayed. 
+![nginx](images/small_apache_default_1804.png)
+The Nginx default page above will displayed. 
 You can check your ubuntu instance ip address from your aws console from the EC2 instance service management or input the command below
 
     curl http://icanhazip.com
+or
 
+    curl -4 icanhazip.com 
 ## Installation of Mysql
 
 In the previous step, apache web server was installed successfully. In this step, mysql will be installed as a database to store data for our web application.
@@ -58,24 +60,25 @@ Log out of mysql
 
 ## Installing PHP
 
-So far, Apache and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step
+So far, Nginx and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step
+The installation of php is different for nginx is different from apache because the way it interacts with the web server duffer. PHP for Apache typically uses the Apache module called mod_php. This module integrates PHP directly into the Apache web server, allowing it to handle PHP requests internally. For Nginx, PHP is typically run as a separate process using FastCGI (e.g., PHP-FPM) or as a reverse proxy. This means Nginx communicates with the PHP interpreter over a network socket or through a unix domain socket.
 
-    sudo apt install php libapache2-mod-php php-mysql
+    sudo apt install php-fpm php-mysql
 Check for the successful installation of php
 
     php -v
 
-## Configuring Apache Web Server To Serve As A Virtual Host 
-Create a directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which apache will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Apache web server is smart enough to know this location and serve it with the help of its configuration file.
+## Configuring Nginx Web Server To Serve As A Virtual Host 
+Create a directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which nginx will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Nginx web server is smart enough to know this location and serve it with the help of its configuration file.
 
     sudo mkdir /var/www/html/darey.io
-Create an simple html file which our apache will serve
+Create an simple html file which Nginx will serve
 
     sudo nano /var/www/darey.io/index.html
 It should have the content below
 
 
-    <h1>Welcone to Darey.io, Apache works</h1>
+    <h1>Welcone to Darey.io, Nginx works</h1>
 darey.io is the directory created which will contain our php code
 Assign ownership of the directory with the user
 
@@ -83,7 +86,7 @@ Assign ownership of the directory with the user
 
 Create a new configuration file that will replace apache default configuration file at /etc/apache2/sites-available
 
-    sudo nano /etc/apache2/sites-available/darey_io.conf
+    sudo nano /etc/nginx/sites-available/darey_io.conf
 
 darey_io contains the below
 
