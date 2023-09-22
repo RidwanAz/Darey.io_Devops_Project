@@ -84,58 +84,64 @@ Assign ownership of the directory with the user
 
     sudo chown -R $USER:$USER /var/www/html/darey.io
 
-Create a new configuration file that will replace apache default configuration file at /etc/apache2/sites-available
+Create a new server block configuration that will replace nginx default server block configuration at /etc/apache2/sites-available
 
-    sudo nano /etc/nginx/sites-available/darey_io.conf
+    sudo nano /etc/nginx/sites-available/darey.io
 
-darey_io contains the below
+darey_io should contain the below
 
-    #<VirtualHost *:80>
-          ServerName localhost
-          ServerAlias localhost
-          ServerAdmin webmaster@localhost
-          DocumentRoot /var/www/html/darey.io
-          ErrorLog ${APACHE_LOG_DIR}/error.log
-          CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>
+    server {
+    listen 80;
+    server_name ;
+    root /var/www/html/darey.io;
 
-Enable the new .conf and disabled default.conf file
+    index index.html index.htm index.php;
 
-    sudo a2ensite /etc/apache2/sites-available/darey_io.conf
+    location / {
+        try_files $uri $uri/ =404;
+    }
 
-    sudo a2dissite /etc/apache2/sites-available/000-default
-Reload apache conf. file to make sure the file has no errors
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+     }
 
-    sudo apache2ctl configtest
+    location ~ /\.ht {
+        deny all;
+    }
+    }
+Unlike apache, nginx only uses the server block configuration file in sites-enabled, sites-available only contains the different server block configuration.
+To activate a server block, you create a symbolic link from the sites-enabled directory to the configuration file in the sites-available directory. This link tells Nginx to use that configuration.
 
-Reload apache 
+Creating a symbolic link 
 
-    sudo systemctl reload apache2
+    sudo ln -s /etc/nginx/sites-available/darey_io /etc/nginx/sites-enabled/
+
+Unlinking the default server block configuration file from sites enables
+
+    sudo rm /etc/nginx/sites-enabled/default
+or
+
+    sudo unlink /etc/nginx/sites-enabled/default
+
+Reload nginx conf. file to make sure the file has no errors
+
+    sudo nginx -t
+
+Reload nginx
+
+    sudo systemctl reload nginx
 
 Check your web browser.
 
     http://ubuntu_instance_public_ip_address
 
-## Modifying Directory Index To Serve php files
 
-By default, in the index.html comes before index.php1 file in /etc/apache2/mods-enabled/dir.conf. As a result of this, apache will always serve html files before php file. The directory index needs to be modified to apache read php files
+## Testing PHP with Nginx 
 
+Replace the index.html file in /var/www/html/darey.io with index.php with a simple php info.
 
-    sudo nano /etc/apache2/mods-enabled/dir.conf
-Change the arrangement if index.html and index.php
-
-    <IfModule mod_dir.c>
-        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
-    </IfModule>
-Save and close the file then reload apache
-
-    sudo systemctl reload apache2
-
-## Testing PHP with Apache 
-
-Replace the index.html file in /var/www/darey.io with index.php with a simple php info.
-
-    sudo nano /var/www/darey.io/info.php
+    sudo nano /var/www/darey.io/html/index.php
 Paste the contents below
 
     <?php
