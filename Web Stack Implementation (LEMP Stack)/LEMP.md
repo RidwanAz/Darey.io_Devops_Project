@@ -89,7 +89,7 @@ Assign ownership of the directory with the user
 
     sudo chown -R $USER:$USER /var/www/html/darey.io
 
-Create a new server block configuration that will replace nginx default server block configuration at /etc/apache2/sites-available
+Create a new server block configuration that will replace nginx default server block configuration at /etc/nginx/sites-available
 
     sudo nano /etc/nginx/sites-available/darey.io
 
