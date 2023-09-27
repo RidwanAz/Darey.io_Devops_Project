@@ -113,3 +113,11 @@ Also, darey.sh must be an executable file before it can be executed
          # Display the final sorted file
          echo "Final sorted file:"
          cat sorted_file_sorted_alphabetically.txt
+
+The script above;
+- Creates three non-empty text files: bash1.txt, bash2.txt, and bash3.txt.
+- It sorts the files in the current directory alphabetically and saves the sorted list to a file named sorted_files.txt.
+- It displays the sorted file names.
+- Removes the original bash1.txt, bash2.txt, and bash3.txt files.
+- Renames the sorted file (sorted_files.txt) to sorted_file_sorted_alphabetically.txt.
+- Displays the contents of the renamed file, which should contain the sorted list of file names.
