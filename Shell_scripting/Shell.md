@@ -53,4 +53,20 @@ Also, darey.sh must be an executable file before it can be executed
     echo "darey_io created"
     echo "changing to new directory"
     cd darey_io
-    echo 
+    echo "Current directory: $PWD"
+    echo "creating files"
+    touch bash1.txt
+    touch bash2.txt
+    echo "Files created"
+    echo "Files in the current directory:"
+    ls
+    echo "Moving back to previous directory"
+    cd ..
+    echo "Current directory: $PWD"
+    echo "Removing the new directory"
+    rm -rf "darey_io
+    echo "Directory removed."
+    echo "Files in the current directory:"
+    ls
+
+   
