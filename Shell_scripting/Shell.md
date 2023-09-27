@@ -64,9 +64,52 @@ Also, darey.sh must be an executable file before it can be executed
     cd ..
     echo "Current directory: $PWD"
     echo "Removing the new directory"
-    rm -rf "darey_io
+    rm -rf darey_io
     echo "Directory removed."
     echo "Files in the current directory:"
     ls
-
+ The script above;
+- Prints the current directory.
+- Creates a directory called "darey_io."
+- Changes to the "darey_io" directory.
+- Prints the current directory (which should be inside "darey_io").
+- Creates two empty files in the "darey_io" directory.
+- Lists the files in the current directory (inside "darey_io").
+- Moves back to the previous directory.
+- Prints the current directory (which should be the original directory).
+- Removes the "darey_io" directory and its contents.
+- Lists the files in the current directory (after removing "darey_io").
    
+3. File Operations and Sorting
+
+       #!/bin/bash
+
+       # Creating three files
+       echo "Creating non empty files..."
+       echo "This is bash3." > bash3.txt
+       echo "This is bash2." > bash2.txt
+       echo "This is bash1" > bash1.txt
+       echo "Bash 1, 2 and 3 has been successfully created"
+
+        # Sorting the files alphabetically
+        echo "sorting files alphabetically..."
+        ls | sort > sorted_files.txt
+        echo "Files sorted."
+
+        # Display the sorted files
+        echo "Sorted files:"
+        cat sorted_files.txt
+
+        # Remove the original files
+        echo "Removing the files..."
+        rm bash1.txt bash2.txt bash3.txt
+        echo "original files removed."
+
+         # Rename the sorted file to a more descriptive name
+         echo "Renaming sorted file..."
+         mv sorted_files.txt sorted_file_sorted_alphabetically.txt
+         echo "File renamed"
+
+         # Display the final sorted file
+         echo "Final sorted file:"
+         cat sorted_file_sorted_alphabetically.txt
