@@ -22,5 +22,11 @@ Execute a bash script assuming the file containing the script is darey
 
     ./darey.sh
 Note: all bash file are always ending with an extension .sh
+Also, darey.sh must be an executable file before it can be executed
 
-    
+    sudo chmod u+x darey.sh
+ The command above make darey.sh an executable file
+
+ An alternative for executing a bash script
+
+    bash darey.sh 
