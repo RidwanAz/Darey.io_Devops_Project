@@ -32,5 +32,25 @@ Also, darey.sh must be an executable file before it can be executed
     bash darey.sh 
 
 
-### Creating Shell Scripts
+### Practical Examples of Shell Scripts
 
+1. Input and output
+
+       echo "enter your name:"
+       read name
+       echo "Hi $name, it nice to know you"
+
+- The first line in the script above shows a text telling the user to input his name
+- The second takes input from the user
+- The third line outputs the input take from the user.
+
+2 Directory Manipulation and Navigation.
+
+    #!/bin/bash
+    echo "Current directory: $PWD"
+    echo "creating a new directory ..."
+    mkdir darey_io 
+    echo "darey_io created"
+    echo "changing to new directory"
+    cd darey_io
+    echo 
