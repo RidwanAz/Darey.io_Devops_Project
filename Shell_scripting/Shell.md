@@ -151,7 +151,7 @@ The script above;
         # Copy all files from the source directory to the backup directory
         cp -r "$source_dir"/* "$backup_dir_with_timestamp"
 
-        # Display a message indicating the backup process is completThis line creates the backup directory specified by backup_dir_with_timestamp. The -p option ensures that parent directories are created if they don't exist.e
+        # Display a message indicating the backup process is complet
         echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 
    In the first comment section of the script, the source directory and backup directory are defined. You should replace "/path/to/source_directory" and "/path/to/backup_directory" with the actual paths to your source and backup directories.
@@ -161,4 +161,5 @@ The fourth comment section creates the backup directory specified by backup_dir_
 Using the cp command, all files from the source directory ($source_dir) are recursively copied (-r) to the backup directory with the timestamp ($backup_dir_with_timestamp).
 Finally, a message is displayed to indicate the completion of the backup process. It shows the path to the backup directory with the timestamp where the files were copied.
 
+![shell](image/termius4.jpg)
    
