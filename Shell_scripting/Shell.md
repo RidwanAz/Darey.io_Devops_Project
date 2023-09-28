@@ -44,6 +44,9 @@ Also, darey.sh must be an executable file before it can be executed
 - The second takes input from the user
 - The third line outputs the input take from the user.
 
+  ![github](image/termius1.jpg)
+
+  
 2 Directory Manipulation and Navigation.
 
     #!/bin/bash
@@ -79,6 +82,9 @@ Also, darey.sh must be an executable file before it can be executed
 - Prints the current directory (which should be the original directory).
 - Removes the "darey_io" directory and its contents.
 - Lists the files in the current directory (after removing "darey_io").
+
+  ![shell](image/termius2.jpg)
+
    
 3. File Operations and Sorting
 
@@ -121,6 +127,8 @@ The script above;
 - Removes the original bash1.txt, bash2.txt, and bash3.txt files.
 - Renames the sorted file (sorted_files.txt) to sorted_file_sorted_alphabetically.txt.
 - Displays the contents of the renamed file, which should contain the sorted list of file names.
+
+![shell](image/termius3.jpg)
 
 
 4. File Backup and Timestamping
