@@ -14,7 +14,7 @@ When a script with a shebang line like #!/bin/bash, the operating system looks f
 
 Without a shebang line, the system may not know how to interpret and execute the script, and you may need to explicitly specify the interpreter when running the script. 
 
-### Syntax For a Bash script
+### Syntax For a Shell script
 Every line of a bash file starts with a shebang 
    
     #!/bin/bash
