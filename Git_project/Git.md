@@ -9,9 +9,19 @@ The simple definition is that git is a version control system. A version control
 This project aim to present the world of Git, covering everything from the essentials to more advanced points. You'll learn how to make repositories, commit changes, clone repositories, merge branches, create personal access token for commit made locally and collaborate successfully with others. 
 
 ### Importance of Git
-The knowledege of git is needed by anyone into software development and deployment, ranging but no limited from developers to devops engineers, to project managers, 
+The knowledege of git is needed by anyone into software development and deployment, ranging but no limited from developers to devops engineers, project managers, system administrator. Some of the benefit of using git are;
+
+- Collaboration: Git allows teams to work collaboratively. In the devops lifecycle software development and deployment usually require teams to work together. For example, developers push code changes to a remote repository, QA engineer pull the code changes for testing and operations engineer deploy code changes into production using git.
+- Version History: Git maintains a detailed history of changes, therefore, it makes it easy to track who made changes, what changes they made and when the changes were made.
+- Branching and Merging: Git's branching and merging capabilities make it possible for development team to create other branches separate from the main codebase to work on new software version, features or fix bugs in previous release version before integraging them into the main codebase.
+
+Distributed Development: Git allows for distributed development, meaning team members can work on their copies of the code and merge changes later, even when not connected to the internet.
+
+Open Source Collaboration: Many open-source projects use Git, so understanding it is essential for contributing to or maintaining open-source software.
+
+
 ### What is Github.
- Github is a code repository when all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
+ Github is a code repository where all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
 
 # Implementation of Git & Github
 ### Creating a Github account
