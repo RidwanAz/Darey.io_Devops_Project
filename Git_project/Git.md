@@ -1,8 +1,15 @@
 
+# Git
 
-# Git & Github 
+## Introduction To Git
+Version control may be a basic angle of present day software development, empowering teams to collaborate efficiently, track changes, and keep up a verifiable record of their work. Git, a  common version control system, has ended up as the most popularly used within the software development industry. This project is about understanding and utilizing Git.
+
 ### What is Git ? 🤔
-The simple definition is that it is a version control system. A version control system is a software tool that helps manage and track changes to files and directories in a project over time. It is a crucial tool for devops engineers.
+The simple definition is that git is a version control system. A version control system is a software tool that helps manage and track changes to files and directories in a project over time. It is an important tool for devops engineers. Git is an effective tool that helps developers run their source code effectively. It permits different people or teams to work on the same project  without clashes. 
+This project aim to present the world of Git, covering everything from the essentials to more advanced points. You'll learn how to make repositories, commit changes, clone repositories, merge branches, create personal access token for commit made locally and collaborate successfully with others. 
+
+### Importance of Git
+The knowledege of git is needed by anyone into software development and deployment, ranging but no limited from developers to devops engineers, to project managers, 
 ### What is Github.
  Github is a code repository when all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
 
