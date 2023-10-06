@@ -49,7 +49,7 @@ By the end of this project, learners  would;
 This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the tech industry.
 
 ## Table of Contents
-## 444
+## Getting Started With Git
 
 ### What is Github
 
@@ -58,30 +58,34 @@ Github is a code repository where all code changes made locally are kept remotel
 ### Creating a Github account
 click [here](https://github.com) to create an account 
 
-### Installing Git
-***For Windows***
+#### a. Installing Git
+***i. Windows***
     
-Download [git](https://gitforwindows.org/)
+Download [git](https://gitforwindows.org/) installer for windows
 
-***For Linux***
+***ii. For Linux***
+Commands for installation of git depends on the linux distribution package manager
 
-Launch a terminal
-
-Update apt repositories 
+- For Ubuntu or Debian ditribution
 
        sudo apt update 
-Install git
+       sudo apt install git
+The commands above will update package list and install git using apt with super user privileges.
 
-    sudo apt install git
+- For Red Hat or CentOS distribution packages
 
-***For Mac***
+        sudo yum update
+        sudo yum install git
+  The commands above will update package list and install git using yum with super user privileges.
+  
+***iii. For Mac***
 
-Launch a terminal and update repositories
+ On mac operating systems, git can be install by using Homebrew
+    Launch a terminal and run the below commands
     
-     brew update
-Install git
-
-     brew install git
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     brew install git 
+The first command above will install homebrew and the later will installgit using brew.
 
 ![git install](images/gitinsta.png)
 
@@ -90,6 +94,12 @@ Confirm installation of git by running the below command
        git --version 
 ![git version](images/gitversion.png)
 
+#### b. Git commands
+
+Before diving further into git, below are some basic git commands which would be used for implementation as we move on;
+***git add:*** add files or folder that are to be commited to your repository to a staging area
+***git  commit:*** record changes to the repository
+git push: update changes made to remote repository
 ### Creating a repository
 Create a folder or directory in your local environment 
 
