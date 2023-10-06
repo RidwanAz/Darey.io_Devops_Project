@@ -97,14 +97,17 @@ Confirm installation of git by running the below command
 #### b. Git commands
 
 Before diving further into git, below are some basic git commands which would be used for implementation as we move on;
+
 ***git add:*** add files or folder that are to be commited to your repository to a staging area
+
 ***git  commit:*** record changes to the repository
-git push: update changes made in a local repository to remote repository
-git init: Creates an empty git repository or initializes an exixting one
-git pull: fetch changes fo=rom a remote repository to a local branch
-git --version: Check the installed Git version.
-git config --global user.name "Your Name": Set your global Git username.
-git config --global user.email "youremail@example.com": Set your global Git email.
+
+***git push:*** update changes made in a local repository to remote repository
+***git init:*** creates an empty git repository or initializes an exixting one
+***git pull:*** fetch changes fo=rom a remote repository to a local branch
+***git --version:*** checks the installed git version.
+***git config --global user.name "Your Name":*** Set your global Git username.
+***git config --global user.email "youremail@example.com":*** Set your global Git email.
 
 To know  more detailed explanation of Git commands and their usage, run;
 
@@ -112,16 +115,27 @@ To know  more detailed explanation of Git commands and their usage, run;
 
 ![git help](images/githelp.png)
 
+
+#### c. core concepts
+
+***i. Repositories***
+
+Git repos are where files are stored temporarily before they are pushed to a remote repository
+
+
 ### Creating a repository
-Create a folder or directory in your local environment 
+ 
 
     sudo mkdir darey_io
-initialize the folder into a repository
-
-    git init
-create a readme.md file
-
     echo "Welcome to darey.io" >> README.md
+    git init
+ The command above;   
+- Create a folder or directory in your local environment,
+- create a README.md file
+- initializes the folder into a repository
+
+![git help](images/gitini.png)
+    
  Add changes 
 
     git add .
