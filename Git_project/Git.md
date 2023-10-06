@@ -72,7 +72,8 @@ This project is designed to equip learners with the knowledge and skills needed 
     - Commits
     - Branches
     - Working With Remote Repositories for Collaboration
-
+    - Clonning Remote Git Repositories
+       
 - Best Practices
 
 - Use Cases
@@ -267,7 +268,8 @@ This command adds a new remote repository called origin with the URL https://git
 Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with our personal access token
 
 
-- Clonning a remote repository from your local environment 
+***v. Clonning a Remote Git Repository***
+
 The syntax for clonning to a repository locally 
 
     Git clone <repository url>
