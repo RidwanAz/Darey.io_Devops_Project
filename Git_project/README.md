@@ -1,14 +1,28 @@
-***Git & Github***
-- What is Git
-- What is Github
+- Git
 
+- Introduction To Git
+  - What is Git
+  - Importance of Git
+  - Target Audience
+  - Prerequsites
+  - Git Goals
 
-***Implementation of Git & Github***
-  - Creating a Github account 
-  - Installating Git on your Virtual Machine or Local Environment
-  - Creating a repository from your local environment
-  - Creating Personal Access Token (PAT)
-  - Creating a repository on github
-  - Clonning a repository from your local environment
-  - Committing and Pushing to changes to your remote location (github)
-  - Working with branches
+- Getting Started With Git
+  - Installing Git
+    - Windows
+    - Linux
+    - Mac
+
+  - Git Commands
+
+  - Concepts
+    - Repositories
+    - Commits
+    - Branches
+    - Working With Remote Repositories for Collaboration
+
+- Best Practices
+
+- Use Cases
+
+- Conclusion
