@@ -48,13 +48,18 @@ By the end of this project, learners  would;
 
 This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the tech industry.
 
-### What is Github.
- Github is a code repository where all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
+## Table of Contents
+## 444
 
-# Implementation of Git & Github
+### What is Github
+
+ Github is a code repository where all code changes made locally are kept remotely. It is a tool for version control and increases collaboration among cross functions team.
+
 ### Creating a Github account
 click [here](https://github.com) to create an account 
-### Installing Git in your local environment or virtual machine, for example vagrant
+
+#### Installing Git
+
 Update apt repositories 
 
        sudo apt update 
