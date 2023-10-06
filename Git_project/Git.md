@@ -154,7 +154,19 @@ Git repos are where files are stored temporarily before they are pushed to a rem
 ![git help](images/gitcommiti.png)
   
 
-***iii. Branches
+***iii. Branches***
+
+Git branches are ways to separte changes made to a repository from the master or main branch. There are primarily to types of branches on github which are the master and main branch. The main branche is the default branch on github and often the primary branch on github.
+Listing available branch in your local repository 
+
+    git branch 
+    git checkout -b main
+
+- List the available branches
+- Create a main branch and switch to the branch. The "-b" allows to switch to main branch after it is created, otherwise, it would just create the branch without switching to it
+
+  ![git branch](images/gitbranc.png)
+
 - Change your working branch to main from master
 
      git branch  -M main
@@ -223,22 +235,4 @@ Commit Changes
 Push Changes to remote github repository 
 
     git push
-
-    
-### Working with branches
-There are primarily to types of branches on github which are the master and main branch. The main branche is the default branch on github and often the primary branch on github.
-Listing available branch in your local repository 
-
-    git branch 
-Switching to the master branch
-![git]
-
-    git checkout master
-Switching to the main branch from the master branch
-
-    git checkout main
-Creating a new branch
-
-    git checkout -b darey_io
-The "-b" allows to switch to darey_io branch after it is created.
 
