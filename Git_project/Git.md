@@ -14,11 +14,40 @@ The knowledege of git is needed by anyone into software development and deployme
 - Collaboration: Git allows teams to work collaboratively. In the devops lifecycle software development and deployment usually require teams to work together. For example, developers push code changes to a remote repository, QA engineer pull the code changes for testing and operations engineer deploy code changes into production using git.
 - Version History: Git maintains a detailed history of changes, therefore, it makes it easy to track who made changes, what changes they made and when the changes were made.
 - Branching and Merging: Git's branching and merging capabilities make it possible for development team to create other branches separate from the main codebase to work on new software version, features or fix bugs in previous release version before integraging them into the main codebase.
+- Distributed Development: Git allows for distributed development, meaning team members can work on their copies of the code and merge changes later, even when not connected to the internet.
+- Open Source Collaboration: Many open-source projects use Git, so understanding it is essential for contributing to or maintaining open-source software.
 
-Distributed Development: Git allows for distributed development, meaning team members can work on their copies of the code and merge changes later, even when not connected to the internet.
+### Target Audience
 
-Open Source Collaboration: Many open-source projects use Git, so understanding it is essential for contributing to or maintaining open-source software.
+This project is suitable for a wide range of professionals in different field which are:
 
+- Devops Engineers: Git is needed by devops engineers for tracking changes made to source code, collaborate on project, deploy code to production, manage infrastructure and resources
+- Software Developers: Git is an esssential tool for the management of source code, and developers of all levels can benefit from mastering it.
+- Project Managers: Understanding Git helps project managers track progress and coordinate team efforts efficiently.
+- System Administrators: Git is not limited to code; it can be used to manage configurations, scripts, and documentation, making it valuable for system administrators.
+- Data Scientists: Git is useful for managing data science projects and collaborating with colleagues on research.
+
+### Prerequisites
+
+Learners should have;
+- Basic understanding of linux and its commands.
+- A code editor or IDE of their choice
+    - Emacs, vim or nano for linux users.
+    - Visual Studio Code for Windows and Mac Users
+- Access to Git installed on their system.
+- A github account
+No prior experience with Git is required.
+
+### Git Goals:
+
+By the end of this project, learners  would;
+Understand the fundamentals of Git, including repositories, commits, and branches.
+Use Git for version control in software development or other text-based document management tasks.
+Collaborate effectively with others using Git.
+Implement branching strategies to organize and manage code changes.
+Employ advanced Git techniques like rebasing, stashing, and submodules to tackle complex scenarios.
+Integrate Git into their development workflow to improve productivity and code quality.
+This project is designed to equip you with the knowledge and skills needed to confidently use Git in your professional and personal projects, regardless of your role in the technology industry.
 
 ### What is Github.
  Github is a code repository where all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
