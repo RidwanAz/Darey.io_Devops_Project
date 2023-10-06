@@ -50,6 +50,35 @@ By the end of this project, learners  would;
 This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the tech industry.
 
 # Table of Contents
+- Git
+
+- Introduction To Git
+  - What is Git
+  - Importance of Git
+  - Target Audience
+  - Prerequsites
+  - Git Goals
+
+- Getting Started With Git
+  - Installing Git
+    - Windows
+    - Linux
+    - Mac
+
+  - Git Commands
+
+  - Concepts
+    - Repositories
+    - Commits
+    - Branches
+    - Working With Remote Repositories for Collaboration
+
+- Best Practices
+
+- Use Cases
+
+- Conclusion
+
 # Getting Started With Git
 
 #### a. Installing Git
@@ -262,12 +291,12 @@ Pull Before Push: Always pull the latest changes from the remote repository befo
 For more best practices, refer to Git Best Practices.
 
 # Use Cases
-$$Use Case 1: Feature Development
+#### Use Case 1: Feature Development
 Imagine you're developing a new feature for your project. You can create a feature branch, work on it, and merge it back into the main branch when it's ready.
 
-Use Case 2: Bug Fix
+#### Use Case 2: Bug Fix
 Suppose a critical bug surfaces in your application. Create a bug-fix branch, fix the issue, and merge it into the main branch to deploy the fix.
 
-7. Conclusion
-In this guide, we've covered the essentials of Git installation, basic commands, core concepts, side hustle tasks, advanced topics, best practices, and use cases. Git is a powerful tool that empowers collaborative development and version control. Continue exploring Git's rich feature set and expand your expertise in this fundamental aspect of modern software development. Happy coding!
+# Conclusion
+In this doucumentation, we have implemented essentials of Git installation, basic commands, core concepts, side hustle tasks, advanced topics, best practices, and use cases. Git is a powerful tool that empowers collaborative development and version control. Continue exploring Git's rich feature set and expand your expertise in this fundamental aspect of modern software development.
 
