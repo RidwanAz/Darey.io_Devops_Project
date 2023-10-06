@@ -1,7 +1,7 @@
 
-# Git
+# 1. Git
 
-# Introduction To Git
+# 2. Introduction To Git
 Version control may be a basic angle of present day software development, empowering teams to collaborate efficiently, track changes, and keep up a verifiable record of their work. Git, a  common version control system, has ended up as the most popularly used within the software development industry. This project is about understanding and utilizing Git.
 
 ### What is Git ? 🤔
@@ -80,7 +80,7 @@ This project is designed to equip learners with the knowledge and skills needed 
 
 - Conclusion
 
-# Getting Started With Git
+# 3. Getting Started With Git
 
 #### a. Installing Git
 ***i. Windows***
@@ -285,20 +285,20 @@ Replace you personal access token with the <PAT> when clonning your repository. 
 ***Task 5 - Create a remote repository called "git_course", create a README.md file remotely, clone the remote repository***
 
 
-# Best Practices
+# 4. Best Practices
 Commit Frequently: Make small, focused commits to track changes effectively.
 Use Descriptive Messages: Write clear commit messages that explain the changes made.
 Branch Strategically: Adopt a branching strategy like Gitflow to manage feature development and releases.
 Pull Before Push: Always pull the latest changes from the remote repository before pushing your own changes.
 For more best practices, refer to Git Best Practices.
 
-# Use Cases
+# 5. Use Cases
 #### Use Case 1: Feature Development
 Imagine you're developing a new feature for your project. You can create a feature branch, work on it, and merge it back into the main branch when it's ready.
 
 #### Use Case 2: Bug Fix
 Suppose a critical bug surfaces in your application. Create a bug-fix branch, fix the issue, and merge it into the main branch to deploy the fix.
 
-# Conclusion
+# 6. Conclusion
 In this doucumentation, we have implemented essentials of Git installation, basic commands, core concepts, side hustle tasks, advanced topics, best practices, and use cases. Git is a powerful tool that empowers collaborative development and version control. Continue exploring Git's rich feature set and expand your expertise in this fundamental aspect of modern software development.
 
