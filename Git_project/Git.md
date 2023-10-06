@@ -61,18 +61,25 @@ click [here](https://github.com) to create an account
 ### Installing Git
 For Windows
     
-    Download [git](https://gitforwindows.org/)
+Download [git](https://gitforwindows.org/)
+
+For Linux 
+Launch a terminal
+
 Update apt repositories 
 
        sudo apt update 
- For windows users, install git bash or vocoder
- For Mac users
+Install git
 
-     brew apt update
+    sudo apt install git
+
+ For Mac
+Launch a terminal and update repositories
+    
+     brew update
+Install git
+
      brew install git
-Install git 
-      
-       sudo apt install git 
 
 ![git install](images/gitinsta.png)
 
