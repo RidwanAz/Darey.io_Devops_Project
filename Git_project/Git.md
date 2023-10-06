@@ -103,10 +103,15 @@ Before diving further into git, below are some basic git commands which would be
 ***git  commit:*** record changes to the repository
 
 ***git push:*** update changes made in a local repository to remote repository
+
 ***git init:*** creates an empty git repository or initializes an exixting one
+
 ***git pull:*** fetch changes fo=rom a remote repository to a local branch
+
 ***git --version:*** checks the installed git version.
+
 ***git config --global user.name "Your Name":*** Set your global Git username.
+
 ***git config --global user.email "youremail@example.com":*** Set your global Git email.
 
 To know  more detailed explanation of Git commands and their usage, run;
@@ -121,28 +126,35 @@ To know  more detailed explanation of Git commands and their usage, run;
 ***i. Repositories***
 
 Git repos are where files are stored temporarily before they are pushed to a remote repository
-
-
-### Creating a repository
  
-
     sudo mkdir darey_io
+    cd darey_io
     echo "Welcome to darey.io" >> README.md
     git init
- The command above;   
+ The commands above;   
 - Create a folder or directory in your local environment,
 - create a README.md file
 - initializes the folder into a repository
 
 ![git help](images/gitini.png)
-    
- Add changes 
 
-    git add .
- Save Changes
+***ii. Commits*** 
 
-     git commit -m "This is my first commit"
- Change your working branch to main from master
+     git add README.md
+     git config --global user.name "Your Name"
+     git config --global user.email "youremail@example.com"
+     git commit -m "This is my first commit as a devops engineer"
+     
+- Add the README.md file created in the previous step to a staging area
+- Set your global Git username
+- Set your global Git email and;
+- Commit changes
+
+![git help](images/gitcommi.png)
+  
+
+***iii. Branches
+- Change your working branch to main from master
 
      git branch  -M main
  In order to push changes to the remote repository on github, we need the http link of the remote location.
