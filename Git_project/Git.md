@@ -35,7 +35,8 @@ Learners should have;
     - Emacs, vim or nano for linux users.
     - Visual Studio Code for Windows and Mac Users
 - Access to Git installed on their system.
-- A github account ceate [one](https://github.com)
+- A github account create [one](https://github.com)
+  
 No prior experience with Git is required.
 
 ### Git Goals:
