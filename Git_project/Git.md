@@ -19,7 +19,7 @@ The knowledege of git is needed by anyone into software development and deployme
 
 ### Target Audience
 
-This project is suitable for a wide range of professionals in different field which are:
+This project is suitable for a wide range of professionals in different tech industry which are:
 
 - Devops Engineers: Git is needed by devops engineers for tracking changes made to source code, collaborate on project, deploy code to production, manage infrastructure and resources
 - Software Developers: Git is an esssential tool for the management of source code, and developers of all levels can benefit from mastering it.
@@ -41,13 +41,12 @@ No prior experience with Git is required.
 ### Git Goals:
 
 By the end of this project, learners  would;
-Understand the fundamentals of Git, including repositories, commits, and branches.
-Use Git for version control in software development or other text-based document management tasks.
-Collaborate effectively with others using Git.
-Implement branching strategies to organize and manage code changes.
-Employ advanced Git techniques like rebasing, stashing, and submodules to tackle complex scenarios.
-Integrate Git into their development workflow to improve productivity and code quality.
-This project is designed to equip you with the knowledge and skills needed to confidently use Git in your professional and personal projects, regardless of your role in the technology industry.
+- Fully understand the basics of Git, including repositories, commits, and branches.
+- Effciently use git commands like git init, git add, git commit, git remote, git push, git pull, git clone e.t.c.
+- Collaborate effectively with others people or team using Git.
+- Implement branching strategies to organize and manage code changes.
+
+This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the technology industry.
 
 ### What is Github.
  Github is a code repository where all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
