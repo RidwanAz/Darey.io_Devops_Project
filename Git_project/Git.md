@@ -99,7 +99,19 @@ Confirm installation of git by running the below command
 Before diving further into git, below are some basic git commands which would be used for implementation as we move on;
 ***git add:*** add files or folder that are to be commited to your repository to a staging area
 ***git  commit:*** record changes to the repository
-git push: update changes made to remote repository
+git push: update changes made in a local repository to remote repository
+git init: Creates an empty git repository or initializes an exixting one
+git pull: fetch changes fo=rom a remote repository to a local branch
+git --version: Check the installed Git version.
+git config --global user.name "Your Name": Set your global Git username.
+git config --global user.email "youremail@example.com": Set your global Git email.
+
+To know  more detailed explanation of Git commands and their usage, run;
+
+    git --help
+
+![git help](images/githelp.png)
+
 ### Creating a repository
 Create a folder or directory in your local environment 
 
