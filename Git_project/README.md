@@ -20,6 +20,7 @@
     - Commits
     - Branches
     - Working With Remote Repositories for Collaboration
+    - Clonning Remote Git Repositories
 
 - Best Practices
 
