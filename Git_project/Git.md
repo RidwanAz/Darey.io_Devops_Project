@@ -52,13 +52,6 @@ This project is designed to equip learners with the knowledge and skills needed 
 ## Table of Contents
 ## Getting Started With Git
 
-### What is Github
-
-Github is a code repository where all code changes made locally are kept remotely. It is a tool for version control and increases collaboration among cross functions team.
-
-### Creating a Github account
-click [here](https://github.com) to create an account 
-
 #### a. Installing Git
 ***i. Windows***
     
@@ -171,7 +164,8 @@ Listing available branch in your local repository
   - To switch to anoher branch
 
         git checkout branch
-    - Merging branches together
+    - Merging branches
+      
    Merging branches is very important in git. It allows to add changes made separately to the main codebase.
 
           git merge master
@@ -181,7 +175,23 @@ Listing available branch in your local repository
   - To delete a branch
 
         git branch -d <branch_name>
-         git 
+
+***iv. Working with Remote Repositories for Collaboration***
+
+In the previous steps, we have created repositories locally, made commit to the repository, and also add branches to the reposirtory. In this step, we will be working with github as a remote repository.
+Github is a code repository where all code changes made locally are kept remotely. It is a tool for version control and increases collaboration among cross functions team. Github will server as a code base where all changes made different people in a team or different teams track and manage changes made.
+
+- Creating a Github account
+click [here](https://github.com) to create an account if you do not have one.
+- Creating a repository
+  Create a public repository in your github account
+  ![git branch](images/gitrepo.png)
+- Pushing changes made locally to our remote repository
+In the prevoius steps, 
+
+
+
+
  In order to push changes to the remote repository on github, we need the http link of the remote location.
 
      git remote origin -v
@@ -221,7 +231,7 @@ Your PAT should be stored safely and cannot be shared with anyone. Store somewhe
 ### Creating a repository on github 
 ![github](images/Screenshot_20230914-075850_Chrome.jpg)
 
-### Clonning a repository from your local environment 
+### Clonning a remote repository from your local environment 
 The format for clonning to a repository locally 
 
     Git clone <repository url>
