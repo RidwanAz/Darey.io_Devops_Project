@@ -186,11 +186,48 @@ click [here](https://github.com) to create an account if you do not have one.
 - Creating a repository
   Create a public repository in your github account
   ![git branch](images/gitrepo.png)
+
+- Creating a personal access token (PAT)
+As of August 13, 2021, authentication with password was disabled by github, personal access tokesn is used instead of password. Personal Access Token is a form of authentication that is used to access a Github account from your local environmrnt using Git. It give access to repository locally and server as a more secure way to access a github account by replacing the username and password.
+With the help of a PAT, we can eliminate the prompt showing up after pushing saved changes to github. The steps below shows how to create a PAT
+
+Click on the top right corner
+![github](images/Screenshot_20230914-072043_Chrome.jpg)
+
+Select settings from dropdown
+
+![github](images/Screenshot_20230914-072541_Chrome.jpg)
+
+Select Developer Settings
+
+![github](images/Screenshot_20230914-072602_Chrome.jpg)
+
+Select personal access token 
+
+![github](images/Screenshot_20230914-072614_Chrome.jpg)
+
+Select Token(classic)
+
+![github](images/Screenshot_20230914-072623_Chrome.jpg)
+
+Click on Generate new token to generate a new one
+
+![github](images/Screenshot_20230914-072636_Chrome.jpg)
+
+Your PAT should be stored safely and cannot be shared with anyone. Store somewhere you can only access it once after it is generated.
+
+  
 - Pushing changes made locally to our remote repository
-In the prevoius steps, 
+So far we have created a git repository which we made changes to locally and also made a github remote repository to py=ush our changes to. Now we will push our changes to our remote repository.
 
+      git remote add origin https://github.com/RidwanAz/git_lesson.git
+      git branch -M main
+      git push -u origin main
 
+This command adds a new remote repository called origin with the URL https://github.com/RidwanAz/git_lesson.git, pushes the current branch (main) to the remote repository origin and sets the upstream branch to main.
 
+![git branch](images/gitpush.png)
+Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with our personal access token
 
  In order to push changes to the remote repository on github, we need the http link of the remote location.
 
@@ -203,33 +240,8 @@ In the prevoius steps,
      git push -u origin main
 ***Note: After pushing changes to github, a prompt will be brought up asking for your username and password to your github account in order to push changes.***
 
-### Creating a personal access token (PAT)
-Personal Access Token is a form of authentication that is used to access a Github account from the command line using Git. It give access to repository locally and server as a more secure way to access a github account by replacing the username and password.
-With the help of a PAT, we can eliminate the prompt showing up after pushing saved changes 
-to github. The steps below shows how to create a PAT
+### 
 
-Click on the top right corner
-![github](images/Screenshot_20230914-072043_Chrome.jpg)
-
-Select settings from dropdown
-
-
-![github](images/Screenshot_20230914-072541_Chrome.jpg)
-
-Select Developer Settings
-![github](images/Screenshot_20230914-072602_Chrome.jpg)
-
-Select personal access token 
-![github](images/Screenshot_20230914-072614_Chrome.jpg)
-
-Select Token(classic)
-![github](images/Screenshot_20230914-072623_Chrome.jpg)
-
-Click on Generate new token to generate a new one
-![github](images/Screenshot_20230914-072636_Chrome.jpg)
-Your PAT should be stored safely and cannot be shared with anyone. Store somewhere you can only access it once after it is generated.
-### Creating a repository on github 
-![github](images/Screenshot_20230914-075850_Chrome.jpg)
 
 ### Clonning a remote repository from your local environment 
 The format for clonning to a repository locally 
