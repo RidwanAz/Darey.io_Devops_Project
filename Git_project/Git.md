@@ -60,7 +60,8 @@ click [here](https://github.com) to create an account
 
 ### Installing Git
 For Windows
-    #Download [git](https://gitforwindows.org/)
+    
+    Download [git](https://gitforwindows.org/)
 Update apt repositories 
 
        sudo apt update 
