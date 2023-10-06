@@ -133,7 +133,7 @@ Git repos are where files are stored temporarily before they are pushed to a rem
 
 ![git help](images/gitini.png)
 
-- - Task
+ ***Task 1: Create a folder for called darey_io, add a README.md file containing "This is my first repository as a devops engineer" in the folder, and make the folder a git repository.***
 
 ***ii. Commits*** 
 
@@ -148,7 +148,9 @@ Git repos are where files are stored temporarily before they are pushed to a rem
 - Commit changes
 
 ![git help](images/gitcommiti.png)
-  
+
+***Task 2 - Make your first commit  to the from the git repo in task 1 with the commit message "Learning and growing as a devops engineer"*** 
+
 
 ***iii. Branches***
 
@@ -177,6 +179,9 @@ Listing available branch in your local repository
   - To delete a branch
 
         git branch -d <branch_name>
+
+***Task 3 - create a branch called "collaboration", switch to the branch and create 3 non empty .txt files. Merge the collaboration branch to the main branch***
+
 
 ***iv. Working with Remote Repositories for Collaboration***
 
@@ -233,8 +238,8 @@ This command adds a new remote repository called origin with the URL https://git
 Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with our personal access token
 
 
-### Clonning a remote repository from your local environment 
-The format for clonning to a repository locally 
+- Clonning a remote repository from your local environment 
+The syntax for clonning to a repository locally 
 
     Git clone <repository url>
 
@@ -244,4 +249,7 @@ Clonning to the repository created.
 
 Replace you personal access token with the <PAT> when clonning your repository. The will eliminate a prompt showing while pushing changes to github
 
+***Task 4 - Create a remote repository and push changes made from task 1 - task 3***
+
+***Task 5 - Create a remote repository called "git_course", create a README.md file remotely, clone the remote repository***
 #### d. Side Hustle Tasks
