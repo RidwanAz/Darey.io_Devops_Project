@@ -166,7 +166,7 @@ Listing available branch in your local repository
         git checkout branch
     - Merging branches
       
-   Merging branches is very important in git. It allows to add changes made separately to the main codebase.
+   Merging branches is very important in git. It allows addition of changes made separately to the main codebase.
 
           git merge master
 
