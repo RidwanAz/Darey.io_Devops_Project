@@ -46,7 +46,7 @@ By the end of this project, learners  would;
 - Collaborate effectively with others people or team using Git.
 - Implement branching strategies to organize and manage code changes.
 
-This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the technology industry.
+This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the tech industry.
 
 ### What is Github.
  Github is a code repository where all code changes are kept. It is a tool for version control and increases collaboration among cross functions team.
