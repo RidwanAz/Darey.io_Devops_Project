@@ -64,6 +64,7 @@ click [here](https://github.com) to create an account
 Download [git](https://gitforwindows.org/)
 
 ***For Linux***
+
 Launch a terminal
 
 Update apt repositories 
@@ -74,6 +75,7 @@ Install git
     sudo apt install git
 
 ***For Mac***
+
 Launch a terminal and update repositories
     
      brew update
