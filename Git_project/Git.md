@@ -227,20 +227,8 @@ So far we have created a git repository which we made changes to locally and als
 This command adds a new remote repository called origin with the URL https://github.com/RidwanAz/git_lesson.git, pushes the current branch (main) to the remote repository origin and sets the upstream branch to main.
 
 ![git branch](images/gitpush.png)
+
 Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with our personal access token
-
- In order to push changes to the remote repository on github, we need the http link of the remote location.
-
-     git remote origin -v
- Add remote origin before pushing changes.
-
-     git remote add origin https://github.com/Ridwan010/darey_io.git
- Push Changes to your github account 
-
-     git push -u origin main
-***Note: After pushing changes to github, a prompt will be brought up asking for your username and password to your github account in order to push changes.***
-
-### 
 
 
 ### Clonning a remote repository from your local environment 
@@ -252,21 +240,4 @@ Clonning to the repository created.
 
     git clone https://<PAT>@github.com/Ridwan010/Darey.io.git
 
-![git Colne](images/gitclone.png)
-
-### Committing and Pushing changes to your remote location (github)
-Changes made in a github repository can be committed locally and then later pushed into a remote repository on github.
-Create a non empty file in the cloned github repository.
-
-    echo "## This is my first repository as a devops engineer" > Readme.md
-Add Changes made 
-
-    git add .
-
-Commit Changes 
-
-    git commit -m "This is my first commit"
-Push Changes to remote github repository 
-
-    git push
-
+Replace you personal access token with the <PAT> when clonning your repository. The will eliminate a prompt showing while pushing changes to github
