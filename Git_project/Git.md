@@ -89,6 +89,7 @@ Confirm installation of git by running the below command
 
        git --version 
 ![git version](images/gitversion.png)
+
 ### Creating a repository
 Create a folder or directory in your local environment 
 
