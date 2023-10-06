@@ -59,11 +59,11 @@ Github is a code repository where all code changes made locally are kept remotel
 click [here](https://github.com) to create an account 
 
 ### Installing Git
-For Windows
+***For Windows***
     
 Download [git](https://gitforwindows.org/)
 
-For Linux 
+***For Linux***
 Launch a terminal
 
 Update apt repositories 
@@ -73,7 +73,7 @@ Install git
 
     sudo apt install git
 
- For Mac
+***For Mac***
 Launch a terminal and update repositories
     
      brew update
