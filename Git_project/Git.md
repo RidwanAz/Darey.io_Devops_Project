@@ -115,7 +115,7 @@ To know  more detailed explanation of Git commands and their usage, run;
 ![git help](images/githelp.png)
 
 
-#### c. Core concepts
+#### c. Concepts
 
 ***i. Repositories***
 
@@ -132,6 +132,8 @@ Git repos are where files are stored temporarily before they are pushed to a rem
 - initializes the folder into a repository
 
 ![git help](images/gitini.png)
+
+- - Task
 
 ***ii. Commits*** 
 
@@ -241,3 +243,5 @@ Clonning to the repository created.
     git clone https://<PAT>@github.com/Ridwan010/Darey.io.git
 
 Replace you personal access token with the <PAT> when clonning your repository. The will eliminate a prompt showing while pushing changes to github
+
+#### d. Side Hustle Tasks
