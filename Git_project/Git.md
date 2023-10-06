@@ -35,7 +35,7 @@ Learners should have;
     - Emacs, vim or nano for linux users.
     - Visual Studio Code for Windows and Mac Users
 - Access to Git installed on their system.
-- A github account
+- A github account ceate [one](https://github.com)
 No prior experience with Git is required.
 
 ### Git Goals:
@@ -167,9 +167,20 @@ Listing available branch in your local repository
 
   ![git branch](images/gitbranc.png)
 
-- Change your working branch to main from master
+  - To switch to anoher branch
 
-     git branch  -M main
+        git checkout branch
+    - Merging branches together
+   Merging branches is very important in git. It allows to add changes made separately to the main codebase.
+
+          git merge master
+
+  The git command above merge the master branch while in the main branch
+    
+  - To delete a branch
+
+        git branch -d <branch_name>
+         git 
  In order to push changes to the remote repository on github, we need the http link of the remote location.
 
      git remote origin -v
