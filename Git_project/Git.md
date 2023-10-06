@@ -53,13 +53,14 @@ This project is designed to equip learners with the knowledge and skills needed 
 
 ### What is Github
 
- Github is a code repository where all code changes made locally are kept remotely. It is a tool for version control and increases collaboration among cross functions team.
+Github is a code repository where all code changes made locally are kept remotely. It is a tool for version control and increases collaboration among cross functions team.
 
 ### Creating a Github account
 click [here](https://github.com) to create an account 
 
-#### Installing Git
-
+### Installing Git
+For Windows
+        Download [git](https://gitforwindows.org/)
 Update apt repositories 
 
        sudo apt update 
