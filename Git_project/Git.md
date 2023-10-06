@@ -121,7 +121,7 @@ To know  more detailed explanation of Git commands and their usage, run;
 ![git help](images/githelp.png)
 
 
-#### c. core concepts
+#### c. Core concepts
 
 ***i. Repositories***
 
@@ -133,6 +133,7 @@ Git repos are where files are stored temporarily before they are pushed to a rem
     git init
  The commands above;   
 - Create a folder or directory in your local environment,
+- move into the directory
 - create a README.md file
 - initializes the folder into a repository
 
@@ -150,7 +151,7 @@ Git repos are where files are stored temporarily before they are pushed to a rem
 - Set your global Git email and;
 - Commit changes
 
-![git help](images/gitcommi.png)
+![git help](images/gitcommiti.png)
   
 
 ***iii. Branches
