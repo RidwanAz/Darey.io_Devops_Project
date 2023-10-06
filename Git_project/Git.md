@@ -1,7 +1,7 @@
 
 # Git
 
-## Introduction To Git
+# Introduction To Git
 Version control may be a basic angle of present day software development, empowering teams to collaborate efficiently, track changes, and keep up a verifiable record of their work. Git, a  common version control system, has ended up as the most popularly used within the software development industry. This project is about understanding and utilizing Git.
 
 ### What is Git ? 🤔
@@ -49,8 +49,8 @@ By the end of this project, learners  would;
 
 This project is designed to equip learners with the knowledge and skills needed to confidently use Git in  professional and personal projects, regardless of your role in the tech industry.
 
-## Table of Contents
-## Getting Started With Git
+# Table of Contents
+# Getting Started With Git
 
 #### a. Installing Git
 ***i. Windows***
@@ -79,7 +79,7 @@ The commands above will update package list and install git using apt with super
     
      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
      brew install git 
-The first command above will install homebrew and the later will installgit using brew.
+The first command above will install homebrew and the later will install git using brew.
 
 ![git install](images/gitinsta.png)
 
@@ -252,4 +252,22 @@ Replace you personal access token with the <PAT> when clonning your repository. 
 ***Task 4 - Create a remote repository and push changes made from task 1 - task 3***
 
 ***Task 5 - Create a remote repository called "git_course", create a README.md file remotely, clone the remote repository***
-#### d. Side Hustle Tasks
+
+
+# Best Practices
+Commit Frequently: Make small, focused commits to track changes effectively.
+Use Descriptive Messages: Write clear commit messages that explain the changes made.
+Branch Strategically: Adopt a branching strategy like Gitflow to manage feature development and releases.
+Pull Before Push: Always pull the latest changes from the remote repository before pushing your own changes.
+For more best practices, refer to Git Best Practices.
+
+# Use Cases
+$$Use Case 1: Feature Development
+Imagine you're developing a new feature for your project. You can create a feature branch, work on it, and merge it back into the main branch when it's ready.
+
+Use Case 2: Bug Fix
+Suppose a critical bug surfaces in your application. Create a bug-fix branch, fix the issue, and merge it into the main branch to deploy the fix.
+
+7. Conclusion
+In this guide, we've covered the essentials of Git installation, basic commands, core concepts, side hustle tasks, advanced topics, best practices, and use cases. Git is a powerful tool that empowers collaborative development and version control. Continue exploring Git's rich feature set and expand your expertise in this fundamental aspect of modern software development. Happy coding!
+
