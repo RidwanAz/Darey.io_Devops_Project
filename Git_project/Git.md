@@ -2,7 +2,7 @@
 # 1. Git
 
 # 2. Introduction To Git
-Version control may be a basic angle of present day software development, empowering teams to collaborate efficiently, track changes, and keep up a verifiable record of their work. Git, a  common version control system, has ended up as the most popularly used within the software development industry. This project is about understanding and utilizing Git.
+Version control may be a essential point of modern day software development, enabling teams to collaborate more effectively, track changes, and keep up a unquestionable record of their work. Git, a  common version control system, it has become the popularly used within the software development industry. 
 
 ### What is Git ? 🤔
 The simple definition is that git is a version control system. A version control system is a software tool that helps manage and track changes to files and directories in a project over time. It is an important tool for devops engineers. Git is an effective tool that helps developers run their source code effectively. It permits different people or teams to work on the same project  without clashes. 
@@ -23,29 +23,29 @@ The knowledege of git is needed by anyone into software development and deployme
 
 ### Target Audience
 
-This project is suitable for a wide range of professionals in different tech industry which are:
+This project is applicable to a different  experts in numerous tech industry which are:
 
-**- Devops Engineers:** Git is needed by devops engineers for tracking changes made to source code, collaborate on project, deploy code to production, manage infrastructure and resources
+**- Devops Engineers:** One of the tasks of a DevOps engineer is to design and develop CI/CD pipelines. Git plays an important role in CI/CD by tracking changes made to source code, collaborate on project, deploy code to production, manage infrastructure and resources
 
-**- Software Developers:** Git is an esssential tool for the management of source code, and developers of all levels can benefit from mastering it.
+**- Software Engineers:** They commonly use git  to store and share small scripts and bits of codes.
 
-**- Project Managers:** Understanding Git helps project managers track progress and coordinate team efforts efficiently.
+**- Project Managers:** The knowledge of git helps project managers quicken their project planning workflows, track progress and coordinate team work easily.
 
-**- System Administrators:** Git is not limited to code; it can be used to manage configurations, scripts, and documentation, making it valuable for system administrators.
+**- System Administrators:** Use git keeps a history of changes, making it less demanding to settle issues. it can be used to manage configurations, scripts, and documentation.
 
 **- Data Scientists:** Git is useful for managing data science projects and collaborating with colleagues on research.
 
 ### Prerequisites
 
 Learners should have;
-- Basic understanding of linux and its commands.
-- A code editor or IDE of their choice
+- Little or more knowledge of linux and its commands.
+- A text editor
     - Emacs, vim or nano for linux users.
     - Visual Studio Code for Windows and Mac Users
-- Access to Git installed on their system.
+- Access to Git installed on their operating system.
 - A github account create [one](https://github.com)
   
-No prior experience with Git is required.
+Learners do not need any previous experience with git to get started
 
 ### Git Goals:
 
