@@ -1,11 +1,49 @@
-# LAMP STACK IMPLEMENTATION
-The word LAMP refers to a group of open source software installed together which can be used to host web applications.
+# Web Stack Implementation (LAMP Stack) In AWS
+
+# Introduction
+
+In the constantly changing world of software development, picking the right technology stack is crucial for the success or failure of a project. The "Web Stack" project is a program for people who want to learn how to make and launch web applications. This course teaches you how to create a type of web stack that work on all operating systems and allow users to interact with them. You will learn about the latest technology used to build these websites.
+
+This project focuses on exploring how different web development tools and frameworks can work together effectively. It aims to teach people how to create a LAMP stack and deploy static pages onto the stack. We will begin by looking at the main parts and structure of this new web system. Through this, learners will learn about the benefits and possibilities of using these different software technologies together.
+
+
+### What is Web Stack ?
+A simple meaning of web in any interconnected things. A stack on the other hand is a collection of similar things or objects which are together.
+A web stack is a collection of similar things or object (softwares) which work together in an interconnected way to run a function. There are different types of web stack and they all perform different function. There are different types of web stacks which are;
+- **LAMP** (Linux, Apache, MySQL, PHP or Python, or Perl)
+- **LEMP** (Linux, Nginx, MySQL, PHP or Python, or Perl)
+- **MERN** (MongoDB, ExpressJS, ReactJS, NodeJS)
+- **MEAN** (MongoDB, ExpressJS, AngularJS, NodeJS)
+
+These stacks all have diferent function. In this project, we will be focusing on LAMP Stack
+**i. LAMP Stack**
+
+The word LAMP refers to a group of open source software installed together which can be used to host web applications. The stack consists of four software technologies which are linux, a database, an hypertext processor and a web sever that is not capable of load balancing and reverse proxy
 ***LAMP*** meaning Linux; a unix operating system, Apache; a web server, Mysql; a database and PHP; an Hypertext preprocessor.
 
-### Tools Used For Completion of the project
-- An AWS account with an ubuntu EC2 instance
-- Virtual machine using linux
-- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)(not necessary)
+### Importance of Using LAMP Stack
+
+- LAMP is a popular and flexible web development platform that supports many websites and web applications. If you understand LAMP, you can create web solutions that are interactive, have many features, and can handle a lot of traffic.
+- All parts of the LAMP stack are free for anyone to use and contribute to, which encourages people to work together in building websites and web applications. This not only saves money but also promotes working together and coming up with new ideas.
+- LAMP is used by many different industries. It is important for web developers, system administrators, and IT professionals to know about it.
+- LAMP includes both the skills needed for the part of a website that users see (HTML, PHP) and the skills needed for the behind-the-scenes part of a website (Linux, Apache, MySQL). LAMP provides a complete view of web development.
+- Entrepreneurs who want to start their own web-based businesses or digital projects without relying too much on specialized technologies find LAMP skills very useful.
+
+### Target Audience
+
+This project is for devops engineers who wants to become proficient in software deployment, particularly those seeking to deploy dynamic web applications but are not limited to;
+- System administrator
+- Site Reliability Engineers
+
+
+### Prerequisite
+- An AWS account 
+- Access to a terminal or a virtual machine
+- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+
+### Goals
+By the end of this project, learners should be able to setup a LAMP Stack and deploy a static php page.
+
 
 ## Installation of Apache
 update apt repositories
