@@ -273,7 +273,7 @@ This command adds a new remote repository called origin with the URL https://git
 
 ![git branch](images/gitpush.png)
 
-Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with our personal access token
+Note that "Password for 'https://RidwanAz@github.com': <PAT>" PAT should be replaced with your personal access token
 
 
 ***v. Clonning a Remote Git Repository***
