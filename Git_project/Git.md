@@ -12,9 +12,13 @@ This project aim to present the world of Git, covering everything from the esse
 The knowledege of git is needed by anyone into software development and deployment, ranging but no limited from developers to devops engineers, project managers, system administrator. Some of the benefit of using git are;
 
 **- Collaboration:** Git allows teams to work collaboratively. In the devops lifecycle software development and deployment usually require teams to work together. For example, developers push code changes to a remote repository, QA engineer pull the code changes for testing and operations engineer deploy code changes into production using git.
+
 **- Version History:** Git maintains a detailed history of changes, therefore, it makes it easy to track who made changes, what changes they made and when the changes were made.
+
 **- Branching and Merging:** Git's branching and merging capabilities make it possible for development team to create other branches separate from the main codebase to work on new software version, features or fix bugs in previous release version before integraging them into the main codebase.
+
 **- Distributed Development:** Git allows for distributed development, meaning team members can work on their copies of the code and merge changes later, even when not connected to the internet.
+
 **- Open Source Collaboration:** Many open-source projects use Git, so understanding it is essential for contributing to or maintaining open-source software.
 
 ### Target Audience
@@ -22,9 +26,13 @@ The knowledege of git is needed by anyone into software development and deployme
 This project is suitable for a wide range of professionals in different tech industry which are:
 
 **- Devops Engineers:** Git is needed by devops engineers for tracking changes made to source code, collaborate on project, deploy code to production, manage infrastructure and resources
+
 **- Software Developers:** Git is an esssential tool for the management of source code, and developers of all levels can benefit from mastering it.
+
 **- Project Managers:** Understanding Git helps project managers track progress and coordinate team efforts efficiently.
+
 **- System Administrators:** Git is not limited to code; it can be used to manage configurations, scripts, and documentation, making it valuable for system administrators.
+
 **- Data Scientists:** Git is useful for managing data science projects and collaborating with colleagues on research.
 
 ### Prerequisites
