@@ -38,7 +38,7 @@ This project is for devops engineers who wants to become proficient in software 
 
 
 ### Prerequisite
-- An AWS account 
+- An AWS account [Click here](https://portal.aws.amazon.com/billing/signup#/start/email) to create one
 - Access to a terminal or a virtual machine
 - Knowledge of linux
 - SSH [Click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to kearn more on ssh keys
@@ -49,9 +49,8 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 # Getting Started With LAMP Stack
 
-#### Step 1 Launching and Ubuntu Instance
-
-
+#### Step 1 Launch Ubuntu Instance and SSH Into It
+**i. Log into
 
 
 
