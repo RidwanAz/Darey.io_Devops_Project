@@ -16,6 +16,7 @@ A web stack is a collection of similar things or object (softwares) which work t
 - **MEAN** (MongoDB, ExpressJS, AngularJS, NodeJS)
 
 These stacks all have diferent function. In this project, we will be focusing on LAMP Stack
+
 **i. LAMP Stack**
 
 The word LAMP refers to a group of open source software installed together which can be used to host web applications. The stack consists of four software technologies which are linux, a database, an hypertext processor and a web sever that is not capable of load balancing and reverse proxy
@@ -39,10 +40,19 @@ This project is for devops engineers who wants to become proficient in software 
 ### Prerequisite
 - An AWS account 
 - Access to a terminal or a virtual machine
-- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+- Knowledge of linux
+- SSH [Click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to kearn more on ssh keys
 
 ### Goals
 By the end of this project, learners should be able to setup a LAMP Stack and deploy a static php page.
+
+
+# Getting Started With LAMP Stack
+
+#### Step 1 Launching and Ubuntu Instance
+
+
+
 
 
 ## Installation of Apache
