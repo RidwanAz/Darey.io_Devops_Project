@@ -50,12 +50,15 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 # Getting Started With LAMP Stack
 
 #### Step 1: Launch Ubuntu Instance and SSH Into From Your Terminal
+
 **i. Sign in to your AWS account**
 
 **ii. On the top right select services and search for ***Elastic Cloud Compute (EC2).*****
 
 **iii. From the menu on the left side, select ***instances.*****
+
 **iv. Select ***launch instance*** on the top right side.***
+
  **v. Follow the gif below to finish lauching an instance**
 
 ![aws](images/instance.gif)
@@ -74,7 +77,8 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 **Note:** path/to/.pem should be replaced with the path to the ssh .pem key the was download when creating the instance and public_ip_address should be replaced the actual ubuntu instance public ip address
 
 #### Step 2: Installation of Apache
-In the previous step, we were able to create and instance and ssh into the instance
+In the previous step, we were able to create and instance and ssh into the instance. In this step, we will install apache webserver.
+
 update apt repositories
 
     sudo apt update
@@ -105,7 +109,7 @@ You can check your ubuntu instance ip address from your aws console from the EC2
 
 #### Step 2: Installation of Mysql
 
-In the previous step, apache web server installed successfully. In this step, mysql will be installed as a database to store data for our web application.
+In step 1 above, we were able to install apache web server successfully. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
 
     sudo apt install mysql-server
@@ -124,17 +128,18 @@ Log out of mysql
 
     mysql>exit
 
-## Installing PHP
+#### Step 4: Installing PHP
 
-So far, Apache and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step
+So far, we have been created an instance, installed Apache and Mysql. The last software technology of the LAMP stack is PHP will be installed in this step
 
     sudo apt install php libapache2-mod-php php-mysql
 Check for the successful installation of php
 
     php -v
 
-## Configuring Apache Web Server To Serve As A Virtual Host 
-Create a directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which apache will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Apache web server is smart enough to know this location and serve it with the help of its configuration file.
+#### Step 5: Configuring Apache Web Server To Serve As A Virtual Host 
+
+ We need to create a  directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which apache will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Apache web server is smart enough to know this location and serve it with the help of its configuration file.
 
     sudo mkdir /var/www/html/darey.io
 Create an simple html file which our apache will serve
@@ -181,9 +186,9 @@ Check your web browser.
 
     http://ubuntu_instance_public_ip_address
 
-## Modifying Directory Index To Serve php files
+#### Step 6: Modifying Directory Index To Serve php files
 
-By default, in the index.html comes before index.php1 file in /etc/apache2/mods-enabled/dir.conf. As a result of this, apache will always serve html files before php file. The directory index needs to be modified to apache read php files
+By default, in the index.html comes before index.php file in /etc/apache2/mods-enabled/dir.conf. As a result of this, apache will always serve html files before php file. The directory index needs to be modified to apache read php files
 
 
     sudo nano /etc/apache2/mods-enabled/dir.conf
@@ -196,7 +201,7 @@ Save and close the file then reload apache
 
     sudo systemctl reload apache2
 
-## Testing PHP with Apache 
+#### Step 7: Testing PHP with Apache 
 
 Replace the index.html file in /var/www/html/darey.io with index.php with a simple php info.
 
