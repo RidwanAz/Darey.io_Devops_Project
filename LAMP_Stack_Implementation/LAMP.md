@@ -79,7 +79,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 #### Step 2: Installation of Apache
 In the previous step, we were able to create and instance and ssh into the instance. In this step, we will install apache webserver.
 
-update apt repositories
+update package lists and apt repositories
 
     sudo apt update
 Install apache web server
