@@ -49,7 +49,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 # Getting Started With LAMP Stack
 
-#### Step 1: Launch Ubuntu Instance and SSH Into From Your Terminal
+#### Step 1: Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
 
 **i. Sign in to your AWS account**
 
