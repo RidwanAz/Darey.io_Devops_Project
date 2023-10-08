@@ -57,9 +57,9 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 **iii. From the menu on the left side, select ***instances.*****
 
-**iv. Select ***launch instance*** on the top right side.***
+**iv. Select ***launch instance*** on the top right side.**
 
- **v. Follow the gif below to finish lauching an instance**
+ **v. Follow the gif below to finish lauching an instance.**
 
 ![aws](images/instance.gif)
 
@@ -107,7 +107,7 @@ You can check your ubuntu instance ip address from your aws console from the EC2
 
     curl http://icanhazip.com
 
-#### Step 2: Installation of Mysql
+#### Step 3: Installation of Mysql
 
 In step 1 above, we were able to install apache web server successfully. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
@@ -214,7 +214,8 @@ Save and close the file
 You can use ubuntu instance public ip address to access the php file served by apache from your web browser 
 ![php](images/phpinfo.png)
 The default page above will be displayed.
-## Testing PHP and Mysql with Apache (LAMP Stack)
+
+#### Step 8: Testing PHP and Mysql with Apache (LAMP Stack)
 
 In the previous step, php was tested with apache by using apache to serve a php file. In the step mysql database will be connected to php and web served by apache.
 The first to do is to create a database with datas
@@ -305,3 +306,17 @@ Paste the content below
     }
 Save and close the file
 Check you web browser with your ubuntu instance ip address to see apache serving php with the contents in the database displayed.
+
+
+# Best Practices of LAMP Stack
+
+In the world of LAMP Stack development, it is important to follow the best practices used by professionals in order to build strong, safe, and easily manageable web applications.
+
+- Use version control systems like Git to keep track of changes in your code, work with others, and make sure your project is saved as a backup.
+
+- Monitoring and logging means setting up tools that will help you find and fix problems in your work environment before they cause any trouble.
+
+- Regular backups mean making copies of your web application and its database on a regular basis. This is done to protect against losing important data or if there are problems with the server.
+
+
+
