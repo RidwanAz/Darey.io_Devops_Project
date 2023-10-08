@@ -38,7 +38,7 @@ This project is for devops engineers who wants to become proficient in software 
 
 
 ### Prerequisite
-- An AWS account [Click here](https://portal.aws.amazon.com/billing/signup#/start/email) to create one
+- An AWS account. [Click here](https://portal.aws.amazon.com/billing/signup#/start/email) to create a free account
 - Access to a terminal or a virtual machine
 - Knowledge of linux
 - SSH [Click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to kearn more on ssh keys
@@ -49,12 +49,32 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 # Getting Started With LAMP Stack
 
-#### Step 1 Launch Ubuntu Instance and SSH Into It
-**i. Log into
+#### Step 1: Launch Ubuntu Instance and SSH Into From Your Terminal
+**i. Sign in to your AWS account**
 
+**ii. On the top right select services and search for ***Elastic Cloud Compute (EC2).*****
 
+**iii. From the menu on the left side, select ***instances.*****
+**iv. Select ***launch instance*** on the top right side.***
+ **v. Follow the gif below to finish lauching an instance**
 
-## Installation of Apache
+![aws](images/instance.gif)
+
+**Important**: Be sure to launch an Ubuntu 20.04LTS instance. Also keep your .pem key safely. Once it is lost, you will not be able to ssh into the instance again. Also, anyone with the key can have access to your instance
+
+**SSH into your ubuntu instance**
+- For windows, open command promot or powershell
+
+      ssh -i path/to/.pem ubuntu@public_ip_address
+
+- For mac and linux, open a terminal
+
+      ssh -i path/to/.pem ubuntu@public_ip_address
+
+**Note:** path/to/.pem should be replaced with the path to the ssh .pem key the was download when creating the instance and public_ip_address should be replaced the actual ubuntu instance public ip address
+
+#### Step 2: Installation of Apache
+In the previous step, we were able to create and instance and ssh into the instance
 update apt repositories
 
     sudo apt update
@@ -83,9 +103,9 @@ You can check your ubuntu instance ip address from your aws console from the EC2
 
     curl http://icanhazip.com
 
-## Installation of Mysql
+#### Step 2: Installation of Mysql
 
-In the previous step, apache web server was installed successfully. In this step, mysql will be installed as a database to store data for our web application.
+In the previous step, apache web server installed successfully. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
 
     sudo apt install mysql-server
