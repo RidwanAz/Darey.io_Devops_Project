@@ -5,7 +5,7 @@
   - Importance of Git
   - Target Audience
   - Prerequsites
-  - Git Goals
+  - Goals To Be Accomplished By The End of The Project
 
 ## Getting Started With Git
   - Installing Git
