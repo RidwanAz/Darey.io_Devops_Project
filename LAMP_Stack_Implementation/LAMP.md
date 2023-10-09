@@ -46,6 +46,34 @@ This project is for devops engineers who wants to become proficient in software 
 ### Goals
 By the end of this project, learners should be able to setup a LAMP Stack and deploy a static php page.
 
+# Project Highlight
+
+- Web Stack Implementation (LAMP Stack) In AWS
+
+- Introduction To Web Stack
+  - What is Web Stack
+    - Lamp Stack
+      
+  - Importance of Using LAMP Stack
+  - Target Audience
+  - Prerequisite
+  - Goals To Be Accomplished By The End of The Project
+
+- Getting Started With LAMP Stack
+  - Launching an Ubuntu Instance on AWS Console and SSH Into It From Your Terminal
+  - Installating Apache
+  - Installating  Mysql
+  - Installating PHP
+  - Configuring Apache Web server to Serves As A Virtual Host
+  - Modifying Directory Index To Serve php files
+  - Testing PHP with Apache
+  - Testing PHP and Mysql with Apache (LAMP Stack)
+
+- Best Practices Of LAMP Stack
+
+-  Use Cases of LAMP STACK
+
+# Conclusion
 
 # Getting Started With LAMP Stack
 
@@ -76,7 +104,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 **Note:** path/to/.pem should be replaced with the path to the ssh .pem key the was download when creating the instance and public_ip_address should be replaced the actual ubuntu instance public ip address
 
-#### Step 2: Installation of Apache
+#### Step 2: Installating Apache
 In the previous step, we were able to create and instance and ssh into the instance. In this step, we will install apache webserver.
 
 update package lists and apt repositories
@@ -107,7 +135,7 @@ You can check your ubuntu instance ip address from your aws console from the EC2
 
     curl http://icanhazip.com
 
-#### Step 3: Installation of Mysql
+#### Step 3: Installating Mysql
 
 In step 1 above, we were able to install apache web server successfully. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
