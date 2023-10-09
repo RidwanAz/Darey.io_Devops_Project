@@ -1,5 +1,16 @@
 # LEMP STACK IMPLEMENTATION
-In project_2 LAMP Stack was implemented. In the project LEMP Stack will be implemented.
+
+In project_2 LAMP Stack was implemented, in this project LEMP Stack will be implemented. Learners will understand more about web stack and what LEMP Stack is, its importane, and how it is different from LAMP Stack. As we move forward in this project, learners will learn  how to create and launch web applications using the LEMP stack.
+
+We’ll start by exploring the LEMP stack's architecture. Linux is the strong base, Nginx serves as the powerful web server, MySQL manages databases, and PHP gives life to your web applications by enabling server-side functionality.
+In this project, we will understand you more on ec2 instaces, improve the performance of Nginx, manage MySQL databases, and become skilled at developing PHP code for your applications. 
+We will learn many different techniques, such as dealing with user requests and working with databases, filling out forms, and making sure things are secure. In addition, we will show you commonly used programs and tools that can increase your efficiency and make the process of creating web applications easier.
+
+When you finish the Project (LEMP Stack) Course, you will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development. Get ready to use your imagination and start this exciting adventure with us.
+By the end of this project a task will be assigned which will be based on everything we has be done in this project. So let's  start 
+
+What Is LEMP Stack ?
+From the last project, we understand what web stack means
 The word LEMP refers to a group of open source software installed together which can be used to host web applications.
 ***LEMP*** meaning Linux; a unix operating system, Nginx; a web server capable of load balancing and can serve as a reverse proxy, Mysql; a database and PHP; an Hypertext preprocessor.
 What makes a LAMP stack different  from LEMP Stack is the Nginx web server which is the most widely used web server.
