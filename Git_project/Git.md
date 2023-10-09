@@ -153,7 +153,7 @@ To know  more detailed explanation of Git commands and their usage, run;
 ![git help](images/githelp.png)
 
 
-#### c. Concepts
+#### c. Basic Git Concepts
 
 ***i. Repositories***
 
@@ -293,18 +293,18 @@ Replace you personal access token with the <PAT> when clonning your repository. 
 ***Task 5 - Create a remote repository called "git_course", create a README.md file remotely, clone the remote repository***
 
 
-# 4. Best Practices
+# 4. Best Practices of Git
 Commit Frequently: Make small, focused commits to track changes effectively.
 Use Descriptive Messages: Write clear commit messages that explain the changes made.
 Branch Strategically: Adopt a branching strategy like Gitflow to manage feature development and releases.
 Pull Before Push: Always pull the latest changes from the remote repository before pushing your own changes.
 For more best practices, refer to Git Best Practices.
 
-# 5. Use Cases
-#### Use Case 1: Feature Development
+# 5. Use Cases of Git
+#### Feature Development
 Imagine you're developing a new feature for your project. You can create a feature branch, work on it, and merge it back into the main branch when it's ready.
 
-#### Use Case 2: Bug Fix
+#### Bug Fix
 Suppose a critical bug surfaces in your application. Create a bug-fix branch, fix the issue, and merge it into the main branch to deploy the fix.
 
 # 6. Conclusion
