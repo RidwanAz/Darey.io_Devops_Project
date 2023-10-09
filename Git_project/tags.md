@@ -1,17 +1,20 @@
-- Project Title
-  - Git
+# Tags for LAMP Stack Project
 
-- Technology Category
+## Technology Category
+
   - Version Control System (VCS)
 
-- Sub-category
+## Sub-category
+
   - Git
 
-- Skill Level
+## Level
+
   - Beginner
   - Intermediate
 
-- Applicable Careers
+## Applicable Careers
+
   - DevOps Engineering
   - Software Engineering
   - Data Analysis
