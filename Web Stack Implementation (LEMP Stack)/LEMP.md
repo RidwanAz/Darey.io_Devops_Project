@@ -11,7 +11,7 @@ We will learn many different techniques, such as dealing with user requests and 
 When you finish the Project (LEMP Stack) Course, you will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development. Get ready to use your imagination and start this exciting adventure with us.
 By the end of this project a task will be assigned which will be based on everything we has be done in this project. So let's  start 
 
-# What Is LEMP Stack ?
+#### What Is LEMP Stack ?
 
 From the last project, we understand what web stack is a collection of similar things or object (softwares) which work together in an interconnected way to run a function.
 
@@ -21,15 +21,13 @@ The word LEMP refers to a group of open source software installed together which
 **What makes a LAMP stack different from LEMP Stack** 
 
 The difference between a LAMP Stack and a LEMP Stack is their web servers. A LAMP Stack makes use of an apache web server and a LEMP Stack makes use of a nginx web server.
-Both web servers have their advantages, while apache is highly versatile, nginx has a very high performance, capable of load balancing amd serve as a reverse proxy.
+Both web servers have their advantages, while apache is highly versatile, nginx has a very high performance, capable of load balancing amd serve as a reverse proxy and is the most widely used web server.
 
+### Prerequisite
 
-which is the most widely used web server.
-
-### Tools Used For Completion of the project
 - An AWS account with an ubuntu EC2 instance
-- Virtual machine using linux
-- [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)(not necessary)
+- Access to a terminal or virtual machine
+- SSH. [click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to learn more on ssh
 
 ## Installation of Nginx
 update apt repositories
