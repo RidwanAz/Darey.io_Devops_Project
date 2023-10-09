@@ -1,5 +1,7 @@
 # LEMP STACK IMPLEMENTATION
 
+# Introduction To LEMP Stack
+
 In project_2 LAMP Stack was implemented, in this project LEMP Stack will be implemented. Learners will understand more about web stack and what LEMP Stack is, its importane, and how it is different from LAMP Stack. As we move forward in this project, learners will learn  how to create and launch web applications using the LEMP stack.
 
 We’ll start by exploring the LEMP stack's architecture. Linux is the strong base, Nginx serves as the powerful web server, MySQL manages databases, and PHP gives life to your web applications by enabling server-side functionality.
@@ -9,11 +11,21 @@ We will learn many different techniques, such as dealing with user requests and 
 When you finish the Project (LEMP Stack) Course, you will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development. Get ready to use your imagination and start this exciting adventure with us.
 By the end of this project a task will be assigned which will be based on everything we has be done in this project. So let's  start 
 
-What Is LEMP Stack ?
-From the last project, we understand what web stack means
+# What Is LEMP Stack ?
+
+From the last project, we understand what web stack is a collection of similar things or object (softwares) which work together in an interconnected way to run a function.
+
 The word LEMP refers to a group of open source software installed together which can be used to host web applications.
 ***LEMP*** meaning Linux; a unix operating system, Nginx; a web server capable of load balancing and can serve as a reverse proxy, Mysql; a database and PHP; an Hypertext preprocessor.
-What makes a LAMP stack different  from LEMP Stack is the Nginx web server which is the most widely used web server.
+
+**What makes a LAMP stack different from LEMP Stack** 
+
+The difference between a LAMP Stack and a LEMP Stack is their web servers. A LAMP Stack makes use of an apache web server and a LEMP Stack makes use of a nginx web server.
+Both web servers have their advantages, while apache is highly versatile, nginx has a very high performance, capable of load balancing amd serve as a reverse proxy.
+
+
+which is the most widely used web server.
+
 ### Tools Used For Completion of the project
 - An AWS account with an ubuntu EC2 instance
 - Virtual machine using linux
