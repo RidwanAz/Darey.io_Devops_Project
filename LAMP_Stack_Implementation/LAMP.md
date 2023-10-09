@@ -61,7 +61,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
  **v. Follow the gif below to finish lauching an instance.**
 
-![aws](images/instance.gif)
+![aws](images/aws.gif)
 
 **Important**: Be sure to launch an Ubuntu 20.04LTS instance. Also keep your .pem key safely. Once it is lost, you will not be able to ssh into the instance again. Also, anyone with the key can have access to your instance
 
