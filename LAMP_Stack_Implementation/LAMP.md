@@ -73,7 +73,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 -  Use Cases of LAMP STACK
 
-# Conclusion
+- Conclusion
 
 # Getting Started With LAMP Stack
 
@@ -87,7 +87,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 **iv. Select ***launch instance*** on the top right side.**
 
- **v. Follow the gif below to finish lauching an instance.**
+ **v. Follow the image below to finish lauching an instance.**
 
 ![aws](images/aws.gif)
 
@@ -335,6 +335,16 @@ Paste the content below
 Save and close the file
 Check you web browser with your ubuntu instance ip address to see apache serving php with the contents in the database displayed.
 
+## Task For This Project
+i. Launch an ubuntu instance and ssh into it.
+ii. Set up a lamp stack
+iii. Download a simple bootstrap code to host on your Stack. Use <wget https://github.com/startbootstrap/startbootstrap-agency/archive/gh-pages.zip>
+iv. unzip the folder host it on your LAMP Stack 
+
+***Hint:*** unzip the folder with the command "unzip" if not installed, installed unzip with 
+
+	sudo apt install unzip
+ Then move the whole folder you unziped to your project folder and update the server block configuration file.
 
 # Best Practices of LAMP Stack
 
