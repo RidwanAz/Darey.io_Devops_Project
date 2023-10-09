@@ -1,3 +1,14 @@
+# Web Stack Implementation (LAMP Stack) In AWS
+
+# Introduction To Web Stack
+
+- What is Web Stack
+  - Lamp Stack
+- Importance of Using LAMP Stack
+- Target Audience
+- Prerequisite
+- Goal to be accomplished
+
 ***What is LAMP Stack***
 
 ***Tool Used***
