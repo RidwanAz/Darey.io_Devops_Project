@@ -49,7 +49,7 @@ Learners should have;
   
 Learners do not need any previous experience with git to get started
 
-### Git Goals:
+### Goals To Be Accomplished By The End of The Project:
 
 By the end of this project, learners  would;
 - Fully understand the basics of Git, including repositories, commits, and branches.
@@ -67,7 +67,7 @@ This project is designed to equip learners with the knowledge and skills needed 
   - Importance of Git
   - Target Audience
   - Prerequsites
-  - Git Goals
+  - Goals To Be Accomplished By The End of The Project
 
 - Getting Started With Git
   - Installing Git
