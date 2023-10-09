@@ -1,4 +1,4 @@
-# Tags for LAMP Stack Project
+# Tags for Git Project
 
 ## Technology Category
 
