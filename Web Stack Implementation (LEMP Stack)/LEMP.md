@@ -6,9 +6,8 @@ In project_2 LAMP Stack was implemented, in this project LEMP Stack will be impl
 
 We’ll start by exploring the LEMP stack's architecture. Linux is the strong base, Nginx serves as the powerful web server, MySQL manages databases, and PHP gives life to your web applications by enabling server-side functionality.
 In this project, we will understand you more on ec2 instaces, improve the performance of Nginx, manage MySQL databases, and become skilled at developing PHP code for your applications. 
-We will learn many different techniques, such as dealing with user requests and working with databases, filling out forms, and making sure things are secure. In addition, we will show you commonly used programs and tools that can increase your efficiency and make the process of creating web applications easier.
 
-When you finish the Project (LEMP Stack) Course, you will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development. Get ready to use your imagination and start this exciting adventure with us.
+When you finish the Project (LEMP Stack) Course, Get ready to use your imagination and start this exciting adventure with us.
 By the end of this project a task will be assigned which will be based on everything we has be done in this project. So let's  start 
 
 #### What Is LEMP Stack ?
@@ -23,13 +22,41 @@ The word LEMP refers to a group of open source software installed together which
 The difference between a LAMP Stack and a LEMP Stack is their web servers. A LAMP Stack makes use of an apache web server and a LEMP Stack makes use of a nginx web server.
 Both web servers have their advantages, while apache is highly versatile, nginx has a very high performance, capable of load balancing amd serve as a reverse proxy and is the most widely used web server.
 
-### Prerequisite
+#### Advantages of LEMP Stack
+
+Web Application Development: The LEMP Stack is the foundation for building dynamic and high-performing web applications. It provides the essential components required to create web-based software, making it a fundamental technology stack for web developers and engineers.
+
+i. Nginx is an important part of the LEMP Stack handles many connections at once and also highly scalability. This is important for websites and apps that need to handle many users.
+
+ii. Understanding and implementing the LEMP Stack correctly is crucial for ensuring the security of web applications. DevOps engineers and system administrators need to be well-versed in securing each component of the stack to protect against common web vulnerabilities and attacks.
+
+iii. MySQL, the "M" in LEMP, is a widely-used relational database management system. Knowledge of how to set up and manage databases is essential for applications that require data storage and retrieval.
+
+iv. PHP is a common programming language used for creating websites. It is part of the LEMP stack, which is a group of software used to run web applications. Learning how to code in PHP and connect it with the LEMP Stack allows developers to make websites that are interactive and change as users interact with them.
+
+
+#### Target Audience
+
+i. DevOps Engineers: DevOps professionals play a critical role in setting up and managing server environments. Understanding the LEMP Stack is essential for configuring web servers, optimizing performance, and ensuring robust security.
+
+ii. System Administrators: System administrators responsible for server maintenance and security will find the LEMP Stack knowledge valuable. It enables them to set up and manage Linux-based web servers and databases effectively.
+
+iii. Web Developers: Web developers looking to build dynamic websites and web applications can benefit from learning the LEMP Stack. They will gain the skills needed to create feature-rich, server-side applications.
+
+iv. Database Administrators: Professionals tasked with database management will learn how to configure and maintain MySQL or MariaDB in the context of the LEMP Stack.
+
+#### Prerequisite
 
 - An AWS account with an ubuntu EC2 instance
 - Access to a terminal or virtual machine
 - SSH. [click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to learn more on ssh
 
-## Installation of Nginx
+#### Goals To Be Accomplished By The End of The Project
+
+By the end of this project, learners will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development.
+
+
+## Installating Nginx
 update apt repositories
 
     sudo apt update
