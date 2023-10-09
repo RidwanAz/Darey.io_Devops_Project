@@ -1,13 +1,13 @@
-- Git
+## Git
 
-- Introduction To Git
+## Introduction To Git
   - What is Git
   - Importance of Git
   - Target Audience
   - Prerequsites
   - Git Goals
 
-- Getting Started With Git
+## Getting Started With Git
   - Installing Git
     - Windows
     - Linux
@@ -15,15 +15,15 @@
 
   - Git Commands
 
-  - Concepts
+  - Basic Git Concepts
     - Repositories
     - Commits
     - Branches
     - Working With Remote Repositories for Collaboration
     - Clonning Remote Git Repositories
 
-- Best Practices
+## Best Practices of Git
 
-- Use Cases
+## Use Cases of Git
 
-- Conclusion
+## Conclusion
