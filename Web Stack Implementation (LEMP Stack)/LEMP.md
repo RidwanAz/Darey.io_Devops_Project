@@ -24,8 +24,6 @@ Both web servers have their advantages, while apache is highly versatile, nginx 
 
 ### Advantages of LEMP Stack
 
-Web Application Development: The LEMP Stack is the foundation for building dynamic and high-performing web applications. It provides the essential components required to create web-based software, making it a fundamental technology stack for web developers and engineers.
-
 i. Nginx is an important part of the LEMP Stack handles many connections at once and also highly scalability. This is important for websites and apps that need to handle many users.
 
 ii. Understanding and implementing the LEMP Stack correctly is crucial for ensuring the security of web applications. DevOps engineers and system administrators need to be well-versed in securing each component of the stack to protect against common web vulnerabilities and attacks.
