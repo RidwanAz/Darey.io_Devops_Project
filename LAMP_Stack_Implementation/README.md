@@ -22,6 +22,6 @@
 
 # Best Practices Of LAMP Stack
 
-# Use Cases of LAMP STACK
+# Real Life Scenarios With LAMP Stack
 
 # Conclusion
