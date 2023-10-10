@@ -71,7 +71,7 @@ By the end of this project, learners should be able to setup a LAMP Stack and de
 
 - Best Practices Of LAMP Stack
 
--  Use Cases of LAMP STACK
+-  Real Life Scenarios With LAMP STACK
 
 - Conclusion
 
