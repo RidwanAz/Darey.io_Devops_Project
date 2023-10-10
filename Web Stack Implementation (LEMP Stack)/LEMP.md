@@ -62,8 +62,9 @@ Let's get our hands on project LEMP
 
 #### Step 1: Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
 
-We were able to launch an ubuntu instance in the previous project, refer to [LAMP_Stack_Implementation]() for a guide to launch an instance
-## Step 2: Installating Nginx
+We were able to launch an ubuntu instance in the previous project, refer to step 1 of [LAMP_Stack_Implementation](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/8a00946f1b768baaf0b2316f664fc828d1a4da4b/LAMP_Stack_Implementation/LAMP.md) for a guide to launch an instance and ssh into it.
+
+#### Step 2: Installating Nginx
 update package lists and apt repositories
 
     sudo apt update
@@ -96,9 +97,9 @@ You can check your ubuntu instance ip address from your aws console from the EC2
 or
 
     curl -4 icanhazip.com 
-## Installation of Mysql
+#### Step 3: Installating Mysql
 
-In the previous step, nginx web server was installed successfully. In this step, mysql will be installed as a database to store data for our web application.
+In the previous step, we were bale to install and allow firewall nginx. In this step, mysql will be installed as a database to store data for our web application.
 apt repositories has been updated in the previous step, mysql should be installed directly
 
     sudo apt install mysql-server
@@ -117,9 +118,9 @@ Log out of mysql
 
     mysql>exit
 
-## Installing PHP
+#### Step 4: Installing PHP
 
-So far, Nginx and Mysql has been installed. The last software of the LAMP stack which is PHP will be installed in this step.
+So far, we have be able to install the first three technology stack of our LEMP stack. The last software of the LEMP stack which is PHP will be installed in this step.
 
 The installation of php is different for nginx is different from apache because, the way it interacts with the web server differs. PHP for Apache typically uses the Apache module called mod_php. This module integrates PHP directly into the Apache web server, allowing it to handle PHP requests internally. For Nginx, PHP is typically run as a separate process using FastCGI (e.g., PHP-FPM) or as a reverse proxy. This means Nginx communicates with the PHP interpreter over a network socket or through a unix domain socket.
 
@@ -128,7 +129,7 @@ Check for the successful installation of php
 
     php -v
 
-## Configuring Nginx Web Server To Serve As A Virtual Host 
+#### Step 5: Configuring Nginx Web Server To Serve As A Virtual Host 
 Create a directory for our codes to be hosted at the location "/var/www/html/darey.io", "darey.io" can be named any name. The directory will contain the php codes which nginx will serve. The codes are not limited to php codes but also html, css, javascript e.t.c. . Nginx web server is smart enough to know this location and serve it with the help of its configuration file.
 
     sudo mkdir /var/www/html/darey.io
@@ -197,7 +198,7 @@ Check your web browser.
     http://ubuntu_instance_public_ip_address
 
 
-## Testing PHP with Nginx 
+#### Step 6: Testing PHP with Nginx 
 
 Replace the index.html file in /var/www/html/darey.io with index.php with a simple php info.
 
@@ -211,7 +212,7 @@ You can use ubuntu instance public ip address to access the php file served by n
 ![php](images/phpinfo.png)
 The default page above will be displayed.
 
-## Testing PHP and Mysql with Nginx (LEMP Stack)
+#### Step 7: Testing PHP and Mysql with Nginx (LEMP Stack)
 
 In the previous step, php was tested with nginx by using nginx to serve a php file. In the step mysql database will be connected to php and web served by nginx.
 The first to do is to create a database with datas
