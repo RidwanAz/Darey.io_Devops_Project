@@ -10,7 +10,7 @@ In this project, we will understand you more on ec2 instaces, improve the perfor
 When you finish the Project (LEMP Stack) Course, Get ready to use your imagination and start this exciting adventure with us.
 By the end of this project a task will be assigned which will be based on everything we has be done in this project. So let's  start 
 
-#### What Is LEMP Stack ?
+### What Is LEMP Stack ?
 
 From the last project, we understand what web stack is a collection of similar things or object (softwares) which work together in an interconnected way to run a function.
 
@@ -22,7 +22,7 @@ The word LEMP refers to a group of open source software installed together which
 The difference between a LAMP Stack and a LEMP Stack is their web servers. A LAMP Stack makes use of an apache web server and a LEMP Stack makes use of a nginx web server.
 Both web servers have their advantages, while apache is highly versatile, nginx has a very high performance, capable of load balancing amd serve as a reverse proxy and is the most widely used web server.
 
-#### Advantages of LEMP Stack
+### Advantages of LEMP Stack
 
 Web Application Development: The LEMP Stack is the foundation for building dynamic and high-performing web applications. It provides the essential components required to create web-based software, making it a fundamental technology stack for web developers and engineers.
 
@@ -35,7 +35,7 @@ iii. MySQL, the "M" in LEMP, is a widely-used relational database management sys
 iv. PHP is a common programming language used for creating websites. It is part of the LEMP stack, which is a group of software used to run web applications. Learning how to code in PHP and connect it with the LEMP Stack allows developers to make websites that are interactive and change as users interact with them.
 
 
-#### Target Audience
+### Target Audience
 
 i. DevOps Engineers: DevOps professionals play a critical role in setting up and managing server environments. Understanding the LEMP Stack is essential for configuring web servers, optimizing performance, and ensuring robust security.
 
@@ -45,16 +45,19 @@ iii. Web Developers: Web developers looking to build dynamic websites and web ap
 
 iv. Database Administrators: Professionals tasked with database management will learn how to configure and maintain MySQL or MariaDB in the context of the LEMP Stack.
 
-#### Prerequisite
+### Prerequisite
 
 - An AWS account with an ubuntu EC2 instance
 - Access to a terminal or virtual machine
 - SSH. [click here](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04) to learn more on ssh
 
-#### Goals To Be Accomplished By The End of The Project
+### Goals To Be Accomplished By The End of The Project
 
 By the end of this project, learners will have the knowledge and ability to set up the whole LEMP stack. You will also have the skills to make impressive, fast web applications that have a big effect in the always changing world of web development.
 
+# Project Highlight
+
+# Getting Started With LEMP Stack
 
 ## Installating Nginx
 update apt repositories
