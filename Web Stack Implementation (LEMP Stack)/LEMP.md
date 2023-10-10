@@ -62,7 +62,7 @@ Let's get our hands on project LEMP
 
 #### Step 1: Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
 
-We were able to launch an ubuntu instance in the previous project, refer to [AMP_Stack_Implementation]
+We were able to launch an ubuntu instance in the previous project, refer to [LAMP_Stack_Implementation]() for a guide to launch an instance
 ## Step 2: Installating Nginx
 update package lists and apt repositories
 
