@@ -58,9 +58,13 @@ By the end of this project, learners will have the knowledge and ability to set 
 # Project Highlight
 
 # Getting Started With LEMP Stack
+Let's get our hands on project LEMP
 
-## Installating Nginx
-update apt repositories
+#### Step 1: Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
+
+We were able to launch an ubuntu instance in the previous project, refer to [AMP_Stack_Implementation]
+## Step 2: Installating Nginx
+update package lists and apt repositories
 
     sudo apt update
 Install nginx web server
