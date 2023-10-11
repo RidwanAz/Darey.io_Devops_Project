@@ -128,7 +128,7 @@ done
 
 Result of the for loop:
 
-![loop](image/loop)
+![loop](image/loop.png)
 
 
 
@@ -255,10 +255,14 @@ The script above;
         echo "Backup completed. Files copied to: $backup_dir_with_timestamp"
 
    In the first comment section of the script, the source directory and backup directory are defined. You should replace "/path/to/source_directory" and "/path/to/backup_directory" with the actual paths to your source and backup directories.
+   
    For the second comment section, it generates a timestamp using the date command. The +%Y%m%d%H%M%S format represents the year (4 digits), month (2 digits), day (2 digits), hour (24-hour format, 2 digits), minute (2 digits), and second (2 digits).
 In the third comment section, a new backup directory path is created by appending the generated timestamp to the specified backup directory path. The result will be a directory name like "backup_YYYYMMDDHHMMSS" inside the backup directory.
+
 The fourth comment section creates the backup directory specified by backup_dir_with_timestamp. The -p option ensures that parent directories are created if they don't exist.
+
 Using the cp command, all files from the source directory ($source_dir) are recursively copied (-r) to the backup directory with the timestamp ($backup_dir_with_timestamp).
+
 Finally, a message is displayed to indicate the completion of the backup process. It shows the path to the backup directory with the timestamp where the files were copied.
 
 ![shell](image/termius4.jpg)
@@ -280,18 +284,21 @@ Finally, a message is displayed to indicate the completion of the backup process
        done
 
 
-This Bash script is designed to loop through the numbers from 1 to 50 and categorize each number based on certain conditions:
+This Bash script is designed to loop through the numbers from 1 to 50 and categorize each number based on certain conditions;
+
 This line specifies the interpreter to be used, which is /bin/bash.
+
 This line initiates a for loop that will run from i=1 to i=50, incrementing i by 1 in each iteration.
+
 This conditional checks if the current value of i is both a multiple of 3 and 5. If this condition is met, it prints "Number is a multiple of 3 and 5."
+
 This elif (else if) conditional checks if the current value of i is a multiple of 3. If this condition is met, it prints "Number is a multiple of 3."
+
 This elif conditional checks if the current value of i is a multiple of 5. If this condition is met, it prints "Number is a multiple of 5."
+
 If none of the above conditions are met, the script reaches the else block, which means the current value of i is neither a multiple of 3 nor 5.
 
-bash
-
-
-![fizz](image/fizz)
+![fizz](image/fizz.png)
 
 
 
