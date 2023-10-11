@@ -47,7 +47,9 @@ iv. IT support and operations teams utilize shell scripting to fix problems, kee
 
 Learners need to have;
 i. Prior knowledge of the command line interface
+
 ii. Understanding of linux commands especially to grant file permissions. Learn more about [linux](http://linuxcommand.org/lc3_lts0020.php).
+
 iii.Ability to use text editors like nano, vim and emacs.
 
 # Project Highlight
