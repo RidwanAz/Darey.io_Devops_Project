@@ -6,7 +6,7 @@
 
 
 ## Sub-category:
-- LAMP Stack
+- LEMP Stack
 
 ## Level:
 - Beginner
