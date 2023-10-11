@@ -24,7 +24,8 @@ At the beginning of a script, is a ***shebang or hashbang***. It is a special no
 When a script with a shebang line like #!/bin/bash, the operating system looks for the specified interpreter (in this case, Bash) and uses it to execute the script. 
 
 Without a shebang line, the system may not know how to interpret and execute the script, and you may need to explicitly specify the interpreter when running the script. 
-### Why Shell Scripting Important
+
+### Why Is Shell Scripting Important
 
 Shell scripting is very important in technology and industry because it allows you to automate a lot of tasks. This includes things like regularly backing up files and setting up complicated system settings. Imagine a data center where people in charge need to make copies of important databases every day. If we didn't use shell scripting, this task would take a long time and there would be a higher chance of mistakes. However, using shell scripts, these backups can be automated, scheduled, and done without humans, which makes sure the data is secure and saves time for IT staff to work on other important tasks.
 Shell scripting is essential for managing and taking care of servers in system administration. For example, in a big web hosting setting, the people in charge must make sure that many servers work well together. By writing code for regular maintenance tasks such as log rotation, software updates, and user management, they can efficiently and consistently handle these tasks for all the servers. This helps to decrease the possibility of mistakes made by humans and improves the reliability of the system.
@@ -54,6 +55,29 @@ ii. Understanding of linux commands especially to grant file permissions. Learn 
 iii.Ability to use text editors like nano, vim and emacs.
 
 # Project Highlight
+
+- Shell Scripting 
+- Introduction To Shell Scripting
+  - What Is Shell Scripting
+    - What is a shebang or hashbang
+  - Why is Shell Scripting Important
+  - Target Audiene
+  - Prerequisites
+
+- Getting Started With Shell Scripting
+  - Syntax For a Shell Script
+  - Variables and Values
+  - Control Flow
+  - Working With Shell Scripts
+    - Input and Output
+    - Directory Manipulation and Navigation
+    - File Operation and Sorting
+    - File Backup and Stamping
+    - Control Flow
+ 
+- Real-World Scenarios of Shell Scripting
+- Conclusion
+
 
 
 ### Syntax For a Shell script
@@ -281,8 +305,7 @@ Finally, a message is displayed to indicate the completion of the backup process
                fi
        done
 
-
-This Bash script is designed to loop through the numbers from 1 to 50 and categorize each number based on certain conditions;
+Using the for loop, with if and elif statement, the script above print a number from 1 to 50. For every multiple of 3 it prints Number is a multiple of 3, for every multiple of 5 it prints Number is a multiple of 5 and for every multiple of 3 and 5 it prints Number is a multiple of 3 and 5.
 
 This line specifies the interpreter to be used, which is /bin/bash.
 
@@ -298,6 +321,16 @@ If none of the above conditions are met, the script reaches the else block, whic
 
 ![fizz](image/fizz.png)
 
+#### Task For The Project
+Write a Shell script that;
+
+i. Prints welcome to V Bank
+
+ii Asks for your password
+
+iii. List and ask user for an input on what services would you like to perform and list 3 available service which are; withdrawal, transfer, and balance inquiry
+
+iv. Each services must be working 
 
 
 # Real-World Scenario of Shell Scripting
