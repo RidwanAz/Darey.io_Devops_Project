@@ -47,8 +47,10 @@ iv. IT support and operations teams utilize shell scripting to fix problems, kee
 
 Learners need to have;
 i. Prior knowledge of the command line interface
-ii. Understanding of linux commands especially to grant file permissions. Learn more about [linux](http://linuxcommand.org/lc3_lts0020.php)
+ii. Understanding of linux commands especially to grant file permissions. Learn more about [linux](http://linuxcommand.org/lc3_lts0020.php).
+iii.Ability to use text editors like nano, vim and emacs.
 
+# Project Highlight
 
 
 ### Syntax For a Shell script
@@ -69,7 +71,7 @@ Also, darey.sh must be an executable file before it can be executed
     bash darey.sh 
 
 
-### Practical Examples of Shell Scripts
+### Working With Shell Scripts
 
 1. Input and output
 
@@ -199,4 +201,14 @@ Using the cp command, all files from the source directory ($source_dir) are recu
 Finally, a message is displayed to indicate the completion of the backup process. It shows the path to the backup directory with the timestamp where the files were copied.
 
 ![shell](image/termius4.jpg)
+
+
+# Real-World Scenario of Shell Scripting
+In a situation whereby a web server creates big records of events, and a DevOps engineer wants to find important details, like the amount of successful and unsuccessful requests, patterns of errors, and changes in traffic, to use for explaining and solving problems.
+
+Shell scripting can help read and study log files. The script can get important information, create reports, and even send notifications for certain situations. This helps the engineer keep an eye on and improve the server's performance.
+
    
+# Conclusion
+
+Shell scripting is an automation tool that is used in various ways in the IT and software development field. Its ability to perform tasks automatically, analyze information, and facilitate smooth processes is extremely important. By learning shell scripting, users can improve their work by being more efficient, making fewer mistakes, and getting more done each day.
