@@ -3,7 +3,8 @@
 # Introdution To Shell Scripting
 
 Think about you working for a big orginisation. In this organisation, you are tasked with deploying a software everyday on nginx or backing up files and storing them in a remote location. In order to make the task easier, we can use a script.
-In a simple explanation, a script is any set of instructions that eliminates manual reptitive task and automates it. There are different types of scripting languages but there are three major scripting langauges in the world of devops which are 
+
+In a simple explanation, a script is any set of instructions that eliminates manual repetitive task and automates it. There are different types of scripting languages but there are three major scripting langauges in the world of devops which are 
 - Shell script
 - Python script
 - Javascript
