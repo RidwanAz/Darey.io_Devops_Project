@@ -110,7 +110,11 @@ fi
 The piece of code prompts you to type a number and prints a statement stating the number is positive or negative.
 
 
-The script above 
+The read command in the script above takes input (a number) from the user
+The second line starting with an if statement tells that if the number inputed by the user is greater than 0, the third line should print "This number is positive" using the echo command
+The fourth line starting with an elif statement tells that if the number inputed by the user is less than 0, the fifth line should print "The number is negative" using the echo command
+The sixth line starting with an else statement tells that if the number inputed by the user is 0, the seventh line should print "The number is zero" using the echo command
+
 Example: Iterating through a list using a for loop
 
 #!/bin/bash
@@ -121,70 +125,10 @@ for (( i=1; i<=5; i++ ))
 do
     echo $i
 done
-The result is:
 
+Result of the for loop:
 
-Command Substitution: Command substitution allows you to capture the output of a command and use it as a value within your script. You can use the backtick or the $()syntax for command substitution.
-Example: Using backtick for command substitution
-
-current_date=`date +%Y-%m-%d`
-Example: Using $() syntax for command substitution
-
-current_date=$(date +%Y-%m-%d)
-Input and Output: Bash provides various ways to handle input and output. You can use the read command to accept user input, and output text to the console using the echo command. Additionally, you can redirect input and output using operators like > (output to a file), < (input from a file), and | (pipe the output of one command as input to another).
-Example: Accept user input
-
-echo "Enter your name:"
-read name
-Example: Output text to the terminal
-
-echo "Hello World"
-Example: Out the result of a command into a file
-
-echo "hello world" > index.txt
-Example: Pass the content of a file as input to a command
-
-grep "pattern" < input.txt
-Example: pass the result of a command as input to another command
-
-echo "hello world" | grep "pattern"
-Functions: Bash allows you to define and use functions to group related commands together. Functions provide a way to modularize your code and make it more reusable. You can define functions using the function keyword or simply by declaring the function name followed by parentheses.
-#!/bin/bash
-
-# Define a function to greet the user
-greet() {
-    echo "Hello, $1! Nice to meet you."
-}
-
-# Call the greet function and pass the name as an argument
-greet "John"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![loop](image/loop)
 
 
 
@@ -318,6 +262,9 @@ Using the cp command, all files from the source directory ($source_dir) are recu
 Finally, a message is displayed to indicate the completion of the backup process. It shows the path to the backup directory with the timestamp where the files were copied.
 
 ![shell](image/termius4.jpg)
+
+5. Control Statement
+
 
 
 # Real-World Scenario of Shell Scripting
