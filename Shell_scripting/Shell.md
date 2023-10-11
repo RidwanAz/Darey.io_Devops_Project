@@ -265,6 +265,34 @@ Finally, a message is displayed to indicate the completion of the backup process
 
 5. Control Statement
 
+        #!/bin/bash
+
+       for (( i=1; i<=50; i++ )); do
+               if (( i % 3 == 0 && i % 5 == 0 )); then
+                       echo "Number is a multiple of 3 and 5."
+               elif (( i % 3 == 0 )); then
+                         echo "Number is a multiple of 3."
+               elif (( i % 5 == 0 )); then
+                         echo "Number is a multiple of 5."
+               else
+                         echo $i
+               fi
+       done
+
+
+This Bash script is designed to loop through the numbers from 1 to 50 and categorize each number based on certain conditions:
+This line specifies the interpreter to be used, which is /bin/bash.
+This line initiates a for loop that will run from i=1 to i=50, incrementing i by 1 in each iteration.
+This conditional checks if the current value of i is both a multiple of 3 and 5. If this condition is met, it prints "Number is a multiple of 3 and 5."
+This elif (else if) conditional checks if the current value of i is a multiple of 3. If this condition is met, it prints "Number is a multiple of 3."
+This elif conditional checks if the current value of i is a multiple of 5. If this condition is met, it prints "Number is a multiple of 5."
+If none of the above conditions are met, the script reaches the else block, which means the current value of i is neither a multiple of 3 nor 5.
+
+bash
+
+
+![fizz](image/fizz)
+
 
 
 # Real-World Scenario of Shell Scripting
