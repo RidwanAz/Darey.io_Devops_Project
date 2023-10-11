@@ -1,6 +1,14 @@
 # Shell Scripting 
 
-### What Is Shell Scripting ? 🤔
+# Introdution To Shell Scripting
+
+Think about you working for a big orginisation. In this organisation, you are tasked with deploying a software everyday on nginx or backing up files and storing them in a remote location. In order to make the task easier, we can use a script.
+In a simple explanation, a script is any set of instructions that eliminates manual reptitive task and automates it. There are different types of scripting languages but there are three major scripting langauges in the world of devops which are 
+- Shell script
+- Python script
+- Javascript
+
+### What Is Shell Scripting
 Shell scripting is the process of writing and executing a series of commands in a shell, which is a command-line interface to an operating system. A shell script is essentially a script or program written in a shell language, such as Bash, sh, zsh, or PowerShell ?
 
 ### What Is a Shebang or Hashbang (#!/bin/bash)
