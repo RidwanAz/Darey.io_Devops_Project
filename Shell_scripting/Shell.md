@@ -81,7 +81,7 @@ Example: Assigning value to a variable:
 
 name="John" 
 
- A variable usually takes a value, in other words, a variabe stores a value, while a value is assigned to a variable.
+ A variable usually takes a value, in other words, a variabe stores a value. A value can be a character, number, string or array a value is assigned to a variable.
 
  From the example above, "John" was asigned to the variable "name". In the next example, we would see how the variable name saved a value
  
@@ -89,15 +89,14 @@ Example: Retrieving value from a variable:
 
 echo $name
 
-echo is a
+echo is a command used to print a text, variables or values.
+In this example, echo is used to print a variable which stores a value .
 
-In the above examples, 
 **- Control Flow:** Bash provides control flow statements like if-else, for loops, while loops, and case statements to control the flow of execution in your scripts. These statements allow you to make decisions, iterate over lists, and execute different commands based on conditions.
 Example: Using if-else to execute script based on a conditions
 
 #!/bin/bash
 
-# Example script to check if a number is positive, negative, or zero
 
 read -p "Enter a number: " num
 
@@ -110,6 +109,8 @@ else
 fi
 The piece of code prompts you to type a number and prints a statement stating the number is positive or negative.
 
+
+The script above 
 Example: Iterating through a list using a for loop
 
 #!/bin/bash
