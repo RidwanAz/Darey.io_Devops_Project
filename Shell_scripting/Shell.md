@@ -79,6 +79,7 @@ iii.Ability to use text editors like nano, vim and emacs.
 - Conclusion
 
 
+# Getting Started With Shell Scripting
 
 ### Syntax For a Shell script
 Every line of a bash file starts with a shebang 
