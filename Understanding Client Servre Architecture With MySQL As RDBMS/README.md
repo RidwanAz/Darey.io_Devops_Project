@@ -1,1 +1,1 @@
-## Understanding Client Servre Architecture With MySQL As RDBMS
+## Understanding Client Server Architecture With MySQL As RDBMS
