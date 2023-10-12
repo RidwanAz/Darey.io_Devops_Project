@@ -1,6 +1,13 @@
-# Understanding Client Servre Architecture With MySQL As RDBMS
+# Understanding Client Server Architecture With MySQL As RDBMS
 
 # Introduction
-When we talk the word Client, it mean to talk of a person using a particular service. Similarly in the digital world a Client is a computer (Host) i.e. capable of receiving information or using a particular service from the service providers (Servers).
-Servers: Similarly, when we talk the word Servers, It mean a person or medium that serves something. Similarly in this digital world a Server is a remote computer which provides information (data) or access to particular services.
-So, its basically the Client requesting something and the Server serving it as long as its present in the database.
+When we talk the word client, it mean to talk of a person using a particular service. Similarly in the digital world a client can be a  computer or mobile phone capable of receiving information through a medium which can be a web browser or a terminal from a server.
+The word server means a medium or a person that serves something. In the real world, a Server is a remote computer which provides information or access to particular services.
+
+So it can basically be said that a client requests and a server respond.
+
+The image below shows a simple client server architecture.
+
+![cs](images/cs.png)
+
+
