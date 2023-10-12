@@ -9,4 +9,4 @@ Documentation of darey.io learning project
 
 ***Project 4 - Shell Scripting***
 
-***Project 5 - Understanding Client Servre Architecture With MySQL As RDBMS***
+***Project 5 - Understanding Client Server Architecture With MySQL As RDBMS***
