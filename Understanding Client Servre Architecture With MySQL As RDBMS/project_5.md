@@ -104,32 +104,35 @@ Use mysql server's local IP address to connect from mysql client. MySQL server u
 
 In order for mysql client to be able to send request to mysql server, we need to create a new user for mysql client and a database.
 
-L
-For MySQL secure installation use the following,
-secure install
+i. Login to mysql server
 
-After the installation you might need to create a password for root user
-Alter User
+    sudo mysql
 
-On MySQL server create a user and a database
-Create user
+ii Create a new user
 
-create database
+    CREATE USER 'darey'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
+**Note:** The password field should be replaced wih your password
 
-Grant privileges
-GRANT ALL ON test_db.* TO 'remote_user'@'%' WITH GRANT OPTION;
+iii. Create a database
 
-Flush Privileges
-FLUSH PRIVILEGES
+    CREATE DATABASE test_run;
+    
+#### Step 6: Grant All MySQL Client All Privilledges MySql Server Has For The Database We Created
+i. Grant privileges
+
+    GRANT ALL ON test_run.* TO 'darey'@'%' WITH GRANT OPTION;
 
 Exit MySQL and restart the mySQL service using
-sudo systemctl restart mysql
 
-You might need to configure MySQL server to allow connections from remote hosts.
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+    sudo systemctl restart mysql
 
-Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
-Configure MySQL server
+#### Step 7: Configure MySQL server to Allow Connections From Remote Hosts.
+i. Edit mysql server configuration file
+
+    sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+ii. Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
+
 
 From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
 Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
@@ -143,4 +146,10 @@ Show databases;
 show database
 
 If you see an output similar to the below image, then you have successfully completed this project – you have deloyed a fully functional MySQL Client-Server set up.
+
+#### Task For The Project
+Install install mysql and secure installation for mysql
+
+# Conclusion
+In summary, this project has looked into an important part of client-server architecture with MySQL. It has given a thorough understanding of how it works and its significance in today's computing. As a devops engineer or system aministrator, it's important to understand this architecture. It will help you improve how you access data, keep it secure, and make it scalable. As technology keeps advancing, this project helps people learn how to create strong and effective systems that connect computers and share information. This promotes new ideas and meets the needs of a world that relies on data. 
 
