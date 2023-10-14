@@ -129,21 +129,23 @@ Exit MySQL and restart the mySQL service using
 #### Step 7: Configure MySQL server to Allow Connections From Remote Hosts.
 i. Edit mysql server configuration file
 
-    sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 
 ii. Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
 
+In the mysqlserver configuration file, replace 127.0.0.1’ to ‘0.0.0, then save and close the file
 
-From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
-Check that you have successfully connected to a remote MySQL server and can perform SQL queries:
+#### Step 8: Connecting To Mysql Server From Mysql Client
+
+i. Connect to mysql server from mysql client
+
+    mysql -udarey -h <mysql_server_ipaddress> -p password
+    
+ii. Check that you have successfully connected to a remote MySQL server and can perform SQL queries
 
 Client connection to mysql
 
-Show database
-
-Show databases;
-
-show database
+    show databases;
 
 If you see an output similar to the below image, then you have successfully completed this project – you have deloyed a fully functional MySQL Client-Server set up.
 
