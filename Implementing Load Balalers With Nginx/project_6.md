@@ -10,4 +10,4 @@ Load balancing is the process of distributing a set of tasks over a set of resou
 In this project, we will use nginx to distribute traffic across 2 different servers.
 
 
-![load balancer](images/loadbalancer.png)
+![load balancer](image/load-balancer.png)
