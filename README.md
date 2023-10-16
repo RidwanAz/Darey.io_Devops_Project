@@ -10,3 +10,5 @@ Documentation of darey.io learning project
 ***Project 4 - Shell Scripting***
 
 ***Project 5 - Understanding Client Server Architecture With MySQL As RDBMS***
+
+***Project 6 - Implmenting Load Balancers With Ngnix***
