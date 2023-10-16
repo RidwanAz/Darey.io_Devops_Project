@@ -40,7 +40,7 @@ iii. System administrators are people who are in charge of setting up, organizin
 iv. DevOps Engineers can use their knowledge of how clients and servers work together to automate the process of setting up, adjusting the size, and taking care of the software.
 
 
-### Prerequisite
+### Project Prerequisite
 
 i. An AWS account
 
@@ -53,6 +53,26 @@ In the project we will implement a client server architecture with mysql as a re
 
 # Project Highlight
 
+- Understanding Client Server Architecture With MySQL As RDBMS
+
+- Introduction
+  - Client Server Architecture With MySQL
+  - Why Is A Client Server Architecture With MySQL Important
+  - Target Audience
+  - Project Prerequisites
+
+- Implementing MySQL As A Client Server Architecture
+  - Launching EC2 Instances
+  - Updating and Upgrading Package Lists
+  - Installing MySQL Server Software
+  - Insatlling MySQL Client Software
+  - Allowing Access To MySQL Server For MySQL Client
+  - Create A New User and Database On MySQL Server
+  - Grant MySQL Client Administrative Prilvledges
+  - Configure MySQL Server To Allow Connection From Remote Host
+  - Connecting To MySQL Server From MySQL Client
+
+- Conclusion
 
 # Implementing MySQL as a Client Server Architecture 
 
@@ -93,7 +113,7 @@ On mysql client instance install MySQL Client software.
 
     sudo apt install mysql-client -y
 
-#### Step 4: Allowing Access To For MySQL Server for MySQl Client
+#### Step 4: Allowing Access To MySQL Server for MySQl Client
 
 By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses.
 Or, you can add them to the same subnets.
@@ -117,7 +137,7 @@ iii. Create a database
 
     CREATE DATABASE test_run;
     
-#### Step 6: Grant All MySQL Client All Privilledges MySql Server Has For The Database We Created
+#### Step 6: Grant MySQL Client Administrative Prilvledges
 i. Grant privileges
 
     GRANT ALL ON test_run.* TO 'darey'@'%' WITH GRANT OPTION;
