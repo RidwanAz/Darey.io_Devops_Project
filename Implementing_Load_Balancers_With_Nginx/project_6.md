@@ -38,4 +38,66 @@ Network administrators are in charge of setting up and looking after the network
 # Project Hghlight
 
 # Implementation of Load Balancers With Nginx
+#### Step 1: Provisioning EC2 Instances
+
+We will provision 3 EC2 instance, two will of these will be our webserver and one will be a load balaner
+
+i. Launch 2 EC2 instances and name each "webserver_1" and "webserver_2"
+
+ii. Launch another EC2 instance and name it load balancer
+
+#### Step 2: Open New Security Group For Both Webservers and load balancer
+
+i. For the webservers and load balancer, go to the security groups
+
+ii Edit inbound rules on open port 8000 for our both webserver_1 and webserver_2 and port 80 for our load balancer
+
+iii. Allow traffic from anywhere on the open ports
+
+#### Step 3: Install Apache Webserver
+
+i. Open 2 termianls and ssh into webserver_1 and webserver_2
+
+  ***For windows, open command prompt or git bash and ssh into the webservers***
+
+ii. Update and upgrade package lists 
+
+    sudo apt update -y && sudo apt upgrade -y
+
+iii. Install Apache 
+
+    sudo apt install apache2 -y
+
+iv. Confirm Apache has been successfully installed
+
+    sudo systemctl status apache2
+
+#### Step 4: Configuring Apache to Port 8000
+
+By default, apache listen on port 80. Since our load balancer will also be listening on port 80, we  need to make our webservers listen on port 8000
+
+i. Grant users permission to read, write and execute the file ports.conf file
+
+    sudo chmod u+rwx ports.conf
+ii. Edit port.conf file 
+
+    sudo vi /etc/apache2/ports.conf
+iii. Add a new listen directive
+
+![listen](images/listen.png)
+
+iv. Add a new virtual statement since a new listen directive has been added
+
+    sudo vi /etc/apache2/sites-availabe/0000-default.conf
+
+![virtualhost](images/virtualhost.png)
+
+v. Relaod Apache
+
+    sudpo systemctl reload apache2
+
+** Note this step should be done for both webservers
+
+#### Step 5: Configuring Apache to show names of both webservers
+
 
