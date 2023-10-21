@@ -44,7 +44,7 @@ We will provision 3 EC2 instance, two will of these will be our webserver and on
 
 i. Launch 2 EC2 instances and name each "webserver_1" and "webserver_2"
 
-ii. Launch another EC2 instance and name it load balancer
+ii. Launch another EC2 instance and name it "load balancer"
 
 #### Step 2: Open New Security Group For Both Webservers and load balancer
 
@@ -88,11 +88,11 @@ iii. Add a new listen directive
 
 iv. Add a new virtualhost statement since a new listen directive has been added
 
-    sudo vi /etc/apache2/sites-availabe/0000-default.conf
+    sudo vi /etc/apache2/sites-available/000-default.conf
 
 ![virtualhost](images/virtualhost.png)
 
-v. Relaod Apache
+v. Reload Apache
 
     sudpo systemctl reload apache2
 
@@ -100,5 +100,81 @@ v. Relaod Apache
 
 #### Step 5: Configuring Apache to show names of both webservers
 
-In the previous step, we set up a new listen directive and virtualhost statement. In our "0000-default.conf", the doccument root is located at /var/www/html. We need to change th
+In the previous step, we set up a new listen directive and virtualhost statement. In our "000-default.conf", the document root is located at /var/www/html. We need to change the content of the file in our document root to show the name of our webserver. 
 
+i. Edit index.html in /var/www/html
+
+    sudo nano /var/www/html/index.html
+ii. Delete the content in the file and paste the content below
+
+      <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Apache EC2 Instance</title>
+        </head>
+        <body>
+            <h1>Load Balancer</h1>
+            <p>Webserver 1 & 2</p>
+        </body>
+        </html>
+
+iii. Save and close the file
+
+iv. Restart Apache
+
+    sudo systemctl restart apache2
+***Note:*** This step should be done for both webserver1 and webserver 2
+
+#### Step 6: Install and Configure Nginx As A Load Balancer For Both WebServers 
+
+In the step, we will configure nginx as a load balancer for webserver 1 and 2
+
+On our load balancer instance;
+
+i. Update package lists and instal nginx
+
+    sudo apt update -y && sudo apt install nginx -y
+
+ii. Verify that Nginx is successfully installed 
+
+    sudo systemctl status nginx
+
+iii. Edit Nginx load balancer configuration file
+
+    sudo nano /etc/nginx/conf.d/loadbalancer.conf
+
+
+iv. Paste the configuration file below to configure nginx to act like a load balancer. A screenshot of an example config file is shown below: Make sure you edit the file and provide necessary information like your server IP address etc.
+
+        
+        upstream backend_servers {
+
+            # your are to replace the public IP and Port to that of your webservers
+            server 127.0.0.1:8000; # public IP and port for webserser 1
+            server 127.0.0.1:8000; # public IP and port for webserver 2
+
+        }
+
+        server {
+            listen 80;
+            server_name <your load balancer's public IP addres>; # provide your load balancers public IP address
+
+            location / {
+                proxy_pass http://backend_servers;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            }
+        }
+    
+upstream backend_servers defines a group of backend servers. The server lines inside the upstream block list the addresses and ports of your backend servers. proxy_pass inside the location block sets up the load balancing, passing the requests to the backend servers. The proxy_set_header lines pass necessary headers to the backend servers to correctly handle the requests
+
+v. Test if nginx configuration is correct
+
+    sudo nginx -t
+
+vi Restart nginx
+
+    sudo systemctl restart nginx
+
+vii. Paste load balancer public Ip address on your web browser to see the content of web server 1 and 2
