@@ -6,7 +6,7 @@
 - Target Audience
 - Project Prerequisites
 
-## Implementation Of Load Balancer
+## Implementation Of Load Balancer With Nginx
 - Provisioning EC2 Instances
 - Open New Security Group For Both webserver and Load Balancer
 - Install Apache Webserver
