@@ -86,7 +86,7 @@ iii. Add a new listen directive
 
 ![listen](images/listen.png)
 
-iv. Add a new virtual statement since a new listen directive has been added
+iv. Add a new virtualhost statement since a new listen directive has been added
 
     sudo vi /etc/apache2/sites-availabe/0000-default.conf
 
@@ -100,4 +100,5 @@ v. Relaod Apache
 
 #### Step 5: Configuring Apache to show names of both webservers
 
+In the previous step, we set up a new listen directive and virtualhost statement. In our "0000-default.conf", the doccument root is located at /var/www/html. We need to change th
 
