@@ -29,13 +29,39 @@ Network administrators are in charge of setting up and looking after the network
 
 
 #### Project Prerequisites
-
 - An AWS account
 - Knowledge of Linux
 - Basic understanding of Web Servers such as apache and nginx
 - Familiarity with linux text editors such as vim, emacs and nano
 
+
+#### Project Goals
+- Gain a clear understanding of load balancing and its importance in modern web application and server management.
+- Learn how to configure and use Nginx as a load balancer, exploring its key features and capabilities.
+- Discover how load balancing with Nginx can enhance the performance, reliability, and availability of web applications and services.
+- Learn how to set up Nginx to ensure high availability by distributing incoming traffic across multiple backend servers and automatically handling server failures.
+
 # Project Hghlight
+- Implementing Load Balancers With Nginx
+
+- Introduction
+  - Concept of Load Balancing
+  - Importance of Load Balancing
+  - Target Audience
+  - Project Prerequisites
+
+- Implementation Of Load Balancer with Nginx
+  - Provisioning EC2 Instances
+  - Open New Security Group For Both webserver and Load Balancer
+  - Install Apache Webserver
+  - 1Configure Apache On Port 8000
+  - Configure Apache To 1Serve Names of Both Webserver
+  - Install and Configure Nginx As A Load Balancer For Both Webservers
+
+- Real Life Scenarion of Load Balancing With Apache
+
+- Conclusion
+
 
 # Implementation of Load Balancers With Nginx
 #### Step 1: Provisioning EC2 Instances
@@ -72,7 +98,7 @@ iv. Confirm Apache has been successfully installed
 
     sudo systemctl status apache2
 
-#### Step 4: Configuring Apache to Port 8000
+#### Step 4: Configure Apache to Port 8000
 
 By default, apache listen on port 80. Since our load balancer will also be listening on port 80, we  need to make our webservers listen on port 8000
 
@@ -98,7 +124,7 @@ v. Reload Apache
 
 ** Note this step should be done for both webservers
 
-#### Step 5: Configuring Apache to show names of both webservers
+#### Step 5: Configure Apache to Show Names Of Both Webservers
 
 In the previous step, we set up a new listen directive and virtualhost statement. In our "000-default.conf", the document root is located at /var/www/html. We need to change the content of the file in our document root to show the name of our webserver. 
 
