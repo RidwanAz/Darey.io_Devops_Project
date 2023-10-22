@@ -31,7 +31,28 @@ Automating Load Balancers with Nginx is very important in the world of technolog
 - Knowledge of using text editors
 - Basic knowledge of webservers
 
+#### Project Goals
+The primary goals and learning objectives of the "Automating Load Balancers with Nginx" project are to empower readers to automate the installation and configuration of Nginx for load balancing, thereby achieving improved web application performance, high availability, and efficient traffic distribution. By the end of this tutorial, learners should understand the importance of load balancing automation, grasp the fundamentals of Nginx configuration, and be equipped with the practical skills to automate load balancing in their web server environments, making them proficient in enhancing the reliability and scalability of web applications.
+
 # Project Highlight
+
+- Automating Load Balancer Configuration With Shell Scripting
+
+- Introduction
+  - What Is Automation
+  - Importance Of Automating Load Balancer Configuration With Shell Scripting
+  - Target Audience
+  - Project Prerequisites
+  - Project Goals
+
+- Deploying And Configuring Webservers And Load Balancer
+  - Launch 3 EC2 Instances
+  - Open New Security Group For Both Webserver And Load Balancer
+  - Automating Webservers Configuration With Shell Sript
+  - Automating Load Balancer Configuration With Shell Script
+
+- Real Life Scenarios of Load Balancing With Nginx
+- Conclusion
 
 # Deploying And Configuring Webservers and Load Balancer
 
