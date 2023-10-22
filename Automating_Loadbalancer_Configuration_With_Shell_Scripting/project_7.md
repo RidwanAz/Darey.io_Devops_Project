@@ -27,4 +27,6 @@ Automating Load Balancers with Nginx is very important in the world of technolog
 
 - An AWS account
 - Basic knowlwdge of Linux
-- Previous Knowledge of [shell scripting]()
+- Previous Knowledge of [shell scripting](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/a39ef56ea1c33036b75eb59bfc6bf2a56f250548/Shell_scripting/Shell.md)
+- Knowledge of using text editors
+- Basic knowledge of web servers 
