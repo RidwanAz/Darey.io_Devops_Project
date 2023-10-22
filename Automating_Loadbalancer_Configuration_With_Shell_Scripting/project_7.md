@@ -22,3 +22,9 @@ Automating Load Balancers with Nginx is very important in the world of technolog
 - DevOps engineers aiming to enhance the scalability and reliability of their web applications through automated load balancing will find this project invaluable.
 - System admins looking to optimize server performance, manage traffic efficiently, and ensure high availability for web services will benefit from mastering automated load balancing with Nginx.
 - Software engineers interested in understanding how load balancing works and how it can be automated within their applications to improve user experience and performance.
+
+#### Project Prerequisite
+
+- An AWS account
+- Basic knowlwdge of Linux
+- Previous Knowledge of [shell scripting]()
