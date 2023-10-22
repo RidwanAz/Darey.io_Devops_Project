@@ -55,7 +55,7 @@ iv. ssh into the three instances
 
 #### Step 3: Automating Webservers Configurartion With Shell Script
 
-Paste the shell script below in a file on webserver 1 and 2 to configure each webservers
+i. Paste the shell script below in a file on webserver 1 and 2 to configure each webservers
 
     #!/bin/bash
 
@@ -136,3 +136,4 @@ It replaces the <VirtualHost *:80> line with <VirtualHost *:8000> in the Apache 
 
 **Restart Apache:** Finally, the script restarts the Apache service with sudo systemctl restart apache2 to apply the configuration changes.
 
+ii. Save and run the script. Check [here](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/a39ef56ea1c33036b75eb59bfc6bf2a56f250548/Shell_scripting/Shell.md) to see syntax of running shell script
