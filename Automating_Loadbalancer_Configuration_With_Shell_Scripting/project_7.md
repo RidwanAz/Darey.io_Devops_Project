@@ -69,7 +69,7 @@ Paste the shell script below in a file on webserver 1 and 2 to configure each we
     set -e # exit the script if there is an error
     set -o pipefail # exit the script when there is a pipe failure
 
-    PUBLIC_IP=$1
+    PUBLIC_IP=$1   # place the public ip address of each webserver
 
     [ -z "${PUBLIC_IP}" ] && echo "Please pass the public IP of your EC2 instance as an argument to the script" && exit 1
 
@@ -98,3 +98,41 @@ Paste the shell script below in a file on webserver 1 and 2 to configure each we
            </html>" > /var/www/html/index.html
 
     sudo systemctl restart apache2
+
+***Note:*** In  PUBLIC_IP=$1, place the public Ip address of each webserver
+
+- Explanation of the shell script above
+
+**Shebang:** The script starts with a shebang line #!/bin/bash, indicating that it should be executed using the Bash shell.
+
+**Comments:** The script contains comments that provide explanations and usage instructions.
+
+**Debug Mode:** set -x enables debug mode, which means that each command is printed to the console before it is executed. This is useful for troubleshooting and understanding the script's execution flow.
+
+**Exit on Error:** set -e causes the script to exit immediately if any command returns a non-zero exit status, indicating an error.
+
+**Exit on Pipe Failure:** set -o pipefail ensures that the script exits if any command within a pipeline fails.
+
+**User Input:** The script expects the public IP address of the EC2 instance as a command-line argument. It assigns this value to the PUBLIC_IP variable.
+
+**Argument Check:** The script checks if the PUBLIC_IP variable is empty and prints an error message if it is, along with usage instructions. If the IP is missing, the script exits with an error code.
+
+**Update and Install Apache:** The script updates the package list with sudo apt update -y and installs the Apache web server with sudo apt install apache2 -y.
+
+**Check Apache Status:** It checks the status of the Apache service using sudo systemctl status apache2. If the service is running successfully (return code 0), the script proceeds with the configuration.
+
+**Configuration Changes:** The script makes the following configuration changes to Apache:
+
+
+It grants full read and write permissions to /etc/apache2/ports.conf to allow editing the configuration file.
+
+It appends Listen 8000 to the end of /etc/apache2/ports.conf, which instructs Apache to listen on port 8000.
+
+It grants full read and write permissions recursively to the /etc/apache2/ directory.
+
+It replaces the <VirtualHost *:80> line with <VirtualHost *:8000> in the Apache default site configuration file (/etc/apache2/sites-available/000-default.conf), ensuring Apache listens on port 8000.
+
+**Set Up Web Page:** The script grants full read and write permissions recursively to the /var/www/ directory and creates an HTML file (index.html) in the default web directory (/var/www/html). This HTML file displays a simple web page with the instance's public IP address.
+
+**Restart Apache:** Finally, the script restarts the Apache service with sudo systemctl restart apache2 to apply the configuration changes.
+
