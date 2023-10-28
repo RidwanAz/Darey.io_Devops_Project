@@ -165,6 +165,8 @@ i. Edit mysql server configuration file
 
 ii. Replace ‘127.0.0.1’ to ‘0.0.0.0’ like this:
 
+![mysql](images/conf.png)
+
 In the mysqlserver configuration file, replace 127.0.0.1’ to ‘0.0.0.0, then save and close the file
 
 #### Step 8: Connecting To Mysql Server From Mysql Client
