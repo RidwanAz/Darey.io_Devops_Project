@@ -100,6 +100,8 @@ On mysql server instance install MySQL Server software.
 
     sudo apt install mysql-server -y
 
+  ![mysql](images/mysqlserverinstall.png)
+
 To start mysql service
 
     sudo systemctl start mysql
