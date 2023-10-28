@@ -127,7 +127,7 @@ Or, you can add them to the same subnets.
 
 Use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so you will have to open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. For extra security, do not allow all IP addresses to reach your ‘mysql server’ – allow access only to the specific local IP address of your ‘mysql client’.
 
-![ec2](inboundrules.png)
+![ec2](images/inboundrules.png)
 
 
 #### Step 5: Create A New User and Database On MySQL Server 
