@@ -98,7 +98,7 @@ On both mysql server and mysql client update and upgrade package lists
 
 On mysql server instance install MySQL Server software.
 
-    sudo apt install my-sql-server -y
+    sudo apt install mysql-server -y
 
 To start mysql service
 
@@ -108,10 +108,15 @@ Check is mysql is active and running
 
     sudo systemctl status mysql
 
+![mysql](images/mysqlserver.png)
+
+
 #### Step 4: Installing MySQL Client Sofware 
 On mysql client instance install MySQL Client software.
 
     sudo apt install mysql-client -y
+
+  ![mysql](images/mysqlclient.png)
 
 #### Step 4: Allowing Access To MySQL Server for MySQl Client
 
