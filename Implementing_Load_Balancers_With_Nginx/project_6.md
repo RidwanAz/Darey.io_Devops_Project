@@ -105,8 +105,8 @@ iii. Install Apache
     sudo apt install apache2 -y
 <table>
   <tr>
-    <td><img src="images/apacheweb01.png" alt="Image 1"></td>
-    <td><img src="images/apacheweb02.png" alt="Image 2"></td>
+    <td><img src="image/apacheweb01.png" alt="Image 1"></td>
+    <td><img src="image/apacheweb02.png" alt="Image 2"></td>
   </tr>
 </table>
 ## ![apache](image/.png)  ![apache](images/apachewe01.png)
