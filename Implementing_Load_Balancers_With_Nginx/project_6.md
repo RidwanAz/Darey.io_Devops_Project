@@ -192,6 +192,7 @@ i. Update package lists and instal nginx
     sudo apt update -y && sudo apt install nginx -y
 
 ![update](image/updatenginx.png)
+
 ii. Verify that Nginx is successfully installed 
 
     sudo systemctl status nginx
