@@ -245,12 +245,12 @@ i. Open a file and paste the shell script below
 
     sudo systemctl restart nginx
 
-![install](image/install3)
+![install](image/install3.png)
 
 ii. Save and close the file
 
 iii. Run the script
-![bash](image/bash3)
+![bash](image/bash3.png)
 <table>
   <tr>
     <td><img src="image/lb01.png" alt="Image 1"></td>
