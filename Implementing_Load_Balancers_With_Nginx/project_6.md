@@ -84,8 +84,6 @@ ii Edit inbound rules on open port 8000 for our both webserver_1 and webserver_2
 ![wbsg](image/wbsg.png)
 
 
-![lbsg](image/lbsg.png)
-
 iii. Allow traffic from anywhere on the open ports
 
 #### Step 3: Install Apache Webserver
@@ -176,6 +174,13 @@ iv. Restart Apache
     sudo systemctl restart apache2
 ***Note:*** This step should be done for both webserver1 and webserver 2
 
+<table>
+  <tr>
+    <td><img src="image/web01.png" alt="Image 1"></td>
+    <td><img src="image/web02.png" alt="Image 2"></td>
+  </tr>
+</table>
+
 #### Step 6: Install and Configure Nginx As A Load Balancer For Both WebServers 
 
 In the step, we will configure nginx as a load balancer for webserver 1 and 2
@@ -186,6 +191,7 @@ i. Update package lists and instal nginx
 
     sudo apt update -y && sudo apt install nginx -y
 
+![update](image/updatenginx.png)
 ii. Verify that Nginx is successfully installed 
 
     sudo systemctl status nginx
@@ -201,14 +207,14 @@ iv. Paste the configuration file below to configure nginx to act like a load bal
         upstream backend_servers {
 
             # your are to replace the public IP and Port to that of your webservers
-            server 127.0.0.1:8000; # public IP and port for webserser 1
-            server 127.0.0.1:8000; # public IP and port for webserver 2
+            server 54.145.203.157:8000; # public IP and port for webserser 1
+            server 54.196.120.65:8000; # public IP and port for webserver 2
 
         }
 
         server {
             listen 80;
-            server_name <your load balancer's public IP addres>; # provide your load balancers public IP address
+            server_name 34.229.98.123; # provide your load balancers public IP address
 
             location / {
                 proxy_pass http://backend_servers;
@@ -217,7 +223,7 @@ iv. Paste the configuration file below to configure nginx to act like a load bal
                 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             }
         }
-    
+
 upstream backend_servers defines a group of backend servers. The server lines inside the upstream block list the addresses and ports of your backend servers. proxy_pass inside the location block sets up the load balancing, passing the requests to the backend servers. The proxy_set_header lines pass necessary headers to the backend servers to correctly handle the requests
 
 v. Test if nginx configuration is correct
@@ -230,6 +236,12 @@ vi Restart nginx
 
 vii. Paste load balancer public Ip address on your web browser to see the content of web server 1 and 2
 
+<table>
+  <tr>
+    <td><img src="image/lb01.png" alt="Image 1"></td>
+    <td><img src="image/lb02.png" alt="Image 2"></td>
+  </tr>
+</table>
 
 # Real Life Scenarios With Load Balancing
 
