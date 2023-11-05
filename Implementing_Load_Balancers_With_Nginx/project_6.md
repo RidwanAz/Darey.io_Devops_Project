@@ -109,7 +109,7 @@ iii. Install Apache
     <td><img src="image/apacheweb02.png" alt="Image 2"></td>
   </tr>
 </table>
-## ![apache](image/.png)  ![apache](images/apachewe01.png)
+
 
 iv. Confirm Apache has been successfully installed
 
@@ -160,6 +160,14 @@ ii. Delete the content in the file and paste the content below
             <p>Webserver 1 & 2</p>
         </body>
         </html>
+
+
+<table>
+  <tr>
+    <td><img src="image/configureweb01.png" alt="Image 1"></td>
+    <td><img src="image/configureweb02.png" alt="Image 2"></td>
+  </tr>
+</table>
 
 iii. Save and close the file
 
