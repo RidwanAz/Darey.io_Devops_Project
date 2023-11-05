@@ -104,7 +104,7 @@ By default, apache listen on port 80. Since our load balancer will also be liste
 
 i. Grant users permission to read, write and execute the file ports.conf file
 
-    sudo chmod u+rwx ports.conf
+    sudo chmod u +rwx ports.conf
 ii. Edit port.conf file 
 
     sudo vi /etc/apache2/ports.conf
