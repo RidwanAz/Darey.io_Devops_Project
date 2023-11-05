@@ -110,6 +110,7 @@ iii. Install Apache
   </tr>
 </table>
 ## ![apache](image/.png)  ![apache](images/apachewe01.png)
+
 iv. Confirm Apache has been successfully installed
 
     sudo systemctl status apache2
