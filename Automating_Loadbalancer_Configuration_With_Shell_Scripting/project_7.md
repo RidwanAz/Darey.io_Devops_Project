@@ -120,6 +120,13 @@ i. Paste the shell script below in a file on webserver 1 and 2 instances to conf
 
     sudo systemctl restart apache2
 
+<table>
+  <tr>
+    <td><img src="image/install1.png" alt="Image 1"></td>
+    <td><img src="image/install2.png" alt="Image 2"></td>
+  </tr>
+</table>
+
 ***Note:*** In  PUBLIC_IP=$1, place the public Ip address of each webserver
 
 - Explanation of the shell script above
@@ -158,7 +165,20 @@ It replaces the <VirtualHost *:80> line with <VirtualHost *:8000> in the Apache 
 **Restart Apache:** Finally, the script restarts the Apache service with sudo systemctl restart apache2 to apply the configuration changes.
 
 ii. Save and run the script. Check [here](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/a39ef56ea1c33036b75eb59bfc6bf2a56f250548/Shell_scripting/Shell.md) to see syntax of running shell script
+<table>
+  <tr>
+    <td><img src="image/bash11.png" alt="Image 1"></td>
+    <td><img src="image/bash2.png" alt="Image 2"></td>
+  </tr>
+</table>
 
+
+<table>
+  <tr>
+    <td><img src="image/web01.png" alt="Image 1"></td>
+    <td><img src="image/web02.png" alt="Image 2"></td>
+  </tr>
+</table>
 
 #### Step 4: Automating Load Balancers Configurartion With Shell Script
 
@@ -225,10 +245,18 @@ i. Open a file and paste the shell script below
 
     sudo systemctl restart nginx
 
+![install](image/install3)
 
 ii. Save and close the file
 
 iii. Run the script
+![bash](image/bash3)
+<table>
+  <tr>
+    <td><img src="image/lb01.png" alt="Image 1"></td>
+    <td><img src="image/lb02.png" alt="Image 2"></td>
+  </tr>
+</table>
 
 # Real Life Scenarios With Load Balancers
 
