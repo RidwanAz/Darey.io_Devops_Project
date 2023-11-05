@@ -80,9 +80,9 @@ i. For the webservers and load balancer, go to the security groups
 
 ii Edit inbound rules on open port 8000 for our both webserver_1 and webserver_2 and port 80 for our load balancer
 
-![wbsg](images/wbsg.png)
+![wbsg](image/wbsg.png)
 
-![lbsg](images/lbsg.png)
+![lbsg](image/lbsg.png)
 
 iii. Allow traffic from anywhere on the open ports
 
@@ -96,12 +96,12 @@ ii. Update and upgrade package lists
 
     sudo apt update -y && sudo apt upgrade -y
 
-![update](images/updateweb01.png)
+![update](image/updateweb01.png)
 
 iii. Install Apache 
 
     sudo apt install apache2 -y
-![apache](images/apachewe01.png)  ![apache](images/apachewe01.png)
+![apache](image/apachewe01.png)  ![apache](images/apachewe01.png)
 iv. Confirm Apache has been successfully installed
 
     sudo systemctl status apache2
@@ -118,13 +118,13 @@ ii. Edit port.conf file
     sudo nano /etc/apache2/ports.conf
 iii. Add a new listen directive
 
-![listen](images/listen.png)
+![listen](image/listen.png)
 
 iv. Add a new virtualhost statement since a new listen directive has been added
 
     sudo nano /etc/apache2/sites-available/000-default.conf
 
-![virtualhost](images/virtualhost.png)
+![virtualhost](image/virtualhost.png)
 
 v. Reload Apache
 
