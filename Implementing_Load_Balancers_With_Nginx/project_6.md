@@ -72,7 +72,7 @@ i. Launch 2 EC2 instances and name each "webserver_1" and "webserver_2"
 
 ii. Launch another EC2 instance and name it "load balancer"
 
-![instance](images/instances.png)
+![instance](image/instances.png)
 
 #### Step 2: Open New Security Group For Both Webservers and load balancer
 
