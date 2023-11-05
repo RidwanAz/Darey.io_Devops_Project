@@ -120,7 +120,7 @@ iv. Add a new virtualhost statement since a new listen directive has been added
 
 v. Reload Apache
 
-    sudpo systemctl reload apache2
+    sudo systemctl reload apache2
 
 ** Note this step should be done for both webservers
 
