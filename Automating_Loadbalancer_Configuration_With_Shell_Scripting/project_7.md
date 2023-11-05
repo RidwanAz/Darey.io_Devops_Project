@@ -167,7 +167,7 @@ It replaces the <VirtualHost *:80> line with <VirtualHost *:8000> in the Apache 
 ii. Save and run the script. Check [here](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/a39ef56ea1c33036b75eb59bfc6bf2a56f250548/Shell_scripting/Shell.md) to see syntax of running shell script
 <table>
   <tr>
-    <td><img src="image/bash11.png" alt="Image 1"></td>
+    <td><img src="image/bash1.png" alt="Image 1"></td>
     <td><img src="image/bash2.png" alt="Image 2"></td>
   </tr>
 </table>
