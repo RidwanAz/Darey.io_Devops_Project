@@ -107,14 +107,14 @@ i. Grant users permission to read, write and execute the file ports.conf file
     sudo chmod u +rwx ports.conf
 ii. Edit port.conf file 
 
-    sudo vi /etc/apache2/ports.conf
+    sudo nano /etc/apache2/ports.conf
 iii. Add a new listen directive
 
 ![listen](images/listen.png)
 
 iv. Add a new virtualhost statement since a new listen directive has been added
 
-    sudo vi /etc/apache2/sites-available/000-default.conf
+    sudo nano /etc/apache2/sites-available/000-default.conf
 
 ![virtualhost](images/virtualhost.png)
 
