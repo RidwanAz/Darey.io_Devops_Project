@@ -258,6 +258,9 @@ iii. Run the script
   </tr>
 </table>
 
+## Side Study
+Configuration Management: Learn about of configuration management systems like Ansible, which enable you to automate load balancer setup and maintenance across your infrastructure.
+
 # Real Life Scenarios With Load Balancers
 
 - Managing the distribution of workload for a very busy online shopping website. Imagine you have a very popular online store that gets a lot of visitors, especially when there are sales happening. Load balancing with Nginx means that when people visit a website, their requests are spread out evenly across many different servers that work together. This stops one server from getting overwhelmed, which makes everything work better and leads to a better shopping experience for your customers. In this situation, you can set up Nginx to distribute the workload evenly using different methods like rotating through each server, selecting the server with the least connections, or assigning specific servers based on the IP address. This ensures that resources are used efficiently.
