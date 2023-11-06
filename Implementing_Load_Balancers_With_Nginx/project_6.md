@@ -244,6 +244,10 @@ vii. Paste load balancer public Ip address on your web browser to see the conten
   </tr>
 </table>
 
+## Side Study
+- Dive deeper into Nginx's advanced configuration options, including fine-tuning load balancing settings, handling SSL termination, and implementing caching for improved performance.
+- Study how to configure and manage SSL/TLS certificates effectively with Nginx, including best practices for security and certificate management.
+
 # Real Life Scenarios With Load Balancing
 
 - Managing the distribution of workload for a very busy online shopping website.
