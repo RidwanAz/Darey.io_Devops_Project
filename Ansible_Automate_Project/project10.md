@@ -32,6 +32,32 @@ Anyone interested in automation and IaC: To learn a valuable skill applicable ac
 - To deploy and manage applications using Ansible.
 - To be well-equipped to apply Ansible to real-world scenarios, improving efficiency and scalability in your IT operations.
 
+## Project Highlight
+- Ansible Automate Project
+
+- Introduction To Ansible
+  - What is Ansible
+  - Why Ansible Is Important For Automation
+  - Target Audience
+  - Project Prerequisites
+  - Project Goals
+
+- Implementing Ansible For Automation
+  - Install and Configure Ansible On EC2 Instance
+  - Configure Jenkins Build Job To Archive Your Repository Content Every Time It Is Changed
+  - Prepare Your Development Environment Using Visual Studio Code
+  - Begin Ansible Development
+  - Setup Ansible Inventory
+  - Create A Common Playbook
+  - Update GIT With The Latest Code
+  - Run First Ansible Test
+
+- Real Life Scenarios Using Ansible
+
+ - Conclusion
+
+
+
 ## Implementing Ansible For Automation
 
 ### Step 1: Install and Configure Ansible on EC2 Instance
@@ -254,14 +280,4 @@ Ansible Automation is a powerful tool that can simplify and streamline various a
 Understanding the fundamentals of Ansible and its use cases.
 Proficiency in writing Ansible playbooks to automate tasks.
 The ability to apply Ansible in scenarios such as server configuration, application deployment, and CI/CD pipelines.
-
-
-
-
-
-
-
-
-
-
 
