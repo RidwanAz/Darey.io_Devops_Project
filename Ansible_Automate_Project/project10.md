@@ -84,6 +84,68 @@ You will see that a new build has been launched automatically (by webhook) and y
 
 3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance. See [Project 1](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/0ce5355a44b1709e01334537053a23fd480da176/Git_project/Git.md) step V to learn more about clonning git repositories.
 
+### Step 3 - Begin Ansible Development
+i. In your ansible-config-mgt GitHub repository, create a new branch that will be used for development of a new feature.
+
+ii. Checkout the newly created feature branch to your local machine and start building your code and directory structure
+
+iii. Create a directory and name it playbooks - it will be used to store all your playbook files.
+
+iv Create a directory and name it inventory - it will be used to keep your hosts organised.
+
+v. Within the playbooks folder, create your first playbook, and name it common.yml
+
+vi. Within the inventory folder, create an inventory file () for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively. These inventory files use .ini languages style to configure Ansible hosts.
+
+
+### Setup Ansible Inventory 
+
+In Ansible, an inventory file is a simple text file that defines the hosts and groups of hosts that Ansible can manage. It serves as a source of truth for Ansible to know which hosts it should target when running tasks and playbooks. The inventory file is a fundamental concept in Ansible and is used to organize and manage your infrastructure.
+
+We need setup our ssh keys for ansible so it can have access to our host (remote servers) when running playbooks for our hosts.
+
+This can be done using an SSH agent. An SSH agent allows you to securely store and manage your SSH private keys and provides a convenient way for ansible to authenticate with remote hosts without repeatedly entering your SSH key.
+
+
+    eval `ssh-agent -s`
+    ssh-add <path-to-private-key>
+Confirm the key has been added with the command below, you should see the name of your key
+
+    ssh-add -l 
+
+
+Since we have our SSH key for our host stored with SSH agent so ansible can use this, ansible also need to know the host to manage. We can do this with an inventory file
+
+i. Open the inventory/dev.yml file we created earlier
+    
+    sudo nano /inventory/dev.yml
+ii. Paste the below information
+
+    [nfs]
+    ansible_host=<NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user
+
+    [webservers]
+    ansible_host=<Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
+    ansible_host=<Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
+
+    [db]
+    ansible_host=<Database-Private-IP-Address> ansible_ssh_user=ec2-user 
+
+    [lb]
+    ansible_host=<Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
