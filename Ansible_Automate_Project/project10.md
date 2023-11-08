@@ -36,9 +36,47 @@ Jenkin is a pipeline for continuous integration. To create a build job, we need 
 ![inbound]()
 
 ***Set up Jenkins***
+
 i. Input your Jenkins-Ansible Instance ip address on your web browser i.e. http://public_ip_address:8080
 
-ii. 
+
+ii. On your Jenkins-Ansible instance, check  "/var/lib/jenkins/secrets/initialAdminPassword" to know your password.
+
+
+iii. Installed suggested plugins
+
+
+iv. Create a user account and log in to jenkins
+
+***Confiure Jenkins To Receive Source Code From ansible-cofig-mgt***
+
+
+i. Allow webhook in our github repository. In ansible-config-mgt repository, navigate to **settings>webhooks** and past the url of jenkins.
+
+
+ii. Create a freestyle project in your jenkins web account and name it "ansible_automation"
+
+
+iii. Connect jenkins to ansible-config-mgt repository by pasting the repository url in the area selected below
+
+
+iv. Save configuration and run "build now" to connect jenkins to our repository
+
+
+v. Click "Configure" your job/project and add these two configurations
+
+Configure triggering the job from GitHub webhook:
+![webhook]()
+
+Configure "Post-build Actions" to archive all the files.
+
+click on add post-build actions and click "Archive the Artifact" then save
+
+Now, go ahead and make some change in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
+
+You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins server.
+
+
 
 
 
