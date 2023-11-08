@@ -270,6 +270,9 @@ Note: Make sure you're in your ansible-config-mgt directory before you run the a
 
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 
+### Side Study
+Learners should look into Ansible Modules to deepen knowledge of ansible playbooks. Ansible Modules are the building blocks of Ansible playbooks, and understanding them is fundamental to working effectively with Ansible.
+
 
 ## Real Life Scenarios Using Ansible
 In a DevOps scenario, you want to implement a CI/CD pipeline for your project. Ansible can play a crucial role in this process. You can use Ansible to automate the provisioning and configuration of testing and production environments. This ensures that your CI/CD pipeline is reliable and reproducible, allowing you to deliver software updates to your users with confidence.
