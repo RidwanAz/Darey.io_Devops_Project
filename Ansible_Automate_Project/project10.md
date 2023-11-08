@@ -2,7 +2,7 @@
 
 ## Implementing Ansible For Automation
 
-### Step 1 Install and Configure Ansible on EC2 Instance
+### Step 1: Install and Configure Ansible on EC2 Instance
 - Launch an instane and name it Jenkins-Ansible.
 - Create a new repository call ansible-config-mgt. This repository will be connected to jenkins pipeline and also store ansible files
 - Install Ansible
@@ -12,7 +12,7 @@
   ***Confirm Ansible has been successfully installed***
 
       ansible --version
-### Configure Jenkins Build Job To Archive Your Repository Content Every Time It Is Changed
+### Step 2: Configure Jenkins Build Job To Archive Your Repository Content Every Time It Is Changed
 Jenkin is a pipeline for continuous integration. To create a build job, we need to have jenkins installed and configured first.
 - On the same EC2 instance ansible was installed, we need to install jenkins
 *** Update package repositories
@@ -77,15 +77,15 @@ Now, go ahead and make some change in any file in your GitHub repository (e.g. R
 You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins server.
 
 
-### Step 2:  Prepare your development environment using Visual Studio Code
+### Step 3:  Prepare your development environment using Visual Studio Code
 1. First part of 'DevOps' is 'Dev', which means you will require to write some codes and you shall have proper tools that will make your coding and debugging comfortable - you need an Integrated development environment (IDE) or Source-code Editor. There is a plethora of different IDEs and source-code Editors for different languages with their own advantages and drawbacks, you can choose whichever you are comfortable with, but we recommend one free and universal editor that will fully satisfy your needs - Visual Studio Code (VSC), you can get it here.
 
 2. After you have successfully installed VSC, configure it to connect to your newly created GitHub repository.
 
 3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance. See [Project 1](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/0ce5355a44b1709e01334537053a23fd480da176/Git_project/Git.md) step V to learn more about clonning git repositories.
 
-### Step 3 - Begin Ansible Development
-i. In your ansible-config-mgt GitHub repository, create a new branch that will be used for development of a new feature.
+### Step 4: - Begin Ansible Development
+i. In your ansible-config-mgt GitHub repository, create a new branch locally that will be used for development of a new feature.
 
 ii. Checkout the newly created feature branch to your local machine and start building your code and directory structure
 
@@ -98,7 +98,7 @@ v. Within the playbooks folder, create your first playbook, and name it common.y
 vi. Within the inventory folder, create an inventory file () for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively. These inventory files use .ini languages style to configure Ansible hosts.
 
 
-### Setup Ansible Inventory 
+### Step 5: Setup Ansible Inventory 
 
 In Ansible, an inventory file is a simple text file that defines the hosts and groups of hosts that Ansible can manage. It serves as a source of truth for Ansible to know which hosts it should target when running tasks and playbooks. The inventory file is a fundamental concept in Ansible and is used to organize and manage your infrastructure.
 
@@ -134,6 +134,83 @@ ii. Paste the below information
     [lb]
     ansible_host=<Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
 
+### Step 6: - Create a Common Playbook
+It is time to start giving Ansible the instructions on what you need to be performed on all servers listed in inventory/dev.
+
+In common.yml playbook you will write configuration for repeatable, re-usable, and multi-machine tasks that is common to systems within the infrastructure.
+
+Update your playbooks/common.yml file with following code:
+
+    ---
+    - name: update web, nfs and db servers
+      hosts: webservers, nfs, db
+      become: yes
+      tasks:
+        - name: ensure wireshark is at the latest version
+          yum:
+            name: wireshark
+            state: latest
+   
+
+    - name: update LB server
+      hosts: lb
+      become: yes
+      tasks:
+        - name: Update apt repo
+          apt: 
+            update_cache: yes
+
+        - name: ensure wireshark is at the latest version
+          apt:
+            name: wireshark
+            state: latest
+Examine the code above and try to make sense out of it. This playbook is divided into two parts, each of them is intended to perform the same task: install wireshark utility (or make sure it is updated to the latest version) on your RHEL 8 and Ubuntu servers. It uses root user to perform this task and respective package manager: yum for RHEL 8 and apt for Ubuntu.
+
+Feel free to update this playbook with following tasks:
+
+Create a directory and a file inside it
+Change timezone on all servers
+Run some shell script
+
+
+### Step 7: - Update GIT with the latest code
+Now all of your directories and files live on your machine and you need to push changes made locally to GitHub.
+
+In the real world, you will be working within a team of other DevOps engineers and developers. It is important to learn how to collaborate with help of [GIT]((https://github.com/RidwanAz/Darey.io_Devops_Project/blob/0ce5355a44b1709e01334537053a23fd480da176/Git_project/Git.md)). In many organisations there is a development rule that do not allow to deploy any code before it has been reviewed by an extra pair of eyes - it is also called "Four eyes principle".
+
+Now you have a separate branch, you will need to know how to raise a Pull Request (PR), get your branch peer reviewed and merged to the master branch.
+
+Commit your code into GitHub:
+
+Use git commands to add, commit and push your branch to GitHub.
+    
+    git status
+    git add <selected files>
+    git commit -m "commit message"
+
+push changes to a remote repositories
+
+    git push
+Wear the hat of another developer for a second, and act as a reviewer.
+
+If the reviewer is happy with your new feature development, merge the code to the master branch on your local computer, commit and push changes to your remote repository.
+
+Once your code changes appear in master branch - Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server as we configured it to in **Step 2**
+
+
+### Step 8: - Run first Ansible test
+Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
+
+Setup your VSCode to connect to your instance as demonstrated by the video above. Now run your playbook using the command:
+    
+    cd ansible-config-mgt
+    
+    ansible-playbook -i inventory/dev.yml playbooks/common.yml
+    
+
+Note: Make sure you're in your ansible-config-mgt directory before you run the above command.
+
+You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 
 
 
