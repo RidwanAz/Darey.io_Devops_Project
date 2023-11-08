@@ -245,10 +245,15 @@ Note: Make sure you're in your ansible-config-mgt directory before you run the a
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 
 
+## Real Life Scenarios Using Ansible
+In a DevOps scenario, you want to implement a CI/CD pipeline for your project. Ansible can play a crucial role in this process. You can use Ansible to automate the provisioning and configuration of testing and production environments. This ensures that your CI/CD pipeline is reliable and reproducible, allowing you to deliver software updates to your users with confidence.
 
 
-
-
+## Conclusion
+Ansible Automation is a powerful tool that can simplify and streamline various aspects of IT and infrastructure management. This project also covered jenkin for integration. By learning Ansible and Jenkins, you can automate tasks, reduce manual errors, and ensure consistency in your operations. Key takeaways from this project include:
+Understanding the fundamentals of Ansible and its use cases.
+Proficiency in writing Ansible playbooks to automate tasks.
+The ability to apply Ansible in scenarios such as server configuration, application deployment, and CI/CD pipelines.
 
 
 
