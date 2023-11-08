@@ -12,3 +12,7 @@ Documentation of darey.io learning project
 ***Project 5 - Understanding Client Server Architecture With MySQL As RDBMS***
 
 ***Project 6 - Implmenting Load Balancers With Ngnix***
+
+***Project 7 - Automating Loadbalancer Configuration With Shell Scripting***
+
+***Project 10 - Ansible Automate Project***
