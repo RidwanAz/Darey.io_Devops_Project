@@ -77,6 +77,15 @@ Now, go ahead and make some change in any file in your GitHub repository (e.g. R
 You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins server.
 
 
+### Step 2:  Prepare your development environment using Visual Studio Code
+1. First part of 'DevOps' is 'Dev', which means you will require to write some codes and you shall have proper tools that will make your coding and debugging comfortable - you need an Integrated development environment (IDE) or Source-code Editor. There is a plethora of different IDEs and source-code Editors for different languages with their own advantages and drawbacks, you can choose whichever you are comfortable with, but we recommend one free and universal editor that will fully satisfy your needs - Visual Studio Code (VSC), you can get it here.
+
+2. After you have successfully installed VSC, configure it to connect to your newly created GitHub repository.
+
+3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance. See [Project 3]() to learn more about clonning git repositories.
+
+
+
 
 
 
