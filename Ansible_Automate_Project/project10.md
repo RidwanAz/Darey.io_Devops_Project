@@ -82,7 +82,7 @@ You will see that a new build has been launched automatically (by webhook) and y
 
 2. After you have successfully installed VSC, configure it to connect to your newly created GitHub repository.
 
-3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance. See [Project 3]() to learn more about clonning git repositories.
+3. Clone down your ansible-config-mgt repo to your Jenkins-Ansible instance. See [Project 1]() to learn more about clonning git repositories.
 
 
 
