@@ -121,7 +121,7 @@ iii. Connect jenkins to ansible-config-mgt repository by pasting the repository 
 iv. Save configuration and run "build now" to connect jenkins to our repository
 
 
-v. Click "Configure" your job/project and add these two configurations
+v. Click "Configure" your job and add these two configurations
 
 Configure triggering the job from GitHub webhook:
 ![webhook]()
