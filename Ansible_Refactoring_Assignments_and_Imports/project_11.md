@@ -9,7 +9,7 @@ This project revolves around enhancing Ansible playbooks through refactoring, as
 ### Importance Of Refactoring, Assignment And Imports
 Effective Ansible usage is critical for organizations aiming to automate infrastructure management and application deployment. Refactoring promotes code clarity, reducing errors and easing collaboration. Assignments empower playbooks with dynamic capabilities, adapting to diverse scenarios. Imports enable the reuse of well-defined components, fostering modularity and scalability. Mastery of these concepts enhances productivity, making Ansible an indispensable asset in the DevOps toolbox.
 
-### Targert Audience
+### Target Audience
 This project is tailored for DevOps engineers seeking to optimize Ansible playbooks. Familiarity with basic Ansible concepts is recommended. Users should have a foundational understanding of YAML, as Ansible playbooks are written in this format.
 
 ### Project Prerequisite
@@ -23,6 +23,26 @@ Completion of the previous project [Ansible Automate](https://github.com/RidwanA
 - Learn dynamic data handling techniques within Ansible playbooks for adaptable automation.
 - Master the art of modularization by incorporating external playbooks and roles into main Ansible scripts.
 - Combine refactoring, assignments, and imports to create well-organized and efficient Ansible automation solutions.
+
+## Project Highlight
+- Ansible Refactoring Assignment And Import
+
+- Introduction
+  - What Is Refactoring, Assignment And Imports
+  - Importance Of Refactoring Assignment And Imports
+  - Target Audience
+  - Project Prerequisite
+  - Project Goals
+
+- Refactor Ansible Code By Importing Other Playbooks Into site.yml
+  - Jenkins Job Enhancement
+  - Refactor Ansible Code By Importing Other Playbooks Into site.yml
+  - Configure UAT Webservers With A Role "Webserver"
+  - Reference "Webserve" Role
+  - Commit And Test
+
+- Real Life Scenario
+- Conclusions
 
 ## Refactor Ansible Code By Importing Other Playbooks Into site.yml
 ### Step 1: Jenkins Job Enhancement
