@@ -87,27 +87,71 @@ Now we have learned how to use import_playbooks module and you have a ready solu
 
 ### Step 3 – Configure UAT Webservers with a role ‘Webserver’
 i. Launch 2 fresh EC2 instances using RHEL 8 image, we will use them as our uat servers, so give them names accordingly – Web1-UAT and Web2-UAT.
-uat servers
 
-To create a role, you must create a directory called roles/, relative to the playbook file or in /etc/ansible/ directory.
-Create the directory/files structure manually
-directory
 
-Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
-[uat-webservers]
-<Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
+ii. To create a role, you must create a directory called roles/, relative to the playbook file or in /etc/ansible/ directory.
+There are two ways how you can create this folder structure:
 
-<Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
-In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+Use an Ansible utility called ansible-galaxy inside ansible-config-mgt/roles directory (you need to create roles directory upfront)
+    
+    mkdir roles
+    cd roles
+    ansible-galaxy init webserver
 
-It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
+The roles directory should look like this
+![image]()
 
-Install and configure Apache (httpd service)
-Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
-Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
-Make sure httpd service is started
-Your main.yml may consist of following tasks:
+iii. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
+    
+    [uat-webservers]
+    ansible_host=Web1-UAT-Server-Private-IP-Address ansible_ssh_user='ec2-user' 
+    ansible_host=Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
 
+iv. In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+
+v. It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
+
+- Install and configure Apache (httpd service)
+- Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
+- Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
+- Make sure httpd service is started
+- Your main.yml in ansible-config-mgt/roles/webserver/default/main.yml shpuld consist of following tasks:
+
+        ---
+        - name: Install apache
+          become: true
+          ansible.builtin.yum:
+            name: "httpd"
+            state: present
+
+        - name: Install git
+          become: true
+          ansible.builtin.yum:
+            name: "git"
+            state: present
+
+        - name: clone a repo
+          become: true
+          ansible.builtin.git:
+            repo: https://github.com/Tonybesto/tooling.git
+            dest: /var/www/html
+            force: yes
+
+        - name: copy html content to one level up
+          become: true
+          command: cp -r /var/www/html /var/www/
+
+        - name: Start service httpd, if not started
+          become: true
+          ansible.builtin.service:
+            name: httpd
+            state: started
+
+        - name: recursively remove /var/www/html directory
+          become: true
+          ansible.builtin.file:
+          path: /var/www/html
+          state: absent
 
 
 
