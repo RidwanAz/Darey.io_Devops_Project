@@ -85,7 +85,7 @@ Make sure that wireshark is deleted on all the servers by running wireshark --ve
 
 Now we have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
 
-### Step 3 – Configure UAT Webservers with a role ‘Webserver’
+### Step 3 – Configure UAT Webservers With A Role 'Webserver'
 i. Launch 2 fresh EC2 instances using RHEL 8 image, we will use them as our uat servers, so give them names accordingly – Web1-UAT and Web2-UAT.
 
 
@@ -155,6 +155,23 @@ v. It is time to start adding some logic to the webserver role. Go into tasks di
       state: absent
 
 
+### Step 4 - Reference 'Webserver' Role
+Within the static-assignments folder, create a new assignment for uat-webservers and name it uat-webservers.yml. This is where you will reference the role.
+
+    ---
+    - hosts: uat-webservers
+      roles:
+         - webserver
+Remember that the entry point to our ansible configuration is the site.yml file. Therefore, you need to refer your uat-webservers.yml role inside site.yml.
+
+So, we should have this in site.yml
+
+    ---
+    - hosts: all
+    - import_playbook: ../static-assignments/common.yml
+
+    - hosts: uat-webservers
+    - import_playbook: ../static-assignments/uat-webservers.yml
 
 
 
