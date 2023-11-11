@@ -29,7 +29,7 @@ ii. Create a new folder in root of the repository and name it static-assignments
 
 iii. Move common.yml file into the newly created static-assignments folder.
 
-iv. Inside site.yml file, import common.yml playbook.
+iv. Inside site.yml file, import common.yml playbook. See project 10 for this playbook
 
 
 
