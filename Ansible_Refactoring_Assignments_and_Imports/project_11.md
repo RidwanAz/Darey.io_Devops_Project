@@ -175,7 +175,7 @@ So, we should have this in site.yml
 
 
 ### Step 5: Commit And Test
-Merge you brnch to master branch commit and push changes to your remote repository, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to your Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
+Merge you branch to master branch commit and push changes to your remote repository, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to your Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
 
 Now run the playbook against your uat inventory and see what happens:
 Change your working directory to our local repository
