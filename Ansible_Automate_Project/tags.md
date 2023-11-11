@@ -1,12 +1,12 @@
 ## Tags For Ansible Automation Projet
 
 ## Technology Category:
-- Automation
+- Configuration Management
+- Infastruction as Code (IaC)
 
 
 ## Sub-category:
-- Configuration Management
-- Infastruction as Code (IaC)
+- Automation
 
 ## Level:
 - Beginner
