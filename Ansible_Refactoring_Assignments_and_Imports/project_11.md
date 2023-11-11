@@ -115,43 +115,44 @@ v. It is time to start adding some logic to the webserver role. Go into tasks di
 - Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
 - Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
 - Make sure httpd service is started
-- Your main.yml in ansible-config-mgt/roles/webserver/default/main.yml shpuld consist of following tasks:
 
-        ---
-        - name: Install apache
-          become: true
-          ansible.builtin.yum:
-            name: "httpd"
-            state: present
+  Your main.yml in ansible-config-mgt/roles/webserver/default/main.yml shpuld consist of following tasks:
 
-        - name: Install git
-          become: true
-          ansible.builtin.yum:
-            name: "git"
-            state: present
+      ---
+      - name: Install apache
+      become: true
+      ansible.builtin.yum:
+      name: "httpd"
+      state: present
 
-        - name: clone a repo
-          become: true
-          ansible.builtin.git:
-            repo: https://github.com/Tonybesto/tooling.git
-            dest: /var/www/html
-            force: yes
+      - name: Install git
+      become: true
+      ansible.builtin.yum:
+      name: "git"
+      state: present
 
-        - name: copy html content to one level up
-          become: true
-          command: cp -r /var/www/html /var/www/
+      - name: clone a repo
+      become: true
+      ansible.builtin.git:
+      repo: https://github.com/Tonybesto/tooling.git
+      dest: /var/www/html
+      force: yes
 
-        - name: Start service httpd, if not started
-          become: true
-          ansible.builtin.service:
-            name: httpd
-            state: started
+      - name: copy html content to one level up
+      become: true
+      command: cp -r /var/www/html /var/www/
 
-        - name: recursively remove /var/www/html directory
-          become: true
-          ansible.builtin.file:
-          path: /var/www/html
-          state: absent
+      - name: Start service httpd, if not started
+      become: true
+      ansible.builtin.service:
+      name: httpd
+      state: started
+
+      - name: recursively remove /var/www/html directory
+      become: true
+      ansible.builtin.file:
+      path: /var/www/html
+      state: absent
 
 
 
