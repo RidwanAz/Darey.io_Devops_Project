@@ -29,9 +29,83 @@ ii. Create a new folder in root of the repository and name it static-assignments
 
 iii. Move common.yml file into the newly created static-assignments folder.
 
-iv. Inside site.yml file, import common.yml playbook. See project 10 for this playbook
+iv. Inside site.yml file, import common.yml playbook. See [project 10](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/adf58f8ac5aecbb54814e98e589bef9664f647fc/Ansible_Automate_Project/project10.md) for this playbook
 
+---
+- hosts: all
+- import_playbook: ../static-assignments/common.yml
+The code above uses built in import_playbook Ansible module.
 
+Our folder structure should look like this;
+
+├── static-assignments
+│   └── common.yml
+├── inventory
+    └── dev
+    └── stage
+    └── uat
+    └── prod
+└── playbooks
+    └── site.yml
+v. Run ansible-playbook command against the dev environment
+Since we need to apply some tasks to our dev servers and wireshark is already installed - we can go ahead and create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
+
+    ---
+    - name: update web, nfs and db servers
+      hosts: webservers, nfs, db
+      remote_user: ec2-user
+      become: yes
+      become_user: root
+      tasks:
+      - name: delete wireshark
+        yum:
+          name: wireshark
+          state: removed
+
+    - name: update LB server
+      hosts: lb
+      remote_user: ubuntu
+      become: yes
+      become_user: root
+      tasks:
+      - name: delete wireshark
+        apt:
+          name: wireshark-qt
+          state: absent
+          autoremove: yes
+          purge: yes
+          autoclean: yes
+update site.yml with - import_playbook: ../static-assignments/common-del.yml instead of common.yml and run it against dev servers:
+
+    cd /home/ubuntu/ansible-config-mgt/
+
+    ansible-playbook -i inventory/dev.yml playbooks/site.yaml
+Make sure that wireshark is deleted on all the servers by running wireshark --version
+
+Now we have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
+
+### Step 3 – Configure UAT Webservers with a role ‘Webserver’
+i. Launch 2 fresh EC2 instances using RHEL 8 image, we will use them as our uat servers, so give them names accordingly – Web1-UAT and Web2-UAT.
+uat servers
+
+To create a role, you must create a directory called roles/, relative to the playbook file or in /etc/ansible/ directory.
+Create the directory/files structure manually
+directory
+
+Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
+[uat-webservers]
+<Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
+
+<Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
+In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+
+It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
+
+Install and configure Apache (httpd service)
+Clone Tooling website from GitHub https://github.com/<your-name>/tooling.git.
+Ensure the tooling website code is deployed to /var/www/html on each of 2 UAT Web servers.
+Make sure httpd service is started
+Your main.yml may consist of following tasks:
 
 
 
