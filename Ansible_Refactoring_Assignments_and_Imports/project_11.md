@@ -4,13 +4,13 @@
 In DevOps, efficient automation tools play a pivotal role in streamlining workflows, ensuring consistency, and managing infrastructure at scale. This project delves further into the realm of Ansible, focusing on refactoring, assignments, and imports. Understanding these concepts is essential for mastering Ansible and optimizing its usage in complex environments.
 
 ### What Is Refactoring, Assignment, And Import
-The project revolves around enhancing Ansible playbooks through refactoring, assignments, and imports. Refactoring involves restructuring existing code to improve readability and maintainability, while assignments allow dynamic data handling within playbooks. Imports, on the other hand, facilitate modularization by incorporating external playbooks or roles into the main automation script.
+This project revolves around enhancing Ansible playbooks through refactoring, assignments, and imports. Refactoring involves restructuring existing code to improve readability and maintainability, while assignments allow dynamic data handling within playbooks. Imports, on the other hand, facilitate modularization by incorporating external playbooks or roles into the main automation script.
 
 ### Importance Of Refactoring, Assignment And Imports
 Effective Ansible usage is critical for organizations aiming to automate infrastructure management and application deployment. Refactoring promotes code clarity, reducing errors and easing collaboration. Assignments empower playbooks with dynamic capabilities, adapting to diverse scenarios. Imports enable the reuse of well-defined components, fostering modularity and scalability. Mastery of these concepts enhances productivity, making Ansible an indispensable asset in the DevOps toolbox.
 
 ### Targert Audience
-This project is tailored for DevOps engineers, system administrators, and developers seeking to optimize Ansible playbooks. Familiarity with basic Ansible concepts is recommended. Users should have a foundational understanding of YAML, as Ansible playbooks are written in this format.
+This project is tailored for DevOps engineers seeking to optimize Ansible playbooks. Familiarity with basic Ansible concepts is recommended. Users should have a foundational understanding of YAML, as Ansible playbooks are written in this format.
 
 ### Project Prerequisite
 Basic knowledge of Ansible concepts and YAML syntax.
@@ -18,8 +18,14 @@ Understanding of inventory files and host configurations.
 Knowledge in running Ansible commands and playbooks.
 Completion of the previous project [Ansible Automate](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/adf58f8ac5aecbb54814e98e589bef9664f647fc/Ansible_Automate_Project/project10.md)
 
-## Refactor ansible code by importing other playbooks into site.yml
-### Step 1: Jenkins job enhancement
+### Project Goals
+- Understand the principles of refactoring Ansible playbooks for improved readability and maintainability.
+- Learn dynamic data handling techniques within Ansible playbooks for adaptable automation.
+- Master the art of modularization by incorporating external playbooks and roles into main Ansible scripts.
+- Combine refactoring, assignments, and imports to create well-organized and efficient Ansible automation solutions.
+
+## Refactor Ansible Code By Importing Other Playbooks Into site.yml
+### Step 1: Jenkins Job Enhancement
 In the previous project, we create a jenkins build job, let us make some changes to our Jenkins job. Now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins serves with each subsequent change. Let us enhance it by introducing a new Jenkins project/job - we will require Copy Artifact plugin.
 
 i. Go to your Jenkins-Ansible server and create a new directory called ansible-config-artifact - we will store there all artifacts after each build.
