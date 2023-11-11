@@ -31,22 +31,23 @@ iii. Move common.yml file into the newly created static-assignments folder.
 
 iv. Inside site.yml file, import common.yml playbook. See [project 10](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/adf58f8ac5aecbb54814e98e589bef9664f647fc/Ansible_Automate_Project/project10.md) for this playbook
 
----
-- hosts: all
-- import_playbook: ../static-assignments/common.yml
+    ---
+    - hosts: all
+    - import_playbook: ../static-assignments/common.yml
 The code above uses built in import_playbook Ansible module.
 
 Our folder structure should look like this;
 
-├── static-assignments
-│   └── common.yml
-├── inventory
-    └── dev
-    └── stage
-    └── uat
-    └── prod
-└── playbooks
-    └── site.yml
+    ├── static-assignments
+      └── common.yml
+    ├── inventory
+        └── dev
+        └── stage
+        └── uat
+        └── prod
+    └── playbooks
+        └── site.yml
+        
 v. Run ansible-playbook command against the dev environment
 Since we need to apply some tasks to our dev servers and wireshark is already installed - we can go ahead and create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
 
