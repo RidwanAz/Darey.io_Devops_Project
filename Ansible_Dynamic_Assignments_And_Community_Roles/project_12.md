@@ -3,9 +3,9 @@
 
 ---
 
-**INTRODUCING DYNAMIC ASSIGNMENT INTO OUR STRUCTURE**
+## Introducing Dynamic Assignment Into Our Structure
 
-
+In the last project, we refactored ansible code, also assigned and imported it
 1. In your https://github.com/<your-name>/ansible-config-mgt GitHub repository start a new branch and call it `dynamic-assignments`.
 
 2. Create a new folder, name it `dynamic-assignments`. Then inside this folder, create a new file and name it `env-vars.yml`. We will instruct `site.yml` to include this playbook later. 
