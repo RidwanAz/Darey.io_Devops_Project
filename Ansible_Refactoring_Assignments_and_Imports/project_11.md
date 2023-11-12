@@ -46,7 +46,7 @@ Completion of the previous project [Ansible Automate](https://github.com/RidwanA
 
 ## Refactor Ansible Code By Importing Other Playbooks Into site.yml
 ### Step 1: Jenkins Job Enhancement
-In the previous project, we create a jenkins build job, let us make some changes to our Jenkins job. Now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins serves with each subsequent change. Let us enhance it by introducing a new Jenkins project/job - we will require Copy Artifact plugin.
+In the previous project, we create a jenkins build job, let us make some changes to our Jenkins job. Now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins server with each subsequent change. Let us enhance it by introducing a new Jenkins project/job - we will require Copy Artifact plugin.
 
 i. Go to your Jenkins-Ansible server and create a new directory called ansible-config-artifact - we will store there all artifacts after each build.
 sudo mkdir /home/ubuntu/ansible-config-artifact
