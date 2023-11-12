@@ -1,4 +1,4 @@
-## Ansible Refactoring, Assignments and Imports
+## ANSIBLE REFACTORING, ASSIGNMENTS AND IMPORTS
 
 ## Introduction
 In DevOps, efficient automation tools play a pivotal role in streamlining workflows, ensuring consistency, and managing infrastructure at scale. This project delves further into the realm of Ansible, focusing on refactoring, assignments, and imports. Understanding these concepts is essential for mastering Ansible and optimizing its usage in complex environments.
