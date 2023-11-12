@@ -18,3 +18,5 @@ Documentation of darey.io learning project
 ***Project 10 - Ansible Automate Project***
 
 ***Project 11 - Ansible Refactoring, Assignments amd Imports***
+
+***Project 12 - Ansible Dynamic Assignments (Include) and Community Roles***
