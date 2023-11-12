@@ -1,4 +1,4 @@
-## Ansible_Automate_Project
+## ANSIBLE AUTOMATE PROJECT
 
 ## Introduction To Ansible
 Ansible Automation is a project that helps you learn about configuration management using Ansible. This project will show learners how to make your tasks easier by automating different things like setting up the system, installing applications, and managing them. Ansible is a strong free automation tool that can make your work easier and more efficient. This project will help you understand and use Ansible for automating tasks.
