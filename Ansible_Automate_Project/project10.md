@@ -61,7 +61,7 @@ Anyone interested in automation and IaC: To learn a valuable skill applicable ac
 ## Implementing Ansible For Automation
 
 ### Step 1: Install and Configure Ansible on EC2 Instance
-- Launch an instane and name it Jenkins-Ansible.
+- Launch an instace and name it Jenkins-Ansible. We will install and configure jenkins and ansible on this instance.
 - Create a new repository call ansible-config-mgt. This repository will be connected to jenkins pipeline and also store ansible files
 - Install Ansible
 
