@@ -123,10 +123,9 @@ iv. Save configuration and run "build now" to connect jenkins to our repository
 
 v. Click "Configure" your job and add these two configurations
 
-Configure triggering the job from GitHub webhook:
+Configure triggering the job from GitHub webhook and Configure "Post-build Actions" to archive all the files.
 ![webhook]()
 
-Configure "Post-build Actions" to archive all the files.
 
 click on add post-build actions and click "Archive the Artifact" then save
 
