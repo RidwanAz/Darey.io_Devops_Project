@@ -90,7 +90,7 @@ Jenkin is a pipeline for continuous integration. To create a build job, we need 
 
     sudo systemctl status jenkins
 
-***On our Jenkins port, open edit inbound rules and open port 8080***
+***On our Jenkins-Ansible instance, create new inbound rules for port 8080 in security group***
 ![inbound]()
 
 ***Set up Jenkins***
