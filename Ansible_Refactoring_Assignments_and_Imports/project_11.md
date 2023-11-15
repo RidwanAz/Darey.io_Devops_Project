@@ -55,10 +55,15 @@ i. Go to your Jenkins-Ansible server and create a new directory called ansible-c
 ii. Change permissions to this directory, so Jenkins could save files there.
 
     chmod -R 0777 /home/ubuntu/ansible-config-artifact
+![ansible](images/ansible-dir.PNG)
 
 iii. Go to Jenkins web console -> Manage Jenkins -> Manage Plugins -> on Available tab search for Copy Artifact and install this plugin without restarting Jenkins.
 
+![jenkins](images/jenkins-artifact.PNG)
+
 iv. Create a new Freestyle project as it was done in the previous project and name it save_artifacts. Make sure it is connected to ansible-config-mgt repository.
+
+![jenkins](images/jenkins-freestyle.PNG)
 
 v. This project will be triggered by completion of your existing ansible project. Configure it accordingly
 
