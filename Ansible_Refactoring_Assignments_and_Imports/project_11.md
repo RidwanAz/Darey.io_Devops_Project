@@ -214,7 +214,7 @@ v. It is time to start adding some logic to the webserver role. Go into tasks di
       path: /var/www/html
       state: absent
   
-![uat](uatwebserversyml.PNG)
+![uat](images/uatwebserversyml.PNG)
 
 ### Step 4 - Reference 'Webserver' Role
 Within the static-assignments folder, create a new assignment for uat-webservers and name it uat-webservers.yml. This is where you will reference the role.
