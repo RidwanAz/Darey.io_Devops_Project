@@ -159,6 +159,7 @@ Use an Ansible utility called ansible-galaxy inside ansible-config-mgt/roles dir
     ansible-galaxy init webserver
 
 The roles directory should look like this
+
 ![image](images/roles.PNG)
 
 iii. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
