@@ -67,14 +67,24 @@ iv. Create a new Freestyle project as it was done in the previous project and na
 
 v. This project will be triggered by completion of your existing ansible project. Configure it accordingly
 
+<table>
+  <tr>
+    <td><img src="images/jenkins-trigger1.PNG" alt="Image 1"></td>
+    <td><img src="images/jenkins-trigger2.PNG" alt="Image 2"></td>
+  </tr>
+</table>
+
 vi. The main idea of save_artifacts project is to save artifacts into /home/ubuntu/ansible-config-artifact directory. To achieve this, create a Build step and choose Copy artifacts from other project, specify ansible as a source project and /home/ubuntu/ansible-config-artifact as a target directory.
+
+![jenkins](images/jenkins-buildstep.PNG)
 
 vii. Test your set up by making some change in README.MD file inside your ansible-config-mgt repository (right inside master branch).
 
+![jenkins](images/jenkins-success.PNG)
 
 ### Step 2: Refactor Ansible Code By Importing Other Playbooks Into site.yml
 
-i. Within playbooks folder, create a new file and name it site.yml - This file will now be considered as an entry point into the entire infrastructure configuration. Other playbooks will be included here as a reference. In other words, site.yml will become a parent to all other playbooks that will be developed. Including common.yml that you created previously. Dont worry, you will understand more what this means shortly.
+i. Within playbooks folder, create a new file and name it site.yml - This file will now be considered as an entry point into the entire infrastructure configuration. Other playbooks will be included here as a reference. In other words, site.yml will become a parent to all other playbooks that will be developed. Including common.yml that you created previously. Don't worry, you will understand more what this means shortly.
 
 ii. Create a new folder in root of the repository and name it static-assignments. The static-assignments folder is where all other children playbooks will be stored. This is merely for easy organization of your work. It is not an Ansible specific concept, therefore you can choose how you want to organize your work. You will see why the folder name has a prefix of static very soon. For now, just follow along.
 
@@ -89,15 +99,7 @@ The code above uses built in import_playbook Ansible module.
 
 Our folder structure should look like this;
 
-    ├── static-assignments
-      └── common.yml
-    ├── inventory
-        └── dev
-        └── stage
-        └── uat
-        └── prod
-    └── playbooks
-        └── site.yml
+![file](images/file.PNG)
         
 v. Run ansible-playbook command against the dev environment
 Since we need to apply some tasks to our dev servers and wireshark is already installed - we can go ahead and create another playbook under static-assignments and name it common-del.yml. In this playbook, configure deletion of wireshark utility.
@@ -127,18 +129,25 @@ Since we need to apply some tasks to our dev servers and wireshark is already in
           autoremove: yes
           purge: yes
           autoclean: yes
+          
 update site.yml with - import_playbook: ../static-assignments/common-del.yml instead of common.yml and run it against dev servers:
 
     cd /home/ubuntu/ansible-config-mgt/
 
     ansible-playbook -i inventory/dev.yml playbooks/site.yml
-Make sure that wireshark is deleted on all the servers by running wireshark --version
+
+  ![wireshark](wireshark-delete.PNG)
+  
+Make sure that wireshark is deleted on all the servers by running
+    
+    wireshark --version
 
 Now we have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
 
 ### Step 3 – Configure UAT Webservers With A Role 'Webserver'
 i. Launch 2 fresh EC2 instances using RHEL 8 image, we will use them as our uat servers, so give them names accordingly – Web1-UAT and Web2-UAT.
 
+![uat](images/uatwebservers.PNG)
 
 ii. To create a role, you must create a directory called roles/, relative to the playbook file or in /etc/ansible/ directory.
 There are two ways how you can create this folder structure:
@@ -150,7 +159,7 @@ Use an Ansible utility called ansible-galaxy inside ansible-config-mgt/roles dir
     ansible-galaxy init webserver
 
 The roles directory should look like this
-![image]()
+![image](images/roles.PNG)
 
 iii. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP addresses of your 2 UAT Web servers
     
@@ -158,7 +167,7 @@ iii. Update your inventory ansible-config-mgt/inventory/uat.yml file with IP add
     ansible_host=Web1-UAT-Server-Private-IP-Address ansible_ssh_user='ec2-user' 
     ansible_host=Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
 
-iv. In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
+iv. In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path= /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
 
 v. It is time to start adding some logic to the webserver role. Go into tasks directory, and within the main.yml file, start writing configuration tasks to do the following:
 
@@ -204,7 +213,8 @@ v. It is time to start adding some logic to the webserver role. Go into tasks di
       ansible.builtin.file:
       path: /var/www/html
       state: absent
-
+  
+![uat](uatwebserversyml.PNG)
 
 ### Step 4 - Reference 'Webserver' Role
 Within the static-assignments folder, create a new assignment for uat-webservers and name it uat-webservers.yml. This is where you will reference the role.
@@ -224,6 +234,7 @@ So, we should have this in site.yml
     - hosts: uat-webservers
     - import_playbook: ../static-assignments/uat-webservers.yml
 
+![site](images/siteyml.PNG)
 
 ### Step 5: Commit And Test
 Merge you branch to master branch commit and push changes to your remote repository, make sure webhook triggered two consequent Jenkins jobs, they ran successfully and copied all the files to your Jenkins-Ansible server into /home/ubuntu/ansible-config-mgt/ directory.
@@ -232,8 +243,11 @@ Now run the playbook against your uat inventory and see what happens:
 Change your working directory to our local repository
 
      cd /home/ubuntu
+     
+     ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yml
 
-    ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yml
+![ansible](images/ansible-playbook.PNG)
+
 You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
 
     http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
@@ -241,6 +255,8 @@ You should be able to see both of your UAT Web servers configured and you can tr
     or
 
     http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
+
+![web](images/webbrowser.PNG)
 
 ## Real Life Scenario
 As a devpos engineer, imagine managing a diverse infrastructure where various components require different configurations. A monolithic Ansible playbook becomes unwieldy, making it challenging to update specific configurations without affecting the entire system.
