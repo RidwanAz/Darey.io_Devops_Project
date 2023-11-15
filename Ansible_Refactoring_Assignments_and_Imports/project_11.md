@@ -49,9 +49,12 @@ Completion of the previous project [Ansible Automate](https://github.com/RidwanA
 In the previous project, we create a jenkins build job, let us make some changes to our Jenkins job. Now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins server with each subsequent change. Let us enhance it by introducing a new Jenkins job - we will require Copy Artifact plugin.
 
 i. Go to your Jenkins-Ansible server and create a new directory called ansible-config-artifact - we will store there all artifacts after each build.
-sudo mkdir /home/ubuntu/ansible-config-artifact
 
-ii. Change permissions to this directory, so Jenkins could save files there - chmod -R 0777 /home/ubuntu/ansible-config-artifact
+    sudo mkdir /home/ubuntu/ansible-config-artifact
+
+ii. Change permissions to this directory, so Jenkins could save files there.
+
+    chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 iii. Go to Jenkins web console -> Manage Jenkins -> Manage Plugins -> on Available tab search for Copy Artifact and install this plugin without restarting Jenkins.
 
@@ -123,7 +126,7 @@ update site.yml with - import_playbook: ../static-assignments/common-del.yml ins
 
     cd /home/ubuntu/ansible-config-mgt/
 
-    ansible-playbook -i inventory/dev.yml playbooks/site.yaml
+    ansible-playbook -i inventory/dev.yml playbooks/site.yml
 Make sure that wireshark is deleted on all the servers by running wireshark --version
 
 Now we have learned how to use import_playbooks module and you have a ready solution to install/delete packages on multiple servers with just one command.
@@ -225,7 +228,7 @@ Change your working directory to our local repository
 
      cd /home/ubuntu
 
-    ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yaml
+    ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yml
 You should be able to see both of your UAT Web servers configured and you can try to reach them from your browser:
 
     http://<Web1-UAT-Server-Public-IP-or-Public-DNS-Name>/index.php
