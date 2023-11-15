@@ -168,7 +168,9 @@ iv Create a directory and name it inventory - it will be used to keep your hosts
 v. Within the playbooks folder, create your first playbook, and name it common.yml
 
 vi. Within the inventory folder, create an inventory file () for each environment (Development, Staging Testing and Production) dev, staging, uat, and prod respectively. These inventory files use .ini languages style to configure Ansible hosts.
+Your repositiory should look like this
 
+![repo](images/file.PNG)
 
 ### Step 5: Setup Ansible Inventory 
 
@@ -194,18 +196,19 @@ i. Open the inventory/dev.yml file we created earlier
 ii. Paste the below information
 
     [nfs]
-    ansible_host=<NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user
+    <NFS-Server-Private-IP-Address> ansible_ssh_user=ec2-user 
 
     [webservers]
-    ansible_host=<Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
-    ansible_host=<Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
+    <Web-Server1-Private-IP-Address> ansible_ssh_user=ec2-user
+    <Web-Server2-Private-IP-Address> ansible_ssh_user=ec2-user
 
     [db]
-    ansible_host=<Database-Private-IP-Address> ansible_ssh_user=ec2-user 
+    <Database-Private-IP-Address> ansible_ssh_user=ec2-user 
 
     [lb]
-    ansible_host=<Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
+    <Load-Balancer-Private-IP-Address> ansible_ssh_user=ubuntu
 
+![images](images/dev.PNG)
 ### Step 6: - Create a Common Playbook
 It is time to start giving Ansible the instructions on what you need to be performed on all servers listed in inventory/dev.
 
@@ -236,6 +239,7 @@ Update your playbooks/common.yml file with following code:
           apt:
             name: wireshark
             state: latest
+          
 Examine the code above and try to make sense out of it. This playbook is divided into two parts, each of them is intended to perform the same task: install wireshark utility (or make sure it is updated to the latest version) on your RHEL 8 and Ubuntu servers. It uses root user to perform this task and respective package manager: yum for RHEL 8 and apt for Ubuntu.
 
 Feel free to update this playbook with following tasks:
