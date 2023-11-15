@@ -273,6 +273,7 @@ If the reviewer is happy with your new feature development, merge the code to th
 
 Once your code changes appear in master branch - Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server as we configured it to in **Step 2**
 
+![jenkins](images/jenkins-archive.PNG)
 
 ### Step 8: - Run first Ansible test
 Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
@@ -282,11 +283,14 @@ Setup your VSCode to connect to your instance as demonstrated by the video above
     cd ansible-config-mgt
     
     ansible-playbook -i inventory/dev.yml playbooks/common.yml
-    
+
+  ![ansible](images/ansible-playbook.PNG)
 
 Note: Make sure you're in your ansible-config-mgt directory before you run the above command.
 
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
+
+![wireshark](images/wireshark-version.PNG)
 
 ### Side Study
 Learners should look into Ansible Modules to deepen knowledge of ansible playbooks. Ansible Modules are the building blocks of Ansible playbooks, and understanding them is fundamental to working effectively with Ansible.
