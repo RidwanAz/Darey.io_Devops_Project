@@ -136,7 +136,7 @@ update site.yml with - import_playbook: ../static-assignments/common-del.yml ins
 
     ansible-playbook -i inventory/dev.yml playbooks/site.yml
 
-  ![wireshark](wireshark-delete.PNG)
+  ![wireshark](images/wireshark-delete.PNG)
   
 Make sure that wireshark is deleted on all the servers by running
     
