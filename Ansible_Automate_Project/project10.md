@@ -8,6 +8,8 @@ Ansible is an orchestration and automation tool that allows you to define and ma
 
 As a devops engineer for your organisation, you are tasked with creating a backup directory for datas on a thousand servers, it will be a very tiring to go on each server and start creating backup directory manually. Ansible can automate the task for us with a single code that will run through the entire server
 
+![ansible](images/ansible-client-as-jump-server.PNG)
+
 ### Why Ansible Is Important For Automation
 Ansible is of utmost importance in today's technology landscape. It offers a solution to the challenges faced by devops engineers, system administrators, and IT professionals in managing infrastructure efficiently. By learning Ansible, you can reduce manual errors, save time, and ensure consistency in your infrastructure. The real-world impact is significant, as it can enhance the reliability and scalability of your systems, making it a valuable skill for anyone working in the field of IT.
 
@@ -291,6 +293,10 @@ Note: Make sure you're in your ansible-config-mgt directory before you run the a
 You can go to each of the servers and check if wireshark has been installed by running which wireshark or wireshark --version
 
 ![wireshark](images/wireshark-version.PNG)
+
+Our architecture should look like this
+
+![final architecture](images/final-architecture.PNG)
 
 ### Side Study
 Learners should look into Ansible Modules to deepen knowledge of ansible playbooks. Ansible Modules are the building blocks of Ansible playbooks, and understanding them is fundamental to working effectively with Ansible.
