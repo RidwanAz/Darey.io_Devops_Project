@@ -70,6 +70,7 @@ Anyone interested in automation and IaC: To learn a valuable skill applicable ac
   ***Confirm Ansible has been successfully installed***
 
       ansible --version
+![ansible](images/ansible-version.PNG)
 ### Step 2: Configure Jenkins Build Job To Archive Your Repository Content Every Time It Is Changed
 Jenkin is a pipeline for continuous integration. To create a build job, we need to have jenkins installed and configured first.
 - On the same EC2 instance ansible was installed, we need to install jenkins
@@ -90,8 +91,10 @@ Jenkin is a pipeline for continuous integration. To create a build job, we need 
 
     sudo systemctl status jenkins
 
+ [jenkins](images/jenkins-status.PNG)
+
 ***On our Jenkins-Ansible instance, create new inbound rules for port 8080 in security group***
-![inbound]()
+![inbound](images/inbound.PNG)
 
 ***Set up Jenkins***
 
@@ -100,32 +103,40 @@ i. Input your Jenkins-Ansible Instance ip address on your web browser i.e. http:
 
 ii. On your Jenkins-Ansible instance, check  "/var/lib/jenkins/secrets/initialAdminPassword" to know your password.
 
+![jenkins](images/jenkins-password.PNG)
 
 iii. Installed suggested plugins
 
 
 iv. Create a user account and log in to jenkins
 
+![jenkins](images/jenkins-admin.PNG)
+
 ***Confiure Jenkins To Receive Source Code From ansible-cofig-mgt***
 
 
 i. Allow webhook in our github repository. In ansible-config-mgt repository, navigate to **settings>webhooks** and past the url of jenkins.
 
+![github](images/githubwebhook.PNG)
 
 ii. Create a freestyle project in your jenkins web account and name it "ansible_automation"
 
+![jenkins](images/jenkins-freestyle.PNG)
 
 iii. Connect jenkins to ansible-config-mgt repository by pasting the repository url in the area selected below
 
+![jenkins](images/jenkins-connect.PNG)
 
 iv. Save configuration and run "build now" to connect jenkins to our repository
 
+![jenkins](images/jenkins-build.PNG)
 
 v. Click "Configure" your job and add these two configurations
 
 Configure triggering the job from GitHub webhook and Configure "Post-build Actions" to archive all the files.
 ![webhook]()
 
+![jenkins](images/jenkins-configure.PNG)
 
 click on add post-build actions and click "Archive the Artifact" then save
 
