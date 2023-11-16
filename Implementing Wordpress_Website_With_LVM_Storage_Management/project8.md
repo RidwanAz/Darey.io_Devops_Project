@@ -207,7 +207,7 @@ Verify your setup by running df -h, output must look like this:
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
 Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `var/www/db` directory instead of `/var/www/html/`.
 
-#### Install WordPress on your Web Server EC2
+#### Install WordPress On EC2 WebServer
 
 Update the repository
 
@@ -250,7 +250,7 @@ Restart Apache
 **`sudo systemctl restart httpd`**
 
 
-#### Download wordpress and copy wordpress to var/www/html
+#### Download Wrdpress and Copy Wordpress to var/www/html
 ```
 mkdir wordpress
 cd   wordpress
@@ -269,7 +269,7 @@ sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
 sudo setsebool -P httpd_can_network_connect=1
 ```
 
-#### Install MySQL on your DB Server EC2
+#### Install MySQL On EC2 DB Server 
 
 ```
 sudo yum update
@@ -284,7 +284,7 @@ sudo systemctl restart mysqld
 sudo systemctl enable mysqld
 ```
 
-#### Configure DB to work with WordPress
+#### Configure DB To Work With WordPress
 
 ```
 sudo mysql
@@ -305,7 +305,7 @@ exit
 
 ![configure database](Images/mysqlconfigure.PNG)
 
-#### Configure WordPress to connect to remote database.
+#### Configure WordPress To Connect To Remote Database.
 
 Edit inbound rule and open port 3306 on database server and allow connection from only our database server.
 
