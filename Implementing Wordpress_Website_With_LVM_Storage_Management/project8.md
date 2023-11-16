@@ -34,21 +34,27 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 4. Use `lsblk` command to inspect what block devices are attached to the server. Notice names of your newly created devices. All devices in Linux reside in `/dev/` directory. Inspect it with ls /dev/ and make sure you see all 3 newly created block devices there – their names will likely be `xvdf`, `xvdh`, `xvdg.`
 
 
-![lsblk](/Images/lsblk.PNG)
+![lsblk](Images/lsblk.PNG)
 
 5. Use `df -h` command to see all mounts and free space on your server
 
-![mount](/Images/df-h.PNG)
+![mount](Images/df-h.PNG)
 
 6. Use `gdisk` utility to create a single partition on each of the 3 disks
 
 **`sudo gdisk /dev/xvdf`**
 
-![xvdf](./Images/xvdf.PNG)
+<table>
+  <tr>
+    <td><img src="Images/gdiskf.PNG" alt="Image 1"></td>
+    <td><img src="Images/gdiskg.PNG" alt="Image 2"></td>
+    <td><img src="Images/gdiskh.PNG" alt="Image 2"></td>
+  </tr>
+</table>
 
 7. Use `lsblk` utility to view the newly configured partition on each of the 3 disks.
 
-![lsblk](./Images/lsblk.PNG)
+![lsblk](Images/lsblk1.PNG)
 
 
 8. Install lvm2 package using `sudo yum install lvm2`. Run `sudo lvmdiskscan` command to check for available partitions.
