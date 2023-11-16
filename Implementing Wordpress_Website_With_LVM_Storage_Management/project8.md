@@ -23,7 +23,8 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 
 <table>
   <tr>
-    <td><img src="Images/Createvolume.PNG" alt="Image 1"></td>
+   <td><img src="Images/Createvolume.PNG" alt="Image 2"></td>
+    <td><img src="Images/volumes.PNG" alt="Image 2"></td>
     <td><img src="Images/attachvolume.PNG" alt="Image 2"></td>
   </tr>
 </table>
@@ -59,26 +60,24 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 
 8. Install lvm2 package using `sudo yum install lvm2`. Run `sudo lvmdiskscan` command to check for available partitions.
 
-![lvm install](./Images/lvm%20install.PNG)
+![lvm install](Images/installlvm2.PNG)
 
 
 9. Use `pvcreate` utility to mark each of 3 disks as physical volumes (PVs) to be used by LVM.
 
-![pvcreate](./Images/pvcreate.PNG)
+![pvcreate](Images/pvcreate.PNG)
 
-
-![pvcreate status](./Images/pvs%20verify.PNG)
 
 10. Use `vgcreate` utility to add all 3 PVs to a volume group (VG). Name the VG **webdata-vg**
 
 **`sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1`**
 
-![vgcreate](./Images/vgcreate.PNG)
+![vgcreate](Images/vgcreate.PNG)
 
 
 11. verify that VG has been created 
 
-![vgcreate status](./Images/volume%20group%20status.PNG)
+![vgcreate status](Images/vgs.PNG)
 
 
 12. Use `lvcreate` utility to create 2 logical volumes. **apps-lv (Use half of the PV size), and logs-lv Use the remaining space of the PV size**. NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
@@ -87,15 +86,16 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 sudo lvcreate -n apps-lv -L 14G webdata-vg
 sudo lvcreate -n logs-lv -L 14G webdata-vg
 ```
+![lvcreate](Images/lvcreate.PNG)
 
 13. Verify that your Logical Volume has been created successfully by running sudo lvs
 
-![LVS](./Images/logical%20volume%20status.PNG)
+![LVS](Images/lvs.PNG)
 
 
 14. Verify the entire setup
 
-![vgdisplay](./Images/vgdisplay.PNG)
+![vgdisplay](Images/vgdisplay.PNG)
 
 15. Use `mkfs.ext4` to format the logical volumes with `ext4` filesystem
 
@@ -103,6 +103,7 @@ sudo lvcreate -n logs-lv -L 14G webdata-vg
 sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
 sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
 ```
+![mkfs](Images/mkfs.PNG)
 
 16. Create /var/www/html directory to store website files
 
@@ -125,9 +126,6 @@ sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
 
 
 **`sudo rsync -av /var/log/. /home/recovery/logs/`**
-
-
-![rsync](./Images/rsync.PNG)
 
 
 20. Mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why step 15 above is very
@@ -155,15 +153,15 @@ The UUID of the device will be used to update the /etc/fstab file;
 **`sudo blkid`**
 
 
-![blkid](./Images/sudo%20blkid.PNG)
+![blkid](Images/blkid.PNG)
 
 
-**`sudo vi /etc/fstab`**
+**`sudo nano /etc/fstab`**
 
 Update /etc/fstab in this format using your own UUID and rememeber to remove the leading and ending quotes.
 
 
-![mount wordpress](./Images/mount%20for%20wordpress%20webserver.PNG)
+![mount wordpress](Images/etcfstab.PNG)
 
 
 
@@ -176,14 +174,14 @@ Test the configuration and reload the daemon
 
 Verify your setup by running df -h, output must look like this:
 
-![df -h](./Images/systemctl%20reload.PNG)
+![df -h](Images/df-h2.PNG)
 
 
 Prepare the Database Server
 
 
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
-Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `/db` directory instead of `/var/www/html/`.
+Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `var/www/db` directory instead of `/var/www/html/`.
 
 **Install WordPress on your Web Server EC2**
 
@@ -191,13 +189,13 @@ Update the repository
 
 **`sudo yum -y update`**
 
-![yum install update ](./Images/yum%20install%20update.PNG)
+![yum install update ](Images/yumupdate.PNG)
 
 Install wget, Apache and it’s dependencies
 
 `sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json`
 
-![install dependcies](./Images/dependcies%20install.PNG)
+![install dependcies](Images/yumwget.PNG)
 
 Start Apache
 
@@ -206,7 +204,7 @@ sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
 
-![httpd](./Images/sudo%20start%20httpd.PNG)
+![httpd](Images/enablehttpd.PNG)
 
 To install PHP and it’s depemdencies
 
@@ -247,13 +245,13 @@ sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
 sudo setsebool -P httpd_can_network_connect=1
 ```
 
-SInstall MySQL on your DB Server EC2
+Install MySQL on your DB Server EC2
 
 ```
 sudo yum update
-sudo yum install mysql-server
+sudo yum install mysql-server -y
 ```
-![mysql server](./Images/mysql%20webserver%20install.PNG)
+![mysql server](Images/yummsql.PNG)
 
 Verify that the service is up and running by using sudo systemctl status mysqld, if it is not running, restart the service and enable it so it will be running even after reboot:
 
@@ -261,8 +259,6 @@ Verify that the service is up and running by using sudo systemctl status mysqld,
 sudo systemctl restart mysqld
 sudo systemctl enable mysqld
 ```
-
-![mysqld](./Images/restart%20mysqld.PNG)
 
 Configure DB to work with WordPress
 
@@ -283,12 +279,13 @@ exit
 ```
 
 
-![configure database](./Images/configure%20database.PNG)
+![configure database](Images/mysqlconfigure.PNG)
 
 Configure WordPress to connect to remote database.
 
+Edit inbound rule and open port 3306 on database server and allow connection from only our database server.
 
-Hint: Do not forget to open MySQL port 3306 on DB Server EC2. For extra security, you shall allow access to the DB server ONLY from your Web Server’s IP address, so in the Inbound Rule configuration specify source as /32
+![inbound rules](Images/inbound.PNG)
 
 
 Install MySQL client and test that you can connect from your Web Server to your DB 
@@ -299,7 +296,7 @@ sudo yum install mysql
 sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 ```
 
-![connection successful](./Images/connection%20successful%20on%20my%20webserver.PNG)
+![connection successful](Images/mysqlclient.PNG)
 
 Verify if you can successfully execute SHOW DATABASES; command and see a list of existing databases.
 
@@ -309,9 +306,21 @@ Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enabl
 
 Try to access from your browser the link to your WordPress `http://<Web-Server-Public-IP-Address>/wordpress/`
 
-![wordpress](./Images/wordpress.PNG)
+<table>
+  <tr>
+   <td><img src="Images/wordpress1.PNG" alt="Image 2"></td>
+    <td><img src="Images/wordpress3.PNG" alt="Image 2"></td>
+  </tr>
+</table>
 
 
-### Thank You!!!
+<table>
+  <tr>
+   <td><img src="Images/wordpress4.PNG" alt="Image 2"></td>
+    <td><img src="Images/wordpress5.PNG" alt="Image 2"></td>
+  </tr>
+</table>
+
+
 
 
