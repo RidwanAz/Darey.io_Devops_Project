@@ -220,7 +220,9 @@ ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
 
 
+## Real Life Scenario
+Imagine you're managing a dynamic cloud infrastructure with servers coming online and offline dynamically. Traditional static inventories fall short in such scenarios. In this use case, we'll explore how Ansible Dynamics can automatically discover and update hosts in a cloud environment, ensuring that your Ansible playbooks adapt seamlessly to the changing infrastructure.
 
-![final play](./Images/final%20play.PNG)
-
+## Conclusion
+From the last 2 project to this project, we have been able to learn about ansible. Ansible Dynamics, Assignments, and Community Roles offer a transformative journey in automation, equipping you with the tools to seamlessly adapt to dynamic infrastructures, delegate tasks effectively, and tap into the collective knowledge of a vibrant community. The power to automate is now at your fingertips, and the possibilities are boundless. Embrace the continuous learning journey, apply these skills to real-world scenarios, and become a catalyst for positive change in the world of automation. Happy automating!
 
