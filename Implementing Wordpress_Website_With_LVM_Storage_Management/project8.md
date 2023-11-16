@@ -177,13 +177,13 @@ Verify your setup by running df -h, output must look like this:
 ![df -h](Images/df-h2.PNG)
 
 
-Prepare the Database Server
+### Prepare the Database Server
 
 
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
 Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `var/www/db` directory instead of `/var/www/html/`.
 
-**Install WordPress on your Web Server EC2**
+### Install WordPress on your Web Server EC2
 
 Update the repository
 
