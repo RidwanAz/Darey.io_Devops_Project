@@ -305,7 +305,7 @@ Change permissions and configuration so Apache could use WordPress:
 Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 
 #### Verify Database Credentials
-Check the wp-config.php file in your WordPress installation directory to ensure that the database credentials are correct.
+Check the wp-config.php file in your WordPress webserver to ensure that the database credentials are correct.
 
     sudo nano /var/www/html/wordpress/wp-config.php
 Verify the values below
