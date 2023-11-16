@@ -177,13 +177,13 @@ Verify your setup by running df -h, output must look like this:
 ![df -h](Images/df-h2.PNG)
 
 
-### Prepare the Database Server
+#### Prepare the Database Server
 
 
 Launch a second RedHat EC2 instance that will have a role – ‘DB Server’
 Repeat the same steps as for the Web Server, but instead of `apps-lv` create `db-lv` and mount it to `var/www/db` directory instead of `/var/www/html/`.
 
-### Install WordPress on your Web Server EC2
+#### Install WordPress on your Web Server EC2
 
 Update the repository
 
@@ -226,7 +226,7 @@ Restart Apache
 **`sudo systemctl restart httpd`**
 
 
-Download wordpress and copy wordpress to var/www/html
+#### Download wordpress and copy wordpress to var/www/html
 ```
 mkdir wordpress
 cd   wordpress
@@ -237,7 +237,7 @@ cp wordpress/wp-config-sample.php wordpress/wp-config.php
 cp -R wordpress /var/www/html/
 ```
 
-Configure SELinux Policies
+#### Configure SELinux Policies
 
 ```
 sudo chown -R apache:apache /var/www/html/wordpress
@@ -245,7 +245,7 @@ sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
 sudo setsebool -P httpd_can_network_connect=1
 ```
 
-Install MySQL on your DB Server EC2
+#### Install MySQL on your DB Server EC2
 
 ```
 sudo yum update
@@ -260,7 +260,7 @@ sudo systemctl restart mysqld
 sudo systemctl enable mysqld
 ```
 
-Configure DB to work with WordPress
+#### Configure DB to work with WordPress
 
 ```
 sudo mysql
@@ -281,7 +281,7 @@ exit
 
 ![configure database](Images/mysqlconfigure.PNG)
 
-Configure WordPress to connect to remote database.
+#### Configure WordPress to connect to remote database.
 
 Edit inbound rule and open port 3306 on database server and allow connection from only our database server.
 
@@ -303,6 +303,19 @@ Verify if you can successfully execute SHOW DATABASES; command and see a list of
 Change permissions and configuration so Apache could use WordPress:
 
 Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
+
+#### Verify Database Credentials
+Check the wp-config.php file in your WordPress installation directory to ensure that the database credentials are correct.
+
+    sudo nano /var/www/html/wordpress/wp-config.php
+Verify the values below
+
+    define('DB_NAME', 'wordpress');
+    define('DB_USER', 'myuser');
+    define('DB_PASSWORD', 'mypass');
+    define('DB_HOST', 'database_private_ipaddress');
+
+
 
 Try to access from your browser the link to your WordPress `http://<Web-Server-Public-IP-Address>/wordpress/`
 
