@@ -13,4 +13,6 @@
   - Configure SElinux Policies
   - Install MySQL On EC2 DB Server
   - Configure DB To Work With Wordpress
+  - Configure Wordpress To Connect To Remote Database
+  - Verify Database Credentials
 - Conclusion
