@@ -23,8 +23,8 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 
 <table>
   <tr>
-    <td><img src="Image/Createvolume.PNG" alt="Image 1"></td>
-    <td><img src="Image/attachvolume.PNG" alt="Image 2"></td>
+    <td><img src="Images/Createvolume.PNG" alt="Image 1"></td>
+    <td><img src="Images/attachvolume.PNG" alt="Image 2"></td>
   </tr>
 </table>
 
