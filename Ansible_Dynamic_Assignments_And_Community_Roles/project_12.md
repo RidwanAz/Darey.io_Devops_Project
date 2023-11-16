@@ -29,6 +29,7 @@ Note: Depending on what method you used in the previous project you may have or 
 └── static-assignments
     └── common.yml
 ```
+![file1](images/file1.PNG)
 
 Since we will be using the same Ansible to configure multiple environments, and each of these environments will have certain unique attributes, such as servername, ip-address etc., we will need a way to set values to variables per specific environment.
 
@@ -56,7 +57,7 @@ Your layout should now look like this.
     └── webservers.yml
 ```
 
-![roles created](./Images/roles.PNG)
+![file2](images/file2.PNG)
 
 Now paste the instruction below into the env-vars.yml file.
 
