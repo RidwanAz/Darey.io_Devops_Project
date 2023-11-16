@@ -27,6 +27,22 @@ Before embarking on this journey, ensure you have a foundational understanding o
 
 By the end of this project, learners should be proficient in leveraging dynamic inventories, assigning tasks effectively, and utilizing community roles to streamline your Ansible workflows. The goals include mastering advanced Ansible concepts, fostering collaboration through community roles, and empowering learners to apply these skills to real-world scenarios. Let's embark on this journey of Ansible empowerment together!
 
+## Project Highlight
+- Introduction
+  - What Does Dynamic, Assignments and Community Roles Mean
+  - Importance of Ansible Dynamics
+  - Target Audience
+  - Project Prerequisite
+  - Project Goals
+
+- Introducing Dynamic Assignments Into Our Structure
+- Update site.yml With Dynamic Assignments 
+- Community Roles
+- Load Balancer Roles
+- Real Life Scenario
+- Conclusion
+
+
 ## Introducing Dynamic Assignment Into Our Structure
 
 In the last project, we refactored ansible code, also assigned and imported it
