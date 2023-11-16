@@ -124,22 +124,20 @@ Inside `roles` directory create your new MySQL role with `ansible-galaxy install
 mv geerlingguy.mysql/ mysql
 ```
 
-Inside `roles` directory create your new MySQL role with `ansible-galaxy install geerlingguy.nginx -p .` and rename the folder to `nginxRole`
+Inside `roles` directory create your new MySQL role with `ansible-galaxy install geerlingguy.nginx -p .` and rename the folder to `nginx`
 
 
 ```
-mv geerlingguy.nginx/ nginxRole
+mv geerlingguy.nginx/ nginx
 ```
 
 
-Inside `roles` directory create your new MySQL role with `ansible-galaxy install geerlingguy.apache -p .` and rename the folder to `apacheRole`
+Inside `roles` directory create your new MySQL role with `ansible-galaxy install geerlingguy.apache -p .` and rename the folder to `apache`
 
 
 ```
-mv geerlingguy.apache/ apacheRole
+mv geerlingguy.apache/ apache
 ```
-
-![install nginx and apache roles](./Images/install%20apache%20and%20nginx.PNG)
 
 
 ## LOAD BALANCER ROLES
@@ -197,8 +195,6 @@ Run Playbook using:
 ansible-playbook -i inventory/uat.yml playbooks/site.yml
 ```
 
-
-![Ansible playbook](./Images/ansible%20playbook%20running.PNG)
 
 
 ![final play](./Images/final%20play.PNG)
