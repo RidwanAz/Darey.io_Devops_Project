@@ -18,14 +18,15 @@ Your 3-Tier Setup
 
 The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as the Web Srver EC2, each of 10GB.
 
-![AWS Instance](./Images/RedHat%20Instance.PNG)
-
 
 2. Attach the three volumes one by one to your Webserver EC2 instance
 
-![Create Volume](./Images/create%20volumes.PNG)
-
-![Attach Volume](./Images/attach%20volume.PNG)
+<table>
+  <tr>
+    <td><img src="Image/Createvolume.PNG" alt="Image 1"></td>
+    <td><img src="Image/attachvolume.PNG" alt="Image 2"></td>
+  </tr>
+</table>
 
 
 3. Open up the Linux terminal to begin configuration
@@ -33,11 +34,11 @@ The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as 
 4. Use `lsblk` command to inspect what block devices are attached to the server. Notice names of your newly created devices. All devices in Linux reside in `/dev/` directory. Inspect it with ls /dev/ and make sure you see all 3 newly created block devices there – their names will likely be `xvdf`, `xvdh`, `xvdg.`
 
 
-![Disk Attach](./Images/disk%20attched%20to%20volume.PNG)
+![lsblk](/Images/lsblk.PNG)
 
 5. Use `df -h` command to see all mounts and free space on your server
 
-![All mount](./Images/all%20mounts.PNG)
+![mount](/Images/df-h.PNG)
 
 6. Use `gdisk` utility to create a single partition on each of the 3 disks
 
