@@ -15,6 +15,10 @@ Documentation of darey.io learning project
 
 ***Project 7 - Automating Loadbalancer Configuration With Shell Scripting***
 
+***Project 8 - Implementing Wordpress Website With LVM Storage Management***
+
+***Project 9 - Devops Tooling Website Solution***
+
 ***Project 10 - Ansible Automate Project***
 
 ***Project 11 - Ansible Refactoring, Assignments amd Imports***
