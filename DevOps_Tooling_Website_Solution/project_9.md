@@ -41,10 +41,14 @@ In this project you will implement a solution that consists of following compone
 
 ![gdisk utility](Images/gdisk.PNG)
 
-- Once partition is created install lvm2 using `sudo yum install lvm2` then carry out the other process as in project 6.
+- Once partition is created install lvm2 using `sudo yum install lvm2` then carry out the other process as in the previous project.
 
+- Create physical volume and volume group. Refer to the previous project for this.
 
+- Use `lvcreate` to create logical volumes of size 10G, 10G and 8G each.
 
+![lvcreate](Images/lvcreate.PNG)
+  
 - Instead of formating the disks as `ext4` you will have to format them as `xfs`
 
 ```
