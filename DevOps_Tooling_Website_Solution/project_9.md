@@ -209,6 +209,7 @@ During the next steps we will do following:
 
 `sudo yum install nfs-utils nfs4-acl-tools -y`
 
+![nfs client](Images/install-nfsclient.PNG)
 
 3. Mount /var/www/ and target the NFS server’s export for apps
 ```
@@ -220,8 +221,6 @@ sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/ww
 
 4. Verify that NFS was mounted successfully by running df -h. Make sure that the changes will persist on Web Server after reboot:
 
-![Mount](Images/df-h.PNG)
-
 
     sudo nano /etc/fstab
 
@@ -229,7 +228,7 @@ add following line;
 
     <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
 
-
+![Mount](Images/df-h.PNG)
 
 5. Install Remi’s repository, Apache and PHP
 ```
@@ -257,7 +256,7 @@ sudo systemctl restart httpd
 
 ```
 
-### **Repeat steps 1-5 for another 2 Web Servers.**
+***steps 1-5 for should be done for webserver 1, 2 and 3***
 
 6. Verify that Apache files and directories are available on the Web Server in /var/www and also on the NFS server in /mnt/apps. If you see the same files – it means NFS is mounted correctly. You can try to create a new file touch test.txt from one server and check if the same file is accessible from other Web Servers.
 
