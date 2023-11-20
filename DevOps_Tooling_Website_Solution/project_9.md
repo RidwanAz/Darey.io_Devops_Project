@@ -294,11 +294,11 @@ sudo systemctl status httpd
 
 10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
-$db = mysqli_connect('172.31.30.238', 'myuser', 'mypasskey', 'tooling');
+        $db = mysqli_connect('172.31.30.238', 'webaccess', 'mypasskey', 'tooling');
 
-* Install MySQL on the web servers using **`sudo yum install mysql -y`** then cd into the tooling directory to connect to thhe database.
+- Install MySQL on the web servers using `sudo yum install mysql -y` then cd into the tooling directory to connect to thhe database.
 
-![Apply Tooling](./Images/apply%20tooling%20script.PNG)
+       sudo mysql -h 172.31.30.238 -u webaccess -p tooling < tooling-db.sql
 
 If you can't connect to it and there is an error simply move to the DB server to edit the inbound security group.
 
