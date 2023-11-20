@@ -19,7 +19,7 @@ In this project you will implement a solution that consists of following compone
 
 * Code Repository: Github
 
-![Architecture](Images/app-diagram.PNG)
+![Architecture](Images/app-diagram.png)
 
 
 ## STEP 1 – PREPARE NFS SERVER
@@ -90,12 +90,10 @@ Edit fstab file and paste the UUID of the mount part
  
       sudo vi /etc/fstab
 
-![fstab](Images/fstab)
+![fstab](Images/fstab.PNG)
 
-```
-sudo mount -a 
-sudo systemctl daemon-reload
-```
+    sudo mount -a 
+    sudo systemctl daemon-reload
 
 
 4. Install NFS server, configure it to start on reboot and make sure it is u and running
@@ -115,7 +113,12 @@ sudo systemctl status nfs-server.service
 5. Export the mounts for webservers’ subnet cidr to connect as clients. For simplicity, you will install your all three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security.
 To check your subnet cidr – open your EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
-
+<table>
+  <tr>
+   <td><img src="Images/subnet1.PNG" alt="Image 2"></td>
+    <td><img src="Images/subnet2.PNG" alt="Image 2"></td>
+  </tr>
+</table>
 
 * Make sure we set up permission that will allow our Web servers to read, write and execute files on NFS:
 
