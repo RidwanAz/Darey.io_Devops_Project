@@ -267,13 +267,16 @@ sudo systemctl restart httpd
 
 8. Fork the tooling source code from Darey.io Github Account to your Github account.
 
-![Repo](Images/dareyforked.PNG)
+![Repository](Images/dareyforked.PNG)
 
 9. Deploy the tooling website’s code to the Webserver. Ensure that the html folder from the repository is deployed to `/var/www/html`
 
-![Tooling](./Images/git%20clone.PNG)
+![Gir Clone](Images/gitclone.PNG)
 
-![/var/www/html](./Images/copy%20html%20to%20var.PNG)
+10. Copy all content inside the html folder into /var/www/html.
+
+
+        sudo cp -R html/. /var/www/html
 
 
 **Note 1: Do not forget to open TCP port 80 on the Web Server.**
@@ -282,7 +285,7 @@ Note 2: If you encounter 403 Error – check permissions to your `/var/www/html`
 
 To make this change permanent – open following config file `sudo vi /etc/sysconfig/selinux` and set `SELINUX=disabled` then restart httpd.
 
-![selinux disabled](./Images/selinux%20disabled.PNG)
+![selinux disabled](Images/selinux.PNG)
 
 ```
 sudo systemctl restart httpd
@@ -291,8 +294,7 @@ sudo systemctl status httpd
 
 10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply tooling-db.sql script to your database using this command mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
 
-
-![update website configuration](./Images/update%20website%20configuration.PNG)
+$db = mysqli_connect('172.31.30.238', 'myuser', 'mypasskey', 'tooling');
 
 * Install MySQL on the web servers using **`sudo yum install mysql -y`** then cd into the tooling directory to connect to thhe database.
 
