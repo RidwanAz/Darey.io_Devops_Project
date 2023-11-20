@@ -302,19 +302,18 @@ sudo systemctl status httpd
 
 If you can't connect to it and there is an error simply move to the DB server to edit the inbound security group.
 
-![mysql port](./Images/mysql%20port.PNG)
+![mysql inbound](Images/mysqlaurora-inbound.PNG)
 
 Then edit the mysqld.cnf file
 
+    sudo vi /etc/mysql/mysql.conf.d//mysqld.cnf
 
-```
-sudo vi /etc/mysql/mysql.conf.d//mysqld.cnf
+![mysql.cnf](Images/mysql-cnf.PNG)
 
-sudo systemctl restart mysql
 
-sudo systemctl status mysql
-```
-![Bind address](./Images/bind-address.PNG)
+    sudo systemctl restart mysql
+
+    sudo systemctl status mysql
 
 
 11. Create in MySQL a new admin user with username: myuser and password: password:
@@ -324,9 +323,11 @@ INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, 
 
 12. Open the website in your browser http://<Web-Server-Public-IP-Address-or-Public-DNS-Name>/index.php and make sure you can login into the websute with myuser user.
 
-![login page](./Images/login%20page.PNG)
+<table>
+  <tr>
+   <td><img src="Images/login.PNG" alt="Image 2"></td>
+    <td><img src="Images/admin.PNG" alt="Image 2"></td>
+  </tr>
+</table>
 
-![Admin tooling page](./Images/admin-tooling%20page.PNG)
 
-
-### Thank You!! 
