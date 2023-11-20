@@ -57,9 +57,9 @@ sudo mkfs -t xfs /dev/webdata-vg/lv-logs
 sudo mkfs -t xfs /dev/webdata-vg/lv-opt
 ```
 
-![Mount format](./Images/format%20xfs.PNG)
+![Mount format](Images/mkfs.PNG)
 
-* Ensure there are 3 Logical Volumes. lv-opt lv-apps, and lv-logs
+- Ensure there are 3 Logical Volumes. lv-opt lv-apps, and lv-logs
 
 3. Create mount points on /mnt directory for the logical volumes as follow:
 
@@ -82,9 +82,15 @@ sudo mount /dev/webdata-vg/lv-logs /mnt/logs
 
 sudo mount /dev/webdata-vg/lv-opt /mnt/opt
 ```
-* Once mount is completed run **`sudo blkid`** to get the UUID of the mount part, open and paste the UUID in the fstab file.
 
-**`sudo vi /etc/fstab`**
+- Once mount is completed run **`sudo blkid`** to get the UUID of the mount part, open and paste the UUID in the fstab file.
+![blkid](Images/blkid.PNG)
+
+Edit fstab file and paste the UUID of the mount part
+ 
+      sudo vi /etc/fstab
+
+![fstab](Images/fstab)
 
 ```
 sudo mount -a 
