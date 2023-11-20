@@ -110,6 +110,8 @@ sudo systemctl enable nfs-server.service
 sudo systemctl status nfs-server.service
 ```
 
+![NFS Status](Images/nfs-status.PNG)
+
 5. Export the mounts for webservers’ subnet cidr to connect as clients. For simplicity, you will install your all three Web Servers inside the same subnet, but in production set up you would probably want to separate each tier inside its own subnet for higher level of security.
 To check your subnet cidr – open your EC2 details in AWS web console and locate ‘Networking’ tab and open a Subnet link:
 
@@ -154,7 +156,9 @@ Save and close the file.
 
 
 6. Check which port is used by NFS and open it using Security Groups (add new Inbound Rule)
-rpcinfo -p | grep nfs
+
+        rpcinfo -p | grep nfs
+![NFS Port](Images/nfsport.PNG)
 
 
 **Important note: In order for NFS server to be accessible from your client, you must also open following ports: TCP 111, UDP 111, UDP 2049**
@@ -200,11 +204,11 @@ During the next steps we will do following:
 1. Launch three new EC2 instance with RHEL 8 Operating System
 
 ![webservers](Images/webservers.PNG)
+
 2. Install NFS client
 
 `sudo yum install nfs-utils nfs4-acl-tools -y`
 
-![NFS Client ](./Images/install%20nfs%20utility%20on%20webserver.PNG)
 
 3. Mount /var/www/ and target the NFS server’s export for apps
 ```
@@ -212,18 +216,20 @@ sudo mkdir /var/www
 sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
 ```
 
-![Mount Target](./Images/mount%20and%20target%20the%20nfs%20server.PNG)
+![Mount Target](Images/nfs-mount.PNG)
 
 4. Verify that NFS was mounted successfully by running df -h. Make sure that the changes will persist on Web Server after reboot:
-```
-sudo vi /etc/fstab
+
+![Mount](Images/df-h.PNG)
+
+
+    sudo nano /etc/fstab
 
 add following line;
 
-<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
-```
+    <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0
 
-![Verify mount ](./Images/verify%20nfs%20mounted.PNG)
+
 
 5. Install Remi’s repository, Apache and PHP
 ```
