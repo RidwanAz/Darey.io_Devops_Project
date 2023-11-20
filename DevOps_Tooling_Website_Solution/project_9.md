@@ -120,7 +120,7 @@ To check your subnet cidr – open your EC2 details in AWS web console and locat
   </tr>
 </table>
 
-* Make sure we set up permission that will allow our Web servers to read, write and execute files on NFS:
+- Make sure we set up permission that will allow our Web servers to read, write and execute files on NFS:
 
 ```
 sudo chown -R nobody: /mnt/apps
@@ -138,19 +138,19 @@ sudo chmod -R 777 /mnt/opt
 sudo systemctl restart nfs-server.service
 ```
 
-* Configure access to NFS for clients within the same subnet (example of Subnet CIDR – 172.31.32.0/20):
+- Configure access to NFS for clients within the same subnet (example of Subnet CIDR – 172.31.32.0/20):
 
-```
-sudo vi /etc/exports
+      sudo nano /etc/exports
 
-/mnt/apps <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
-/mnt/logs <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
-/mnt/opt <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
+      /mnt/apps 172.31.32.0/20(rw,sync,no_all_squash,no_root_squash)
+      /mnt/logs 172.31.32.0/20(rw,sync,no_all_squash,no_root_squash)
+      /mnt/opt 172.31.32.0/20(rw,sync,no_all_squash,no_root_squash)
 
-Esc + :wq!  to exit vim
+Save and close the file.
 
-sudo exportfs -arv
-```
+    sudo exportfs -arv
+
+![export](Images/export.PNG)
 
 
 6. Check which port is used by NFS and open it using Security Groups (add new Inbound Rule)
@@ -160,23 +160,23 @@ rpcinfo -p | grep nfs
 **Important note: In order for NFS server to be accessible from your client, you must also open following ports: TCP 111, UDP 111, UDP 2049**
 
 
-![TCP and UDP](./Images/tcp%20and%20udp.PNG)
+![NFS Inbound](Images/nfs-inbound.PNG)
 
 ## STEP 2 –  CONFIGURE THE DATABASE SERVER
 
 1. Install MySQL server
 
-**`sudo apt install mysql`**
+        sudo apt install mysql
 
 2. Create a database and name it `tooling`
-```
-sudo mysql
-create database tooling;
-```
+   
+        sudo mysql
+        create database tooling;
+
 
 3. Create a database user and name it `webaccess`
 
-**`create user 'webaccess'@'172.31.80.0/20' identified by 'password';`**
+**`create user 'webaccess'@'172.31.32.0/20' identified by 'mypasskey';`**
 
 4. Grant permission to webaccess user on tooling database to do anything only from the webservers subnet cidr
 
