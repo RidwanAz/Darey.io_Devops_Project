@@ -19,7 +19,7 @@ In this project you will implement a solution that consists of following compone
 
 * Code Repository: Github
 
-![Architecture](./Images/application%20diagram.PNG)
+![Architecture](Images/app-diagram.PNG)
 
 
 ## STEP 1 – PREPARE NFS SERVER
@@ -30,22 +30,22 @@ In this project you will implement a solution that consists of following compone
 
 2. Based on your LVM experience from Project 6, Configure LVM on the Server.
 
-*  create volumes for the NFS server
+-  create volumes for the NFS server
 
-![NFS volume](./Images/nfs%20volumes.PNG)
-
-
-![NFS vol list](./Images/NFS%20volume%20list.PNG)
-
-* using the gdisk utility to create partitions 
-
-![gdisk utility](./Images/gdisk%20utility.PNG)
-
-* Once partition is created install lvm2 using `sudo yum install lvm2` then carry out the other process as in project 6.
+![volume](Images/volumes.PNG)
 
 
+![lsblk](Images/lsblk.PNG)
 
-* Instead of formating the disks as `ext4` you will have to format them as `xfs`
+- using the gdisk utility to create partitions 
+
+![gdisk utility](Images/gdisk.PNG)
+
+- Once partition is created install lvm2 using `sudo yum install lvm2` then carry out the other process as in project 6.
+
+
+
+- Instead of formating the disks as `ext4` you will have to format them as `xfs`
 
 ```
 sudo mkfs -t xfs /dev/webdata-vg/lv-apps
