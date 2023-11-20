@@ -182,7 +182,7 @@ rpcinfo -p | grep nfs
 
 **`grant all privileges on tooling.* to 'webaccess'@'172.31.80.0/20';`**
 
-![DB User create](./Images/DB%20create%20user%20and%20database.PNG)
+![DB User create](Images/mysqlconfigure.PNG)
 
 
 
@@ -190,15 +190,16 @@ rpcinfo -p | grep nfs
 
 During the next steps we will do following:
 
-* **Configure NFS client (this step must be done on all three servers)**
+- **Configure NFS client (this step must be done on all three servers)**
 
-* **Deploy a Tooling application to our Web Servers into a shared NFS folder**
+- **Deploy a Tooling application to our Web Servers into a shared NFS folder**
 
-* **Configure the Web Servers to work with a single MySQL database**
+- **Configure the Web Servers to work with a single MySQL database**
 
 
-1. Launch a new EC2 instance with RHEL 8 Operating System
+1. Launch three new EC2 instance with RHEL 8 Operating System
 
+![webservers](Images/webservers.PNG)
 2. Install NFS client
 
 `sudo yum install nfs-utils nfs4-acl-tools -y`
