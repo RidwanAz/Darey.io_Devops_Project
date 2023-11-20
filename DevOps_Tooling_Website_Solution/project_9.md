@@ -26,7 +26,7 @@ In this project you will implement a solution that consists of following compone
 
 1. Spin up a new EC2 instance with RHEL Linux 8 Operating System.
 
-![All instances](./Images/all%20instances%20created.PNG)
+![nfs server](Images/nfs-instance.PNG)
 
 2. Based on your LVM experience from Project 6, Configure LVM on the Server.
 
