@@ -26,13 +26,7 @@ By the end of this project, participants should be able to:
 - Implement best practices for version control and deployment.
 
 
-
-
-
-
-
-
-
+## Implementing A Tooling Website
 
 In this project you will implement a solution that consists of following components:
 
@@ -40,7 +34,7 @@ In this project you will implement a solution that consists of following compone
 ![Architecture](Images/app-diagram.png)
 
 
-## STEP 1 – PREPARE NFS SERVER
+#### STEP 1 – PREPARE NFS SERVER
 
 1. Spin up a new EC2 instance with RHEL Linux 8 Operating System.
 
@@ -184,7 +178,7 @@ Save and close the file.
 
 ![NFS Inbound](Images/nfs-inbound.PNG)
 
-## STEP 2 –  CONFIGURE THE DATABASE SERVER
+#### STEP 2 –  CONFIGURE THE DATABASE SERVER
 
 1. Install MySQL server
 
@@ -208,7 +202,7 @@ Save and close the file.
 
 
 
-## STEP 3 - PREPARE THE WEB SERVERS
+#### STEP 3 - PREPARE THE WEB SERVERS
 
 During the next steps we will do following:
 
