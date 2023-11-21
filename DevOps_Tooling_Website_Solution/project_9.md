@@ -343,3 +343,5 @@ INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, 
 </table>
 
 
+## Conclusion
+This project equips learners with the skills and knowledge needed to create a unified and efficient DevOps environment. Key takeaways include a deep understanding of essential DevOps tools, their integration into a web-based platform, and the promotion of collaborative workflows. By completing this project, you've gained more knowledge on using git for version control, mysql as a database, NFS for storage server and apache for webserver. 
