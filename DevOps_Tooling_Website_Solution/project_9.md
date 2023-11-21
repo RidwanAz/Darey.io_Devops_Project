@@ -5,6 +5,11 @@ In the fast-evolving landscape of technology and software development, the effic
 
 The "DevOps Tooling Website Solution" aims to create a centralized platform that incorporates essential DevOps tools for version control, collaboration and deployment. We will be deploying on building a  tooling website with components such as; AWS, Webserver, Database, Storage server and more. The goal is to provide a unified interface, fostering collaboration and enhancing the efficiency of DevOps workflows.
 
+In this project you will implement a solution that consists of following components:
+
+
+![Architecture](Images/app-diagram.png)
+
 ### Importance
 DevOps practices have become a cornerstone in modern software development, promoting collaboration and automation to achieve higher productivity and better-quality software. The "DevOps Tooling Website Solution" addresses the need for a consolidated environment, reducing the complexity of tool management and facilitating smoother communication between development and operations teams.
 
@@ -38,11 +43,6 @@ By the end of this project, participants should be able to:
 - Conclusion
 
 ## Implementing A Tooling Website
-
-In this project you will implement a solution that consists of following components:
-
-
-![Architecture](Images/app-diagram.png)
 
 
 #### STEP 1 – PREPARE NFS SERVER
