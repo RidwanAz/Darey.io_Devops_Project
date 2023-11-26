@@ -24,3 +24,9 @@ Documentation of darey.io learning project
 ***Project 11 - Ansible Refactoring, Assignments amd Imports***
 
 ***Project 12 - Ansible Dynamic Assignments (Include) and Community Roles***
+
+***Project 16 - Automate Infrastructure With IaC using Terraform. Part 1***
+
+***Project 17 - Automate Infrastructure With IaC using Terraform. Part 2***
+
+***Project 18 - Automate Infrastructure With IaC using Terraform. Part 3***
