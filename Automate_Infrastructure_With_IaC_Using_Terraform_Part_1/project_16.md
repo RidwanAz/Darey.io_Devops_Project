@@ -70,6 +70,11 @@ Your setup should look like this.
 
 To set up terraform cli, follow the [official documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
+After installation, run `terraform version` to verify successful installation of terraform.
+
+![Terraform Version](Images/terraform-version.PNG)
+
+
 ### Provider and VPC resource section
 
 - Add AWS as a provider, and a resource to create a VPC in the main.tf file.
