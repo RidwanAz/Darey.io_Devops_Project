@@ -40,7 +40,12 @@ Verify installation with `python --version or python3 --version
 
 To install AWS CLI, follow this [official documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-After installation, we to use aws cli to configure teraform IAM user to access the aws console from the command line using terraform as IaC
+Verify if aws is successfully installed with `aws --version`
+
+![AWS Version](Images/aws-version.PNG)
+
+
+After installation, we need to use aws cli to configure teraform IAM user to access the aws console from the command line using terraform as IaC
 
       aws configure
 
@@ -52,6 +57,8 @@ Aws Secret Access Key = YOUR_SECRET_KEY
 Default region name = YOUR_REGION
 Default output format = json
 ```
+![AWS Configure](Images/aws-configure.PNG)
+
 
 ### VPC | SUBNETS | SECURITY GROUPS
 
