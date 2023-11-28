@@ -11,10 +11,23 @@
 - Configure programmatic access from your workstation to connect to AWS using the access keys copied above and a Python SDK (boto3). You must have Python 3.6 or higher on your workstation.
 
 ### Install Python3 on Your Local Machine
+If you are using a linux or windows machine, python comes pre-installed 
 **For `Windows` machine**
 ```
-pip install boto3
+Visit the official Python website at python.org.
+Navigate to the "Downloads" section.
+Click on the "View the full list of downloads" link.
+Scroll down to find the version of Python you want to install. As of my last knowledge update in January 2022, the latest stable version is Python 3.x (e.g., Python 3.9).
+Choose the version that suits your needs (you might see options for the latest version and the latest version for a specific operating system, such as Windows).
+Click on the link to download the installer.
+Verify installation with `python --version or python3 --version
 ```
+- Install boto3 with python-pip
+
+      pip install boto3
+** The above command will work on windows, linux and mac
+
+
 
 ![](./images/install%20boto3.PNG)
 
