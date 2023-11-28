@@ -9,7 +9,7 @@
   <tr>
     <td><img src="Images/accesskey-use.PNG" alt="Image 1"></td>
     <td><img src="Images/IAM1.PNG" alt="Image 2"></td>
-    <td><img src="Images/IAM2.PNG" alt="Image 2"></td>
+    <td><img src="Images/IAM2.PNG" alt="Image 3"></td>
   </tr>
 </table>
 
@@ -453,4 +453,9 @@ preferred_number_of_public_subnets = 2
 ```
 
 
-![](./images/final%20creation.PNG)
+ <table>
+  <tr>
+    <td><img src="Images/fterraformapply.PNG" alt="Image 1"></td>
+    <td><img src="Images/fterraformplan.PNG" alt="Image 2"></td>
+  </tr>
+</table>
