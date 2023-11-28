@@ -501,3 +501,9 @@ preferred_number_of_public_subnets = 2
     <td><img src="Images/fterraformplan.PNG" alt="Image 2"></td>
   </tr>
 </table>
+
+**Side Study**
+Learners should more on basic network principle sucha as ip addresses, cidr notation, ip routing and NAT gateway
+
+## Conclusion
+In this project, learners should have understood the concept of Iac and its usage in creating Virtual Private Clouds (VPCs) and subnets. Through this project, you have gained valuable insights into the world of efficient and reproducible infrastructure management.
