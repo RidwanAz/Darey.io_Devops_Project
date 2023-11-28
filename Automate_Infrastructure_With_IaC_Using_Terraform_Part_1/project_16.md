@@ -14,16 +14,21 @@ Automating infrastructure creation is crucial for scalability, repeatability, an
 - Cloud Engineers
 - System Administrators
 
+### Project Prerequisites
+- AWS management console access
+- Basic understanding of AWS cloud computing
+- Knowledge of AWS services and console management
+- Understanding of command line interface
+
+### Project Goals
+The primary goals of this project include:
+
+- Understanding the concept of Infrastructure as Code.
+- Proficiency in using Terraform for automating VPC and subnet creation.
+- Hands-on experience with managing cloud infrastructure programmatically.
 
 
-
-
-
-
-
-
-
-# Automating Infrastructure Creation With IAC (Terraform)
+## Implementing Infrastructure Creation With IAC (Terraform)
 
 ### Create an IAM User From The Management Console
 - Create an IAM user, name it terraform, ensure that the user has only programatic access to your AWS account (make sure not to grant console access) and grant this user AdministratorAccess permissions.
