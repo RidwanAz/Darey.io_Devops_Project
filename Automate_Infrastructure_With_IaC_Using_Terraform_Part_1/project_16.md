@@ -25,37 +25,35 @@ Verify installation with `python --version or python3 --version
 - Install boto3 with python-pip
 
       pip install boto3
-** The above command will work on windows, linux and mac
-
+**The above command will work on windows, linux and mac**
 
 
 ![](./images/install%20boto3.PNG)
 
 ![](./images/architecture%20diagram.PNG)
 
+### Install AWS CLI On Your Local Machine
 
-If you have the AWS CLI installed, then you can use the aws configure command to configure your credentials file:
+To install AWS CLI, follow this [official documentation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
-```
-aws configure
-```
+After installation, we to use aws cli to configure teraform IAM user to access the aws console from the command line using terraform as IaC
+
+      aws configure
+
 Alternatively, you can create the credentials file yourself. By default, its location is ~/.aws/credentials. At a minimum, the credentials file should specify the access key and secret access key. In this example, the key and secret key for the account are specified in the default profile:
 
 ```
-aws_access_key_id = YOUR_ACCESS_KEY
-aws_secret_access_key = YOUR_SECRET_KEY
+Aws Access Key ID = YOUR_ACCESS_KEY
+Aws Secret Access Key = YOUR_SECRET_KEY
+Default region name = YOUR_REGION
+Default output format = json
 ```
+
 
 ![](./images/terraform%20bucket.PNG)
-You may also want to add a default region to the AWS configuration file, which is located by default at ~/.aws/config:
-
-```
-region=us-east-1
-```
-Alternatively, you can pass a region_name when creating clients and resources.
 
 
-# VPC | SUBNETS | SECURITY GROUPS
+### VPC | SUBNETS | SECURITY GROUPS
 
 Let us create a directory structure
 
@@ -68,10 +66,11 @@ Your setup should look like this.
 
 ![](./images/PBL%20folder.PNG)
 
+### Install Terraform
+
+To set up terraform cli, follow the [official documentation](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
 # Provider and VPC resource section
-
-- Set up Terraform CLI as per this instruction.
 
 - Add AWS as a provider, and a resource to create a VPC in the main.tf file.
 
