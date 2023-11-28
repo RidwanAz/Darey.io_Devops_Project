@@ -152,7 +152,7 @@ Starting with the provider block, declare a variable named region, give it a def
     }
 
     variable "vpc_cidr" {
-        default = "172.16.0.0/16"
+        default = "172.31.0.0/16"
     }
 
     variable "enable_dns_support" {
@@ -203,7 +203,7 @@ To make use of this new data resource, we will need to introduce a count argumen
 resource "aws_subnet" "public" { 
     count                   = 2
     vpc_id                  = aws_vpc.main.id
-    cidr_block              = "172.16.1.0/24"
+    cidr_block              = "172.31.0.0/20"
     map_public_ip_on_launch = true
     availability_zone       = data.aws_availability_zones.available.names[count.index]
 
@@ -228,7 +228,7 @@ We will introduce a function cidrsubnet() to make this happen. It accepts 3 para
 
 We can introuduce length() function, which basically determines the length of a given list, map, or string.
 
-Since data.aws_availability_zones.available.names returns a list like ["eu-central-1a", "eu-central-1b", "eu-central-1c"] we can pass it into a lenght function and get number of the AZs.
+Since data.aws_availability_zones.available.names returns a list like ["us-east-1a", "us-east-1b", "us-east-1c"] we can pass it into a lenght function and get number of the AZs.
 
 Now we can simply update the public subnet block like this
 
@@ -296,7 +296,7 @@ variable "region" {
 }
 
 variable "vpc_cidr" {
-    default = "172.16.0.0/16"
+    default = "172.31.0.0/16"
 }
 
 variable "enable_dns_support" {
@@ -396,7 +396,7 @@ variable "region" {
 }
 
 variable "vpc_cidr" {
-    default = "172.16.0.0/16"
+    default = "172.31.0.0/16"
 }
 
 variable "enable_dns_support" {
@@ -425,7 +425,7 @@ variable "enable_classiclink_dns_support" {
 ```
 region = "us-east-1"
 
-vpc_cidr = "172.16.0.0/16" 
+vpc_cidr = "172.31.0.0/16" 
 
 enable_dns_support = "true" 
 
