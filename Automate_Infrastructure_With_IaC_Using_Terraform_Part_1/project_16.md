@@ -1,19 +1,19 @@
 # Automating Infrastructure Creation With IAC (Terraform)
 
-
-- Create an IAM user, name it terraform (ensure that the user has only programatic access to your AWS account) and grant this user AdministratorAccess permissions.
+### Create an IAM User From The Management Console
+- Create an IAM user, name it terraform, ensure that the user has only programatic access to your AWS account (make sure not to grant console access) and grant this user AdministratorAccess permissions.
 
 ![](./images/create%20IAM%20user.PNG)
 
 ![](./images/admin%20access.PNG)
 
-- Copy the secret access key and access key ID. Save them in a notepad temporarily.
+- Copy the secret access key and access key ID. Save them in a notepad temporarily.(It will be used later to configue aws from the command line)
 - Configure programmatic access from your workstation to connect to AWS using the access keys copied above and a Python SDK (boto3). You must have Python 3.6 or higher on your workstation.
 
+### Install Python3 on Your Local Machine
+**For `Windows` machine**
 ```
 pip install boto3
-
-pip install boto3[crt]
 ```
 
 ![](./images/install%20boto3.PNG)
