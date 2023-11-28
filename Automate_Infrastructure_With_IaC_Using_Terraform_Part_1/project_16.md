@@ -25,15 +25,16 @@ Choose the version that suits your needs (you might see options for the latest v
 Click on the link to download the installer.
 Verify installation with `python --version or python3 --version
 ```
+![Python Version](Images/python-version.PNG)
+
 - Install boto3 with python-pip
 
       pip install boto3
 **The above command will work on windows, linux and mac**
 
 
-![](./images/install%20boto3.PNG)
+![Boto3](Images/boto3.PNG)
 
-![](./images/architecture%20diagram.PNG)
 
 ### Install AWS CLI On Your Local Machine
 
@@ -52,10 +53,6 @@ Default region name = YOUR_REGION
 Default output format = json
 ```
 
-
-![](./images/terraform%20bucket.PNG)
-
-
 ### VPC | SUBNETS | SECURITY GROUPS
 
 Let us create a directory structure
@@ -67,7 +64,7 @@ Open your Visual Studio Code and:
 - 
 Your setup should look like this.
 
-![](./images/PBL%20folder.PNG)
+![PBL](Images/pbl-folder.PNG)
 
 ### Install Terraform
 
@@ -85,7 +82,7 @@ Note: You can change the configuration above to create your VPC in other region 
 
 - The next thing we need to do, is to download necessary plugins for Terraform to work. These plugins are used by providers and provisioners.  So, Terraform will just download plugin for AWS provider.
 
-![](./images/terraform%20init.PNG)
+![Terraform Init](Images/terraform-init.PNG)
 
 - Notice that a new directory has been created: .terraform.... This is where Terraform keeps plugins. Generally, it is safe to delete this folder. It just means that you must execute terraform init again, to download them.
 
@@ -108,9 +105,11 @@ resource "aws_vpc" "main" {
 
 - Run terraform plan
 
+![Terraform Plan](Images/terraformplan-vpc.PNG)
+
 - Then, if you are happy with changes planned, execute terraform apply
 
-![](./images/terraform%20apply%20for%20VPC.PNG)
+![Terraform Apply](Images/terraform-applyvpc.PNG)
 
 
 
@@ -154,7 +153,7 @@ First, destroy the current infrastructure. Since we are still in development, th
 To destroy whatever has been created run terraform destroy command, and type yes after evaluating the plan.
 
 
-![](./images/creation%20of%20subnets%20terraform%20plan.PNG)
+![Terraform Apply](Images/terraform-applysubnet.PNG)
 
 
 # FIXING THE PROBLEMS BY CODE REFACTORING
