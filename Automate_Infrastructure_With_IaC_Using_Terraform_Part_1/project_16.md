@@ -1,5 +1,16 @@
 ## AUTOMATING INFRASTRUCTURE CREATION WITH IAC USING TERRAFORM - FOCUS ON VPC AND SUBNETS
 
+## Introduction
+AS a devops engineer, the ability to efficiently manage your infrastructure, provision and manage resources is really important. This project revolves around the concept of Infrastructure as Code (IAC) and specifically focuses on using Terraform to automate the creation of Virtual Private Clouds (VPCs) and subnets within cloud environments.
+
+### What Is Terraform
+The project aims to showcase the power and efficiency of using Terraform, a widely adopted IAC tool, to define and deploy infrastructure in a programmatic and reproducible manner. By concentrating on VPCs and subnets, we delve into the fundamental building blocks of cloud networks, providing a practical and hands-on approach to managing these resources.
+
+
+
+
+
+
 
 
 
