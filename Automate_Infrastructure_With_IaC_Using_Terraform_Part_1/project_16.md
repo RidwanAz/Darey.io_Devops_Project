@@ -68,11 +68,28 @@ Your setup should look like this.
 
 Note: You can change the configuration above to create your VPC in other region that is closer to you. The same applies to all configuration snippets that will follow.
 
-- The next thing we need to do, is to download necessary plugins for Terraform to work. These plugins are used by providers and provisioners. At this stage, we only have provider in our main.tf file. So, Terraform will just download plugin for AWS provider.
+- The next thing we need to do, is to download necessary plugins for Terraform to work. These plugins are used by providers and provisioners.  So, Terraform will just download plugin for AWS provider.
 
 ![](./images/terraform%20init.PNG)
 
 - Notice that a new directory has been created: .terraform.... This is where Terraform keeps plugins. Generally, it is safe to delete this folder. It just means that you must execute terraform init again, to download them.
+
+In our main.tf file, let us create a vpc with aws as our provider.
+
+```
+provider "aws" {
+  region = "us-east-1"
+}
+
+# Create VPC
+resource "aws_vpc" "main" {
+  cidr_block                     = "172.31.0.0/16"
+  enable_dns_support             = "true"
+  enable_dns_hostnames           = "true"
+  enable_classiclink             = "false"
+  enable_classiclink_dns_support = "false"
+}
+```
 
 - Moving on, let us create the only resource we just defined. aws_vpc. But before we do that, we should check to see what terraform intends to create before we tell it to go ahead and create it.
 
