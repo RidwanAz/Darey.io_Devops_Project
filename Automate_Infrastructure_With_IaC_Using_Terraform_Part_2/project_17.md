@@ -52,6 +52,23 @@ Tagging is a straightforward but very powerful concept that helps you manage you
 - You can easily determine resources that are not being used and take actions accordingly.
 - If there are different teams in the organisation using the same account, tagging can help differentiate who owns what resources.
 
+Let's declear a variable called `tags` in our variables.tf file and assign appropriate valuse in our terraform.tfvars file.
+```
+# The snippet below should be included to our variable.tf
+variable "tags" {
+  description = "Tags for our resources"
+  type        = map(string)
+  default     = {}
+
+}
+
+# The snippet below should be included to our terraform.tfvars. Make sure you replace the with your email address and IAM user we created in project 16
+tags = {
+  Owner-Email     = "azeezridwan57@gmail.com"
+  Managed-By      = "Terraform"
+  Billing-Account = "1234567890"
+} 
+
 #  STEP 1: Creating Private Subnet
 
 - Due to the AZ of eu-central-1 region is not up to 4 which will return error since it is 4 private subnet that is needed, therefore random_shuffle resource is introduced and then specifying the maximum subnet:
