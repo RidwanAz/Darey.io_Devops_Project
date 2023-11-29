@@ -107,12 +107,17 @@ Our main.tf file should look like this after private subnet resource has been ad
 
 ![Main.tf]()
 
-Since we have added a new resource block for private subnet, we also need to declear the variables in this block to our `variables.tf` and assign values to it in`terraform.tfvars` 
+Since we have added a new resource block for private subnet, we also need to declear all variables used in this block to our `variables.tf` and assign values to it in `terraform.tfvars` 
 ```
 # The snippet below should be included to our variable.tf
 variable "preferred_number_of_private_subnets" {
   type        = number
   description = "Private subnets"
+}
+
+variable "name" {
+  type    = string
+  default = "Az"
 }
 
 # The snippet below should be included to our terraform.tfvars.
