@@ -52,7 +52,7 @@ Tagging is a straightforward but very powerful concept that helps you manage you
 - You can easily determine resources that are not being used and take actions accordingly.
 - If there are different teams in the organisation using the same account, tagging can help differentiate who owns what resources.
 
-Let's declear a variable called `tags` in our variables.tf file and assign appropriate valuse in our terraform.tfvars file.
+Let's declear a variable called `tags` in our variables.tf file and assign appropriate values in our terraform.tfvars file.
 ```
 # The snippet below should be included to our variable.tf
 variable "tags" {
@@ -68,7 +68,7 @@ tags = {
   Managed-By      = "Terraform"
   Billing-Account = "1234567890"
 } 
-
+```
 #  STEP 1: Creating Private Subnet
 
 - Due to the AZ of eu-central-1 region is not up to 4 which will return error since it is 4 private subnet that is needed, therefore random_shuffle resource is introduced and then specifying the maximum subnet:
@@ -103,8 +103,22 @@ resource "aws_subnet" "private" {
 
 }
 ```
-Since we have added a new resource block for private subnet, we also need to define the variables in this block to our `variables.tf` and `terraform.tfvars` files
+Our main.tf file should look like this after private subnet resource has been added.
 
+![Main.tf]()
+
+Since we have added a new resource block for private subnet, we also need to declear the variables in this block to our `variables.tf` and assign values to it in`terraform.tfvars` 
+```
+# The snippet below should be included to our variable.tf
+variable "preferred_number_of_private_subnets" {
+  type        = number
+  description = "Private subnets"
+}
+
+# The snippet below should be included to our terraform.tfvars.
+
+preferred_number_of_private_subnets = 4
+```
 
 # STEP 2: Creating Internet Gateway
 
