@@ -42,6 +42,16 @@ An internet gateway is a horizontally scaled, redundant, and highly available VP
 - Keep variables and resources in separate files for better code structure and readability
 - Tags all the resources you have created so far. Explore how to use format() and count functions to automatically tag subnets with its respective number.
 
+### Tagging
+
+Tagging is a straightforward but very powerful concept that helps you manage your resources more efficiently:
+
+- Resources are better organized in 'virtual' groups.
+- They can be easily filtered and searched from console or programmatically.
+- Billing team can easily generate reports and determine how much each part of infrastructure costs.(by department, by type, by environment, etc.)
+- You can easily determine resources that are not being used and take actions accordingly.
+- If there are different teams in the organisation using the same account, tagging can help differentiate who owns what resources.
+
 #  STEP 1: Creating Private Subnet
 
 - Due to the AZ of eu-central-1 region is not up to 4 which will return error since it is 4 private subnet that is needed, therefore random_shuffle resource is introduced and then specifying the maximum subnet:
@@ -56,7 +66,8 @@ resource "random_shuffle" "az_list" {
 - Creating the private subnet
 
 Let's update our main.tf file with the code snippet below. The `Create public subnet` should be replaced with this.
-Don't worry, we can always run `terraform destroy` to delete whatever changes we made.
+
+Don't worry, we can always run `terraform destroy` to delete whatever changes we made with terraform.
 
 ```
 # Create private subnets
@@ -75,6 +86,8 @@ resource "aws_subnet" "private" {
 
 }
 ```
+Since we have added a new resource block for private subnet, we also need to define the variables in this block to our `variables.tf` and `terraform.tfvars` files
+
 
 # STEP 2: Creating Internet Gateway
 
