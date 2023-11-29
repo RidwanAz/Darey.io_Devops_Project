@@ -55,6 +55,9 @@ resource "random_shuffle" "az_list" {
 
 - Creating the private subnet
 
+Let's update our main.tf file with the code snippet below. The `Create public subnet` should be replaced with this.
+Don't worry, we can always run `terraform destroy` to delete whatever changes we made.
+
 ```
 # Create private subnets
 resource "aws_subnet" "private" {
