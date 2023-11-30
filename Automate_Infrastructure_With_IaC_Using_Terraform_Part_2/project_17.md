@@ -107,7 +107,7 @@ Our main.tf file should look like this after private subnet resource has been ad
 
 ![Main.tf]()
 
-Since we have added a new resource block for private subnet, we also need to declear all variables used in this block to our `variables.tf` and assign values to it in `terraform.tfvars` 
+Since we have added a new resource block for private subnet, we also need to declare all variables used in this block to our `variables.tf` and assign values to it in `terraform.tfvars` 
 ```
 # The snippet below should be included to our variable.tf
 variable "preferred_number_of_private_subnets" {
@@ -541,21 +541,21 @@ resource "aws_security_group_rule" "inbound-mysql-webserver" {
 # The entire section create a certiface, public zone, and validate the certificate using DNS method
 
 # Create the certificate using a wildcard for all the domains created in mytoolz
-resource "aws_acm_certificate" "mytoolz" {
-  domain_name       = "*.mytoolz.tk"
+resource "aws_acm_certificate" "zeez" {
+  domain_name       = "*.zeez.ar"
   validation_method = "DNS"
 }
 
 # calling the hosted zone
-data "aws_route53_zone" "mytoolz" {
-  name         = "mytoolz.tk"
+data "aws_route53_zone" "zeez" {
+  name         = "zeez.ar"
   private_zone = false
 }
 
 # selecting validation method
-resource "aws_route53_record" "mytoolz" {
+resource "aws_route53_record" "zeez" {
   for_each = {
-    for dvo in aws_acm_certificate.mytoolz.domain_validation_options : dvo.domain_name => {
+    for dvo in aws_acm_certificate.zeez.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name
       record = dvo.resource_record_value
       type   = dvo.resource_record_type
@@ -567,40 +567,73 @@ resource "aws_route53_record" "mytoolz" {
   records         = [each.value.record]
   ttl             = 60
   type            = each.value.type
-  zone_id         = data.aws_route53_zone.mytoolz.zone_id
+  zone_id         = data.aws_route53_zone.zeez.zone_id
 }
 
 # validate the certificate through DNS method
-resource "aws_acm_certificate_validation" "mytoolz" {
-  certificate_arn         = aws_acm_certificate.mytoolz.arn
-  validation_record_fqdns = [for record in aws_route53_record.mytoolz : record.fqdn]
+resource "aws_acm_certificate_validation" "zeez" {
+  certificate_arn         = aws_acm_certificate.zeez.arn
+  validation_record_fqdns = [for record in aws_route53_record.zeez : record.fqdn]
 }
 
 # create records for tooling
 resource "aws_route53_record" "tooling" {
-  zone_id = data.aws_route53_zone.mytoolz.zone_id
-  name    = "tooling.mytoolz.tk"
+  zone_id = data.aws_route53_zone.zeez.zone_id
+  name    = "var.domin_name"
   type    = "A"
 
   alias {
-    name                   = aws_lb.ext-alb.dns_name
-    zone_id                = aws_lb.ext-alb.zone_id
+    name                   = [var.lb][var.alb_name].dns_name
+    zone_id                = [var.lb][var.alb_name].zone_id
     evaluate_target_health = true
   }
 }
 
 # create records for wordpress
 resource "aws_route53_record" "wordpress" {
-  zone_id = data.aws_route53_zone.mytoolz.zone_id
-  name    = "wordpress.mytoolz.tk"
+  zone_id = data.aws_route53_zone.zeez.zone_id
+  name    = "wordpress.zeez.ar"
   type    = "A"
 
   alias {
-    name                   = aws_lb.ext-alb.dns_name
-    zone_id                = aws_lb.ext-alb.zone_id
+    name                   = [var.lb][var.alb_name].dns_name
+    zone_id                = [var.lb][var.alb_name].zone_id
     evaluate_target_health = true
   }
 }
+```
+Since we have added a new resource block for private subnet, we also need to declare all variables used in this block to our `variables.tf` and assign values to it in `terraform.tfvars` 
+```
+# The snippet below should be included to our variable.tf
+variable "domain_name" {
+  description = "Domain name for the Route 53 record"
+  type        = string
+}
+
+variable "alb_name" {
+  description = "Name of the AWS Application Load Balancer"
+  type        = string
+  default     = "ext-alb"
+}
+
+variable "lb" {
+  description = "Name of the AWS Application Load Balancer"
+  type        = string
+}
+
+
+variable "name" {
+  type    = string
+  default = "Az"
+}
+
+# The snippet below should be included to our terraform.tfvars.
+
+domain_name = "tooling.zeez.ar"
+
+alb_name    = "ext-alb"
+
+lb = "aws_lb"
 ```
 
 # STEP 8: Creating Application Load Balancer and Target Groups
