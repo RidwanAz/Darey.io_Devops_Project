@@ -687,7 +687,7 @@ resource "aws_lb" "ialb" {
   tags = merge(
     var.tags,
     {
-      Name = "TCS-int-alb"
+      Name = "Az-int-alb"
     },
   )
 
@@ -764,7 +764,7 @@ resource "aws_lb_listener" "nginx-listner" {
   load_balancer_arn = aws_lb.ext-alb.arn
   port              = 443
   protocol          = "HTTPS"
-  certificate_arn   = aws_acm_certificate_validation.mytoolz.certificate_arn
+  certificate_arn   = aws_acm_certificate_validation.zeez.certificate_arn
 
   default_action {
     type             = "forward"
@@ -780,7 +780,7 @@ resource "aws_lb_listener" "web-listener" {
   load_balancer_arn = aws_lb.ialb.arn
   port              = 443
   protocol          = "HTTPS"
-  certificate_arn   = aws_acm_certificate_validation.mytoolz.certificate_arn
+  certificate_arn   = aws_acm_certificate_validation.zeez.certificate_arn
 
   default_action {
     type             = "forward"
@@ -801,7 +801,7 @@ resource "aws_lb_listener_rule" "tooling-listener" {
 
   condition {
     host_header {
-      values = ["tooling.mytoolz.tk"]
+      values = ["tooling.zeez.ar"]
     }
   }
 }
@@ -809,18 +809,17 @@ resource "aws_lb_listener_rule" "tooling-listener" {
 
 #  STEP 9: Creating An Auto Scaling Group
 
-- Creating a file called asg-bastion-nginx.tf which will be used to create an auto scaling group for the bastion and the Nginx server.
-- Entering the following codes which creates notification for all the auto scaling group:
+- Creating a new file terraform configuration file `asg-wordpress-tooling.tf` and paste the code snippet below. The code below creates an auto scaling group for the bastion and the Nginx server.
 
 ```
 #### creating sns topic for all the auto scaling groups
-resource "aws_sns_topic" "tony-sns" {
+resource "aws_sns_topic" "zeez-sns" {
   name = "Default_CloudWatch_Alarms_Topic"
 }
 
 # creating notification for all the auto scaling groups
 
-resource "aws_autoscaling_notification" "tony_notifications" {
+resource "aws_autoscaling_notification" "zeez_notifications" {
   group_names = [
     aws_autoscaling_group.bastion-asg.name,
     aws_autoscaling_group.nginx-asg.name,
@@ -834,7 +833,7 @@ resource "aws_autoscaling_notification" "tony_notifications" {
     "autoscaling:EC2_INSTANCE_TERMINATE_ERROR",
   ]
 
-  topic_arn = aws_sns_topic.tony-sns.arn
+  topic_arn = aws_sns_topic.zeez-sns.arn
 }
 
 resource "random_shuffle" "az_list" {
@@ -895,7 +894,7 @@ resource "aws_autoscaling_group" "bastion-asg" {
   }
   tag {
     key                 = "Name"
-    value               = "TCS-bastion"
+    value               = "Az-bastion"
     propagate_at_launch = true
   }
 
@@ -958,7 +957,7 @@ resource "aws_autoscaling_group" "nginx-asg" {
 
   tag {
     key                 = "Name"
-    value               = "TCS-nginx"
+    value               = "Az-nginx"
     propagate_at_launch = true
   }
 
@@ -967,11 +966,11 @@ resource "aws_autoscaling_group" "nginx-asg" {
 # attaching autoscaling group of nginx to external load balancer
 resource "aws_autoscaling_attachment" "asg_attachment_nginx" {
   autoscaling_group_name = aws_autoscaling_group.nginx-asg.id
-  alb_target_group_arn   = aws_lb_target_group.nginx-tgt.arn
+  lb_target_group_arn   = aws_lb_target_group.nginx-tgt.arn
 }
 ```
 
-- Creating a new file called asg-wordpress-tooling.tf and entering the following codes which creates launch templates and Auto Scaling Group for both the wordpress and tooling webserver:
+- Creating a new file terraform configuration file `asg-wordpress-tooling.tf` and paste the code snippet below. The code creates an auto scaling group for the wordpress and the tooling server.
 
 ```
 # launch template for wordpress
@@ -1039,7 +1038,7 @@ resource "aws_autoscaling_group" "wordpress-asg" {
 # attaching autoscaling group of  wordpress application to internal loadbalancer
 resource "aws_autoscaling_attachment" "asg_attachment_wordpress" {
   autoscaling_group_name = aws_autoscaling_group.wordpress-asg.id
-  alb_target_group_arn   = aws_lb_target_group.wordpress-tgt.arn
+  lb_target_group_arn   = aws_lb_target_group.wordpress-tgt.arn
 }
 
 # launch template for toooling
@@ -1100,7 +1099,7 @@ resource "aws_autoscaling_group" "tooling-asg" {
 
   tag {
     key                 = "Name"
-    value               = "TCS-tooling"
+    value               = "Az-tooling"
     propagate_at_launch = true
   }
 }
@@ -1109,12 +1108,13 @@ resource "aws_autoscaling_group" "tooling-asg" {
 # attaching autoscaling group of  tooling application to internal loadbalancer
 resource "aws_autoscaling_attachment" "asg_attachment_tooling" {
   autoscaling_group_name = aws_autoscaling_group.tooling-asg.id
-  alb_target_group_arn   = aws_lb_target_group.tooling-tgt.arn
+  lb_target_group_arn   = aws_lb_target_group.tooling-tgt.arn
 }
 ```
 
-- Creating four files that will be used as user data for launching the four different servers:
+- In our `asg-bastion-nginx` and `asg-wordpress-tooling.tf` configuration file, 
 
+  
 ## **For the bastion server bastion.sh**
 
 ```
