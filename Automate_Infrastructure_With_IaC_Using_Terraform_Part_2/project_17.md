@@ -1385,9 +1385,9 @@ master-password = "devops-terraform"
 
 <table>
   <tr>
-    <td><img src="Images/variable1.png" alt="Image 1"></td>
-    <td><img src="Images/variable2.png" alt="Image 2"></td>
-    <td><img src="Images/variable3.png" alt="Image 2"></td>
+    <td><img src="Images/variable1.PNG" alt="Image 1"></td>
+    <td><img src="Images/variable2.PNG" alt="Image 2"></td>
+    <td><img src="Images/variable3.PNG" alt="Image 2"></td>
   </tr>
 </table>
 
