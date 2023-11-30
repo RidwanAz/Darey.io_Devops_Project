@@ -1,41 +1,41 @@
 ## AUTOMATING INFRASTRUCTURE CREATION WITH IAC USING TERRAFORM - A FOCUS ON PIVRATE SUBNETS, ROUTE TABLE, INTERNET GATEWAY, NAT GATEWAY, IAM ROLES, SECURITY GROUPS, ALB, EFS AND AUTOSCALING GROUP
 
+The project is a continuation of [project16](https://github.com/RidwanAz/Darey.io_Devops_Project/blob/c740ad4e78594453be9ab6812273a695e56f68a9/Automate_Infrastructure_With_IaC_Using_Terraform_Part_1/project_16.md). In the previous project we worked on vpc and subnets, we will dive deep by using terraform to set up an infrastructure.
 
-# INFRASTRUCTURE AUTOMATION WITH IAC USING TERRAFORM
+### Infrastructure Automation With IaC Using Terraform 
 
 [Link to Terraform Implementation](https://github.com/Tonybesto/TCS-Terraform)
 
 
 
-## Understanding Basic Network Concepts
+### Understanding Basic Network Concepts
 
-## IP Address:
+**IP Address**
 
 - An IP address is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network.
 
 
-## Subnets
+**Subnets**
 
 - A subnet, or subnetwork, is a segmented piece of a larger network. More specifically, subnets are a logical partition of an IP network into multiple, smaller network segments.
 
 
-## CIDR Notation
+**CIDR Notation**
 
 - CIDR notation (Classless Inter-Domain Routing) is an alternate method of representing a subnet mask. It is simply a count of the number of network bits (bits that are set to 1) in the subnet mask.
 
-## IP Routing
+**IP Routing**
 
 - IP routing is the process of sending packets from a host on one network to another host on a different remote network
 Internet Gateways
 An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between your VPC and the internet
 
-
-## NAT
+**NAT**
 
 - A NAT gateway is a Network Address Translation (NAT) service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your VPC but external services cannot initiate a connection with those instances.
 
 
-## Create 4 private subnets keeping in mind following principles:
+### Create 4 private subnets keeping in mind following principles:
 
 - Make sure you use variables or length() function to determine the number of AZs
 - Use variables and cidrsubnet() function to allocate vpc_cidr for subnets
@@ -69,7 +69,7 @@ tags = {
   Billing-Account = "1234567890" 
 } 
 ```
-#  STEP 1: Creating Private Subnet
+####  STEP 1: Creating Private Subnet
 
 - Due to the AZ of eu-central-1 region is not up to 4 which will return error since it is 4 private subnet that is needed, therefore random_shuffle resource is introduced and then specifying the maximum subnet:
 
@@ -125,7 +125,7 @@ variable "name" {
 preferred_number_of_private_subnets = 4
 ```
 
-# STEP 2: Creating Internet Gateway
+#### STEP 2: Creating Internet Gateway
 
 - Creating a file called internet_gateway.tf and entering the following codes:
 
@@ -142,7 +142,7 @@ resource "aws_internet_gateway" "ig" {
 }
 ```
 
-# STEP 3: Creating NAT Gateway
+#### STEP 3: Creating NAT Gateway
 
 - Creating a file called nat_gateway.tf and entering the following codes to create a NAT gateway and assign an elastic IP to it:
 
@@ -173,7 +173,7 @@ resource "aws_nat_gateway" "nat" {
 }
 ```
 
-# STEP 4: Creating Routes
+#### STEP 4: Creating Routes
 
 - Creating a file called route_tables.tf and entering the following codes to create routes for both public and private subnets:
 
@@ -224,7 +224,7 @@ resource "aws_route_table_association" "public-subnets-assoc" {
 }
 ```
 
-# STEP 5: Creating IAM Roles
+#### STEP 5: Creating IAM Roles
 
 - An IAM role is passed to the EC2 instances to give them access to some specific resources by first of all creating an AssumeRole and AssumeRole policy.
 - Creating a file named roles.tf and entering the following codes:
@@ -303,7 +303,7 @@ resource "aws_iam_instance_profile" "ip" {
 }
 ```
 
-# STEP 6: Creating Security Groups
+#### STEP 6: Creating Security Groups
 
 - Creating a new file and called security.tf and entering the following commands to create security group for the Internal and External load balancer, the bastion server, Nginx server, the tooling and wordpress webserver and the data layer:
 
@@ -533,7 +533,7 @@ resource "aws_security_group_rule" "inbound-mysql-webserver" {
 }
 ```
 
-# STEP 7: Creating Certificate From Amazon Certificate Manager
+#### STEP 7: Creating Certificate From Amazon Certificate Manager
 
 - Creating a new file called cert.tf and entering the following codes to create and validate a certificate AWS:
 
@@ -636,7 +636,7 @@ alb_name    = "ext-alb"
 lb = "aws_lb"
 ```
 
-# STEP 8: Creating Application Load Balancer and Target Groups
+#### STEP 8: Creating Application Load Balancer and Target Groups
 
 - Creating a file called alb.tf
 - Entering the following codes to create external(internet-facing) load balancer which balances traffic for the Nginx servers:
@@ -807,7 +807,7 @@ resource "aws_lb_listener_rule" "tooling-listener" {
 }
 ```
 
-#  STEP 9: Creating An Auto Scaling Group
+####  STEP 9: Creating An Auto Scaling Group
 
 - Creating a new file terraform configuration file `asg-wordpress-tooling.tf` and paste the code snippet below. The code below creates an auto scaling group for the bastion and the Nginx server.
 
@@ -1216,7 +1216,7 @@ systemctl restart httpd
 ```
 
 
-# STEP 10: Creating Database And EFS Resources
+#### STEP 10: Creating Database And EFS Resources
 
 - Creating a new file called efs.tf.
 - Entering the following code to create KMS key to encrypt EFS resource:
@@ -1384,7 +1384,7 @@ master-password = "devops-terraform"
 
 ![Terraform Configuration]()
 
-# Executing Terraform Plan and Apply
+#### Executing Terraform Plan and Apply
 
 ![](./Images/addition%20of%20tags.PNG)
 
