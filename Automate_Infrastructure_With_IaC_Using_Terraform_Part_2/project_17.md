@@ -1393,7 +1393,10 @@ master-password = "devops-terraform"
 
 
 **Our entire folder structure should look like this**
+
+
 ![Terraform folder](Images/folder.PNG)]
+
 
 #### Executing Terraform Plan and Apply
 
