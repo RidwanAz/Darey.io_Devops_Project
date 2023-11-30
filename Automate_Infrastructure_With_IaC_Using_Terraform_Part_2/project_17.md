@@ -64,9 +64,9 @@ variable "tags" {
 
 # The snippet below should be included to our terraform.tfvars. Make sure you replace the with your email address and IAM user we created in project 16
 tags = {
-  Owner-Email     = "azeezridwan57@gmail.com"
-  Managed-By      = "Terraform"
-  Billing-Account = "1234567890"
+  Owner-Email     = "azeezridwan57@gmail.com" #replace with your email address
+  Managed-By      = "Terraform" #replace with the name of your terraform IAM user
+  Billing-Account = "1234567890" 
 } 
 ```
 #  STEP 1: Creating Private Subnet
@@ -1112,7 +1112,28 @@ resource "aws_autoscaling_attachment" "asg_attachment_tooling" {
 }
 ```
 
-- In our `asg-bastion-nginx` and `asg-wordpress-tooling.tf` configuration file, 
+- In our `asg-bastion-nginx` and `asg-wordpress-tooling.tf` configuration file, we used new variable which has not been declared in `variables.tf` and `terraform.tfvars` configuration file. Let's add this to our configuration file
+```
+# The snippet below should be included to our variable.tf
+variable "ami" {
+  type        = string
+  description = "AMI ID for launch template"
+}
+
+variable "keypair" {
+  type        = string
+  description = "keypair  for instances"
+}
+
+# The snippet below should be included to our terraform.tfvars.
+
+ami = "ami-023c11a32b0207432"
+
+keypair = "devops"
+
+```
+
+  
 
   
 ## **For the bastion server bastion.sh**
