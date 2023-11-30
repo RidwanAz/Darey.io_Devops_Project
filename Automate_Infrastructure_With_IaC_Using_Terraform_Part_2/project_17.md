@@ -4,11 +4,8 @@ The project is a continuation of [project16](https://github.com/RidwanAz/Darey.i
 
 ### Infrastructure Automation With IaC Using Terraform 
 
-[Link to Terraform Implementation](https://github.com/Tonybesto/TCS-Terraform)
 
-
-
-### Understanding Basic Network Concepts
+#### Understanding Basic Network Concepts
 
 **IP Address**
 
@@ -1382,13 +1379,21 @@ master-password = "devops-terraform"
 
 **By now our entire variable.tf and terraform.tfvars should look like this**
 
-![Terraform Configuration]()
+<table>
+  <tr>
+    <td><img src="Images/variable1.png" alt="Image 1"></td>
+    <td><img src="Images/variable2.png" alt="Image 2"></td>
+    <td><img src="Images/variable3.png" alt="Image 2"></td>
+  </tr>
+</table>
 
+
+**Our entire folder structure should look like this
 #### Executing Terraform Plan and Apply
 
-![](./Images/addition%20of%20tags.PNG)
+[![Terraform Plan](Images/fterraform-plan.PNG)]
 
-![](./Images/final%20apply.PNG)
+
 
 
 
