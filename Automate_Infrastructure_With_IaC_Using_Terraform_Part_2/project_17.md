@@ -102,7 +102,7 @@ resource "aws_subnet" "private" {
 ```
 Our main.tf file should look like this after private subnet resource has been added.
 
-![Main.tf]()
+![Main.tf](Images/maintf.PNG)
 
 Since we have added a new resource block for private subnet, we also need to declare all variables used in this block to our `variables.tf` and assign values to it in `terraform.tfvars` 
 ```
@@ -1388,10 +1388,12 @@ master-password = "devops-terraform"
 </table>
 
 
-**Our entire folder structure should look like this
+**Our entire folder structure should look like this**
+![Terraform folder](Images/folder.PNG)]
+
 #### Executing Terraform Plan and Apply
 
-[![Terraform Plan](Images/fterraform-plan.PNG)]
+![Terraform Plan](Images/fterraform-plan.PNG)
 
 
 
