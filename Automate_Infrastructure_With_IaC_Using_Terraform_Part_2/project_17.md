@@ -1030,7 +1030,7 @@ resource "aws_autoscaling_group" "wordpress-asg" {
   }
   tag {
     key                 = "Name"
-    value               = "TCS-wordpress"
+    value               = "Az-wordpress"
     propagate_at_launch = true
   }
 }
@@ -1132,11 +1132,9 @@ ami = "ami-023c11a32b0207432"
 keypair = "devops"
 
 ```
+- Also, in our `asg-bastion-nginx` and `asg-wordpress-tooling.tf` configuration file, we used four differnt shell scripts which are for bastion, nginx, wordpress and tooling servers. Now we need to create these scripts so terraform can use it when we run `terraform apply`
 
-  
-
-  
-## **For the bastion server bastion.sh**
+**Create bastion.sh file and paste the script for bastion server**
 
 ```
 #!/bin/bash 
@@ -1145,7 +1143,7 @@ yum install -y git tmux
 yum install -y ansible
 ```
 
-## **For the Nginx server nginx.sh**
+**Create nginx.sh file and paste the script for nginx server**
 
 ```
 #!/bin/bash
@@ -1164,8 +1162,7 @@ sudo systemctl restart nginx
 sudo rm -rf reverseProxy.conf
 ```
 
-## **For the Wordpress server wordpress.sh**
-
+**Create wordpress.sh file and paste the script for wordpress server**
 ```
 #!/bin/bash
 mkdir /var/www/
@@ -1193,9 +1190,7 @@ sed -i "s/database_name_here/wordpressdb/g" wp-config.php
 chcon -t httpd_sys_rw_content_t /var/www/html/ -R
 systemctl restart httpd
 ```
-
-# **For Tooling Webserver**
-
+**Create tooling.sh file and paste the script**
 ```
 #!/bin/bash
 mkdir /var/www/
