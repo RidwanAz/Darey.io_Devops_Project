@@ -1380,6 +1380,9 @@ master-username = "Ridwan"
 master-password = "devops-terraform"
 ```
 
+**By now our entire variable.tf and terraform.tfvars should look like this**
+
+![Terraform Configuration]()
 
 # Executing Terraform Plan and Apply
 
