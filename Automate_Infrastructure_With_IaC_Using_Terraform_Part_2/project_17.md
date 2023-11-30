@@ -1355,6 +1355,32 @@ resource "aws_db_instance" "TCS-rds" {
 }
 ```
 
+```
+# The snippet below should be included to our variable.tf
+variable "account_no" {
+  type        = number
+  description = "account number"
+}
+variable "master-username" {
+  type        = string
+  description = "RDS admin username"
+}
+
+variable "master-password" {
+  type        = string
+  description = "RDS master password"
+}
+
+# The snippet below should be included to our terraform.tfvars.
+
+account_no = "234567891232"
+
+master-username = "Ridwan"
+
+master-password = "devops-terraform"
+```
+
+
 # Executing Terraform Plan and Apply
 
 ![](./Images/addition%20of%20tags.PNG)
