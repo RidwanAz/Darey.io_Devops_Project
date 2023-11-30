@@ -66,6 +66,10 @@ tags = {
   Billing-Account = "1234567890" 
 } 
 ```
+- Run terraform plan to see changes
+
+![Terraform Tags](Images/terraform-tags.PNG)
+
 ####  STEP 1: Creating Private Subnet
 
 - Due to the AZ of eu-central-1 region is not up to 4 which will return error since it is 4 private subnet that is needed, therefore random_shuffle resource is introduced and then specifying the maximum subnet:
