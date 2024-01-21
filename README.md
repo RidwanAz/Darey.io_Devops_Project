@@ -1,4 +1,4 @@
-# Darey.io_Devops_Projec
+# Darey.io_Devops_Project
 Documentation of darey.io learning project 
 
 ***Project 1 - Git Project***
